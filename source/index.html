@@ -1,12 +1,269 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <meta charset="UTF-8">
+    <title>HTML Academy: &ldquo;Pink&rdquo;</title>
   </head>
   <body>
+    <header class="page-header"> <!-- Нужен ли контейнер-центровщик? -->
+      <a class="page-header__logo-link"> <!-- Возможно, сделать частью навигации; пока делаю по образцу Барбершопа -->
+        <img class="page-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="Приложение &ldquo;Pink&rdquo;">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <ul class="main-nav__list main-nav__list--closed site-list">
+          <li class="site-list__item site-list__item--current"> <!-- Возможно, модификатор не нужен, но по мобильному макету непонятно -->
+            <a class="site-list__link">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+    <main class="page-main">
+      <h1 class="visually-hidden">Мобильное приложение &ldquo;Pink&rdquo;</h1>
 
+      <section class="download-app">
+        <h2 class="visually-hidden">Наше приложение доступно на всех мобильных платформах!</h2>
+        <div class="container"> <!-- контейнер-центровщик -->
+          <!-- Картинке потом нужно будет поменять размеры -->
+          <img class="download-app__prototype" src="http://placehold.it/320x314" width="320" height="314" alt="Результат работы приложения">
+          <p class="download-app__slogan">Взгляните на жизнь иначе!</p> <!-- В мобильной версии надпись не видна -->
+          <a class="download-app__button button" href="#">Скачать приложение</a>
+          <ul class="download-app__list applications-list">
+            <li class="applications-list__item">
+              <!-- Логотипы платформ задам фонами ссылок -->
+              <a class="applications-list__link applications-list__link--appstore" href="#" aria-label="Скачать в Appstore"></a>
+            </li>
+            <li class="applications-list__item">
+              <a class="applications-list__link applications-list__link--playmarket" href="#" aria-label="Скачать в Google Play"></a>
+            </li>
+            <li class="applications-list__item">
+              <a class="applications-list__link applications-list__link--microsoft-store" href="#" aria-label="Скачать в Microsoft Store"></a>
+            </li>
+          </ul>
+          <p class="download-app__info">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="visually-hidden">Описание приложения</h2>
+        <div class="features__slogan-wrap container"> <!-- нужно для скошенного фона + контейнер-центровщик -->
+          <p class="features__slogan">Устали от серости мегаполиса?</p>
+          <p class="features__slogan">Нам есть, что вам предложить!</p>
+        </div>
+        <div class="features__list-wrap container"> <!-- нужно для скошенного фона + контейнер-центровщик -->
+          <ul class="features__list">
+            <!-- Фоном у элементов будут идти прототипы; наличие (у 1 и 2 пунктов) и положение фонов будут зависеть от устройства -->
+            <li class="features__item">
+              <b class="features__item-title">Поднимает настроение</b>
+              <p class="features__item-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="features__item">
+              <b class="features__item-title">Меняет мир вокруг</b>
+              <p class="features__item-desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="features__item">
+              <b class="features__item-title">Заводит новых друзей</b>
+              <p class="features__item-desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Тут ещё в других версиях должен будет быть блок про эффект на 24 часа (ну, или вынести в отдельный section)-->
+      </section>
+
+      <section class="reviews">
+        <div class="reviews-wrapper container slider">
+          <h2 class="visually-hidden">Отзывы о приложении</h2>
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author">Николай Петров</cite> <!-- нужен ли тут <cite>? или простой тег типа <span>/<b>? -->
+              <p class="reviews__text">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+              </p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item"> <!-- Текст отзыва не из макета -->
+              <cite class="reviews__author">Андрей Любомиров</cite>
+              <p class="reviews__text">
+                &laquo;Снова полюбил жизнь благодаря приложению Pink! Действительно поднимает настроение!
+                С удовольствием посоветовал всем знакомым!&raquo;
+              </p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item"> <!-- Текст отзыва не из макета -->
+              <cite class="reviews__author">Максим Апчхинбахский</cite>
+              <p class="reviews__text">
+                &laquo;Друг посоветовал это приложение, после того как в который раз увидел моё угрюмое лицо.
+                Теперь улыбаюсь каждый день. Спасибо, разработчики Pink!&raquo;
+              </p>
+            </blockquote>
+          </div>
+          <p class="reviews__toggles slider__toggles">
+              <button class="slider__toggle slider__toggle--current" type="button">1</button>
+              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+          </p>
+          <!-- В других версиях будут кнопки "предыдущий отзыв" и "слудующий отзыв" по бокам -->
+          <button class="reviews__switch reviews__switch--previous" type="button">Предыдущий отзыв</button>
+          <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
+        </div>
+      </section>
+
+      <section class="price">
+        <div class="price-wrapper slider">
+          <h2 class="visually-hidden">Цены на приложение и доступные функции</h2>
+          <table class="price__table table-prices">
+            <thead class="table-prices__header prices-header">
+              <tr class="prices-header__row">
+                <th class="prices-header__cell prices-header__cell--empty"></th>
+                <th class="prices-header__cell">
+                  <span class="prices-header__name">База</span>
+                  <span class="prices-header__cost">1,99 USD</span>
+                </th>
+                <th class="prices-header__cell prices-header__cell--bestseller">
+                  <span class="prices-header__name">Стандарт</span>
+                  <span class="prices-header__cost">3,99 USD</span>
+                </th>
+                <th class="prices-header__cell">
+                  <span class="prices-header__name">Анлим</span>
+                  <span class="prices-header__cost">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="table-prices__body prices-body">
+              <tr class="prices-body__row">
+                <!-- Нужно подумать, как скрывать левую колонку с названиями и показывать текст в других -->
+                <td class="prices-body__cell">Розовый фильтр</td>
+                <td class="prices-body__cell">
+                  Розовый фильтр<!-- наверное, нужно обернуть тест в <span>, например, чтобы легче было скрывать -->
+                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
+                </td>
+                <td class="prices-body__cell">
+                  Розовый фильтр
+                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
+                </td>
+                <td class="prices-body__cell">
+                  Розовый фильтр
+                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
+                </td>
+              </tr>
+              <tr class="prices-body__row">
+                <td class="prices-body__cell">Смайлики</td>
+                <td class="prices-body__cell">
+                  Смайлики
+                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
+                </td>
+                <td class="prices-body__cell">
+                  Смайлики
+                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
+                </td>
+                <td class="prices-body__cell">
+                  Смайлики
+                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
+                </td>
+              </tr>
+              <tr class="prices-body__row">
+                <td class="prices-body__cell">Комментарии</td>
+                <td class="prices-body__cell">
+                  Комментарии
+                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
+                </td>
+                <td class="prices-body__cell">
+                  Комментарии
+                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
+                </td>
+                <td class="prices-body__cell">
+                  Комментарии
+                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="price__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle slider__toggle--current" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <div class="container">
+          <p class="contacts__slogan">Остались вопросы? Свяжитесь с нами!</p>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__form">
+                Звоните:<br>
+                <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+              </p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__form">
+                Пишите:<br>
+                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__form">
+                Приезжайте в гости:<br>
+                <span class="contacts__link">ул. Большая Конюшенная, 19/8</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="map">
+        <!-- Интерактивная карта будет сделана через JS -->
+        <!-- Картинке потом нужно будет поменять размеры -->
+        <h2 class="visually-hidden">Расположение офиса команды разработчиков приложения</h2>
+        <img class="map__image" src="http://placehold.it/320x645" width="320" height="645" alt="Мы находимся в Санкт-Петербурге по адресу ул. Большая Конюшенная, 19/8.">
+      </section>
+    </main>
+
+    <!-- Футер на макете не видно, но он ведь должен быть:) -->
+    <footer class="page-footer page-footer--index">
+      <div class="page-footer__wrap container">
+        <a class="page-footer__logo-link" href="">
+          <img class="page-footer__logo-image" src="http://placehold.it/147x40" width="147" height="40" alt="Приложение &ldquo;Pink&rdquo;"> <!-- тут будет инлайновый svg -->
+        </a>
+
+        <ul class="page-footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__button" href="#" aria-label="Страница приложения в Twitter">
+              <img class="socials__logo" src="http://placehold.it/18x14" width="18" height="14" alt="Twitter"> <!-- тут будет инлайновый svg -->
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button" href="#" aria-label="Страница приложения в Facebook">
+              <img class="socials__logo" src="http://placehold.it/9x18" width="9" height="18" alt="Facebook"> <!-- тут будет инлайновый svg -->
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button" href="#" aria-label="Страница приложения на Youtube">
+              <img class="socials__logo" src="http://placehold.it/15x13" width="15" height="13" alt="Youtube"> <!-- тут будет инлайновый svg -->
+            </a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          Разработано:
+          <a class="copyright__link" href="#" aria-label="HTML Academy">
+            <img class="copyright__logo" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy"> <!-- тут будет инлайновый svg -->
+          </a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

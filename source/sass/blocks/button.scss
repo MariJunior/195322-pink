@@ -1,5 +1,8 @@
 .button {
   display: inline-block;
+  padding-top: 15.5px;
+  padding-bottom: 15.5px;
+  width: 280px;
   font: inherit;
   text-align: center;
   color: inherit;
@@ -8,4 +11,14 @@
   border-radius: 55px;
   background-color: transparent;
   cursor: pointer;
+
+  &--submit {
+    color: #d22856;
+    border-color: #d22856;
+  }
+
+  &--reset {
+    color: rgba(#283645, 0.1);
+    border-color: rgba(#283645, 0.1);
+  }
 }

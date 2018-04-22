@@ -1,15 +1,27 @@
 .galery {
+  padding-top: 50px;
+  padding-bottom: 45px;
+  outline: 1px solid palevioletred;
+}
+.galery__intro-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+  text-align: center;
 
+  outline: 1px solid darkorange;
 }
 
 .galery__intro {
-
+  margin: 0;
+  line-height: 30px;
 }
 
 .galery__list {
-
+  margin-bottom: 45px;
 }
 
 .galery__slogan {
-
+  margin: 0;
+  text-align: center;
 }

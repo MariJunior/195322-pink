@@ -1,11 +1,86 @@
 .page-header {
+  padding-top: 20px; /* вообще, по макету 21px, но хочется немного округлить */
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #283645;
 
+  outline: 1px solid lightcoral;
 }
 
-.page-header__logo-link {
+.page-header__wrapper {
+  margin: 0 auto;
+  margin-bottom: 20px;
 
+  outline: 1px solid lightcyan;
 }
 
-.page-header__logo-image {
+// .page-header__logo-link {
 
+// }
+
+// .page-header__logo-image {
+
+// }
+
+.page-header__nav-toggle {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 50px;
+  height: 24px;
+  background: none;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+  }
 }
+
+.page-header__nav-toggle--to-close {
+  width: 24px;
+  height: 23px;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  span:first-child {
+    transform: rotate(45deg);
+  }
+
+  span:last-child {
+    transform: rotate(-45deg);
+  }
+}
+
+// .page-header__navigation {
+
+// }

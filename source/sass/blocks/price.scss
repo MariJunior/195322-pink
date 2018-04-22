@@ -1,11 +1,22 @@
 .price {
+  padding-top: 90px;
+  padding-bottom: 45px;
+  background-color: #f2f2f2;
 
+  outline: 1px solid deepskyblue;
+}
+
+.price__wrapper{
+  margin: 0 auto;
 }
 
 .price__table {
+  margin: 0 auto;
 
+  outline: 1px solid chartreuse;
 }
 
 .price__toggles {
-
+  margin-top: 40px;
+  text-align: center;
 }

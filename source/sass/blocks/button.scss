@@ -1,3 +1,11 @@
 .button {
-
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  color: inherit;
+  vertical-align: middle;
+  border: 3px solid #ffffff;
+  border-radius: 55px;
+  background-color: transparent;
+  cursor: pointer;
 }

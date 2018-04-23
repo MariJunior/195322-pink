@@ -1,23 +1,28 @@
 .storytelling {
-
+  padding-top: 46px;
+  padding-bottom: 16px;
 }
 
 .storytelling__desc {
-
+  line-height: 30px;
+  text-align: center;
 }
 
-.storytelling__full-desc {
+// .storytelling__full-desc {
 
-}
+// }
 
 .storytelling__form {
-
+  margin-bottom: 36px;
+  outline: 1px solid violet;
 }
 
 .storytelling__form-footnote {
-
+  margin: 0;
+  line-height: $big-height;
+  text-transform: uppercase;
 }
 
 .storytelling__form-sup {
-
+  color: $secondary-text-color;
 }

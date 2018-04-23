@@ -7,18 +7,18 @@
   text-align: center;
   color: inherit;
   vertical-align: middle;
-  border: 3px solid #ffffff;
+  border: 3px solid $base-bg-color;
   border-radius: 55px;
   background-color: transparent;
   cursor: pointer;
 
   &--submit {
-    color: #d22856;
-    border-color: #d22856;
+    color: $secondary-text-color;
+    border-color: $secondary-text-color;
   }
 
   &--reset {
-    color: rgba(#283645, 0.1);
-    border-color: rgba(#283645, 0.1);
+    color: rgba($base-text-color, 0.1);
+    border-color: rgba($base-text-color, 0.1);
   }
 }

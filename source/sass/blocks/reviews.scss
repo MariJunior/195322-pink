@@ -20,11 +20,11 @@
 }
 
 .reviews__author {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: $bigest-size;
+  line-height: $big-height;
   font-weight: 700;
   font-style: normal;
-  color: #283645;
+  color: $base-text-color;
 }
 
 .reviews__text {

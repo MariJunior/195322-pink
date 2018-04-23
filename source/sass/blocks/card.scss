@@ -17,7 +17,7 @@
   padding-right: 23px;
   padding-bottom: 23px;
   padding-left: 17px;
-  background-color: #f2f2f2;
+  background-color: $secondary-bg-color;
 }
 
 .card__author {
@@ -27,7 +27,7 @@
 }
 
 .card__time {
-  font-size: 12px;
+  font-size: $small-size;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -38,14 +38,14 @@
 }
 
 .card__like-button {
-
+  border: none;
 }
 
 .card__like-info {
   margin: 0;
   display: inline-block;
   vertical-align: baseline;
-  color: #d22856;
+  color: $secondary-text-color;
 }
 
 // .card__like-quantity {

@@ -1,5 +1,5 @@
 .features {
-  background-color: #f2f2f2;
+  background-color: $white-gray;
   outline: 1px solid magenta;
 }
 
@@ -8,7 +8,7 @@
   padding-top: 42px;
   padding-bottom: 30px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: $white;
   // Надо подумать насчёт этого скошенного края 😒 Псевдоэлемент с транформацией?
   // background-image: url(..//..//img/bg-triangle-white.svg);
   // background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 .features__item-title {
   margin: 0;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: $bigest-size;
   line-height: 18px;
 }
 

@@ -12,12 +12,12 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif; /* тоже в миксин */
-  font-size: 14px;
-  line-height: 24px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: $base-size;
+  line-height: $base-height;
   font-weight: 400;
-  color: #283645; /* назначить @base-color */
-  background-color: #ffffff;
+  color: $navy-gray;
+  background-color: $white;
 }
 
 img {

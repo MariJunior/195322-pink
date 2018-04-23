@@ -1,3 +1,10 @@
 .green-button {
-
+  display: inline-block;
+  padding-top: 21.5px;
+  padding-bottom: 21.5px;
+  width: 280px;
+  color: $base-bg-color;
+  border: 2px solid $form-btn-color;
+  background-color: $form-btn-color;
+  cursor: pointer;
 }

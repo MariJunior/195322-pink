@@ -14,10 +14,19 @@
   outline: 1px solid cyan;
 }
 
-.site-list__item--current {
-
-}
-
 .site-list__link {
-  color: #ffffff;
+  color: $base-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+  }
+
+  &:active {
+    color: rgba($secondary-text-color, 0.3);
+  }
 }
+
+// .site-list__link--current {
+
+// }

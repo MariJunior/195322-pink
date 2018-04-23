@@ -11,13 +11,13 @@
   padding-right: 17px;
   padding-bottom: 15px;
   padding-left: 22px;
-  line-height: 30px;
-  border: 2px solid #e5e5e5;
-  background-color: #ffffff;
+  line-height: $big-height;
+  border: 2px solid $base-border-color;
+  background-color: $base-bg-color;
 }
 
 .prices-body__marker {
-  // Так можно делать?
+  // Так можно делать (с нулевым размером шрифта)?
   display: inline-block;
   font-size: 0;
   background-repeat: no-repeat;

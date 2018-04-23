@@ -37,12 +37,12 @@
 
 .contacts__form {
   margin: 0;
-  font-size: 18px;
+  font-size: $bigest-size;
   font-weight: 700;
 }
 
 .contacts__link {
   font-size: 24px;
   font-weight: 300;
-  color: #d22856;
+  color: $secondary-text-color;
 }

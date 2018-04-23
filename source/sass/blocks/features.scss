@@ -24,8 +24,8 @@
   font-weight: 300;
 }
 
-.features__list-wrap {
-}
+// .features__list-wrap {
+// }
 
 .features__list {
   margin: 0;
@@ -42,7 +42,7 @@
 
   &--friends {
     padding-bottom: 320px; /* для улыбчивого прототипа */
-    background-image: url(..//..//img/iphone-screen-mobile@1x.png);
+    background-image: url("..//..//img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center bottom -43px;
   }

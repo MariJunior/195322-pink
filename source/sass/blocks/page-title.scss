@@ -1,0 +1,26 @@
+.page-title {
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: url("..//..//img/bg-back-mobile@1x.jpg");
+  background-repeat: repeat;
+  background-position: center top;
+
+  &--photo-page {
+    padding-bottom: 85px;
+  }
+
+  &--form-page {
+    padding-bottom: 50px;
+  }
+
+  outline: 1px solid red;
+}
+
+.page-title__text {
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: $base-bg-color;
+}

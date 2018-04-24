@@ -1,0 +1,117 @@
+// .flashback-form {
+
+// }
+
+.flashback-form__group {
+  margin: 0;
+  padding-top: 33px;
+  padding-right: 0;
+  padding-bottom: 42px;
+  padding-left: 0;
+  border: none;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 48px;
+  }
+
+  &--gray {
+    background-color: $secondary-bg-color;
+  }
+
+  outline: 1px solid crimson;
+}
+
+// Позиционировать? Не хочет отступами по-хорошему 😰
+.flashback-form__group-title {
+  padding: 0;
+  color: $secondary-text-color;
+  text-transform: uppercase;
+}
+
+.flashback-form__label {
+  padding-left: 23px;
+  line-height: $big-height;
+  color: $secondary-text-color;
+  text-transform: uppercase;
+}
+
+.flashback-form__input {
+  display: inline-block;
+  padding-top: 16px;
+  padding-right: 28px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  min-width: 276px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid $base-border-color;
+
+  // тут будет миксин для стилизации плейсхолдера (наверное)
+
+  // &--contacts {
+
+  // }
+
+  // &--contacts-tel {
+
+  // }
+
+  // &--contacts-email {
+
+  // }
+
+  // &--textarea {
+
+  // }
+}
+
+.flashback-form__achievements-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flashback-form__achievements-item {
+  &:not(:last-child) {
+    margin-bottom: 47px;
+  }
+}
+
+// .flashback-form__achievements-checkbox {
+
+// }
+
+.flashback-form__list-label {
+  font-size: $bigest-size;
+  line-height: $big-height;
+}
+
+.flashback-form__contacts {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.flashback-form__platform-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flashback-form__platform-item {
+  &:not(:last-child) {
+    margin-bottom: 39px;
+  }
+}
+
+// .flashback-form__platform-radio {
+
+// }
+
+// .flashback-form__buton {
+
+// }

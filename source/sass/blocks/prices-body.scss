@@ -1,0 +1,37 @@
+// .prices-body {
+
+// }
+
+// .prices-body__row {
+
+// }
+
+.prices-body__cell {
+  padding-top: 14px;
+  padding-right: 17px;
+  padding-bottom: 15px;
+  padding-left: 22px;
+  line-height: $big-height;
+  border: 2px solid $base-border-color;
+  background-color: $base-bg-color;
+}
+
+.prices-body__marker {
+  // Так можно делать (с нулевым размером шрифта)?
+  display: inline-block;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--on {
+    width: 31px;
+    height: 21px;
+    background-image: url("..//..//img/icon-yes.svg");
+  }
+
+  &--off {
+    width: 27px;
+    height: 26px;
+    background-image: url("..//..//img/icon-no.svg");
+  }
+}

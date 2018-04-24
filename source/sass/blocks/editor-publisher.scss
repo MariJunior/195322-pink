@@ -1,0 +1,52 @@
+// .editor-publisher {
+
+// }
+
+// .editor-publisher__photo-wrap {
+
+// }
+
+// .editor-publisher__photo {
+
+// }
+
+// .editor-publisher__tools {
+
+// }
+
+// .editor-publisher__tool {
+
+//   &--crop {
+
+//   }
+
+//   &--current {
+
+//   }
+
+//   &--pouring {
+
+//   }
+
+//   &--brightness {
+
+//   }
+// }
+
+// .editor-publisher__toddler {
+
+// }
+
+// .editor-publisher__actions {
+
+// }
+
+.editor-publisher__button {
+  font-size: $bigest-size;
+  line-height: 18px;
+  font-weight: 700;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}

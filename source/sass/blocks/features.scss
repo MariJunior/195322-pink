@@ -1,0 +1,62 @@
+.features {
+  background-color: $secondary-bg-color;
+  outline: 1px solid magenta;
+}
+
+.features__slogan-wrap {
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: $base-bg-color;
+  // Надо подумать насчёт этого скошенного края 😒 Псевдоэлемент с транформацией?
+  // background-image: url(..//..//img/bg-triangle-white.svg);
+  // background-repeat: no-repeat;
+  // background-position: 50% 100%;
+
+  outline: 1px solid blueviolet;
+}
+
+.features__slogan {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+// .features__list-wrap {
+// }
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  padding-top: 85px; /* для белой скошенной бесячей штуки */
+  text-align: center;
+  list-style: none;
+}
+
+.features__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &--friends {
+    padding-bottom: 320px; /* для улыбчивого прототипа */
+    background-image: url("..//..//img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center bottom -43px;
+  }
+
+  outline: 1px solid lightseagreen;
+}
+
+.features__item-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: $bigest-size;
+  line-height: 18px;
+}
+
+.features__item-desc {
+  margin: 0;
+}

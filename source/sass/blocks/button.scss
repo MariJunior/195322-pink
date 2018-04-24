@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  padding-top: 15.5px;
+  padding-bottom: 15.5px;
+  width: 280px;
+  font: inherit;
+  text-align: center;
+  color: inherit;
+  vertical-align: middle;
+  border: 3px solid $base-bg-color;
+  border-radius: 55px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--submit {
+    color: $secondary-text-color;
+    border-color: $secondary-text-color;
+  }
+
+  &--reset {
+    color: rgba($base-text-color, 0.1);
+    border-color: rgba($base-text-color, 0.1);
+  }
+}

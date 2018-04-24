@@ -1,0 +1,32 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item {
+  padding-top: 18px;
+  padding-right: 0;
+  padding-bottom: 14px;
+  padding-left: 0;
+  text-align: center;
+
+  outline: 1px solid cyan;
+}
+
+.site-list__link {
+  color: $base-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+  }
+
+  &:active {
+    color: rgba($secondary-text-color, 0.3);
+  }
+}
+
+// .site-list__link--current {
+
+// }

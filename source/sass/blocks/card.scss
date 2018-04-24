@@ -1,0 +1,53 @@
+.card {
+  text-align: left;
+  outline: 1px solid mediumspringgreen;
+}
+
+.card__photo {
+  display: block;
+
+  // &--panorama {
+
+  // }
+}
+
+.card__info {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-right: 23px;
+  padding-bottom: 23px;
+  padding-left: 17px;
+  background-color: $secondary-bg-color;
+}
+
+.card__author {
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.card__time {
+  font-size: $small-size;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card__text {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card__like-button {
+  border: none;
+}
+
+.card__like-info {
+  margin: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  color: $secondary-text-color;
+}
+
+// .card__like-quantity {
+
+// }

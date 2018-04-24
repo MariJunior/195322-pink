@@ -1,0 +1,29 @@
+// глобальные стили
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: $base-size;
+  line-height: $base-height;
+  font-weight: 400;
+  color: $base-text-color;
+  background-color: $base-bg-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

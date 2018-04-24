@@ -1,0 +1,51 @@
+.download-app {
+  padding-top: 110px;
+  text-align: center;
+  background-color: $base-text-color;
+  background-image: url("..//..//img/bg-back-mobile@1x.jpg");
+  background-repeat: repeat;
+  background-position: center bottom;
+
+  outline: 1px solid turquoise;
+}
+
+.download-app__prototype {
+  display: block;
+  margin: 0 auto;
+}
+
+.download-app__wrap {
+  padding-top: 28px;
+  background-color: $base-text-color;
+
+  outline: 1px solid yellowgreen;
+}
+
+.download-app__slogan {
+  display: none;
+}
+
+.download-app__button {
+  margin-bottom: 30px;
+  // padding: 15.5px 36px;
+  font-size: $bigest-size;
+  line-height: 18px;
+  font-weight: 700;
+  color: $base-bg-color;
+}
+
+.download-app__list {
+  margin-bottom: 25px;
+
+  outline: 1px solid mediumturquoise;
+}
+
+.download-app__info {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  text-align: center;
+  color: $base-bg-color;
+
+  outline: 1px solid pink;
+}

@@ -1,5 +1,5 @@
 .features {
-  background-color: $white-gray;
+  background-color: $secondary-bg-color;
   outline: 1px solid magenta;
 }
 
@@ -8,7 +8,7 @@
   padding-top: 42px;
   padding-bottom: 30px;
   text-align: center;
-  background-color: $white;
+  background-color: $base-bg-color;
   // Надо подумать насчёт этого скошенного края 😒 Псевдоэлемент с транформацией?
   // background-image: url(..//..//img/bg-triangle-white.svg);
   // background-repeat: no-repeat;

@@ -1,4 +1,6 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -30,3 +32,16 @@
 // .site-list__link--current {
 
 // }
+
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 635px;
+  }
+
+  .site-list__item {
+    padding: 0;
+  }
+}

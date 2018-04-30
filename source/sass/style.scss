@@ -21,9 +21,9 @@
 @import "blocks/site-list.scss";
 // @import "blocks/page-main.scss";
 // -- Футер
-@import "blocks/page-footer.scss";
 @import "blocks/socials.scss";
 @import "blocks/copyright.scss";
+@import "blocks/page-footer.scss";
 // 4. Блоки на главной (index.html)
 @import "blocks/applications-list.scss";
 @import "blocks/download-app.scss";
@@ -31,8 +31,6 @@
 @import "blocks/reviews.scss";
 @import "blocks/price.scss";
 @import "blocks/table-prices.scss";
-@import "blocks/prices-header.scss";
-@import "blocks/prices-body.scss";
 @import "blocks/contacts.scss";
 @import "blocks/map.scss";
 // 5. Блоки на странице-галерее (photo.html)

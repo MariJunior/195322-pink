@@ -50,7 +50,6 @@
       <section class="download-app">
         <div class="download-app__container container">
           <h2 class="visually-hidden">Наше приложение доступно на всех мобильных платформах!</h2>
-          <!-- <img class="download-app__prototype" src="img/iphone-hand-mobile@1x.png" width="320" height="314" alt="Результат работы приложения"> -->
           <div class="download-app__wrap wrap">
               <p class="download-app__slogan">Взгляните на жизнь иначе!</p> <!-- В мобильной версии надпись не видна -->
               <a class="download-app__button button" href="#">Скачать приложение</a>
@@ -97,7 +96,6 @@
           <p class="features__slogan">Нам есть, что вам предложить!</p>
         </div>
         <ul class="features__list container">
-          <!-- Фоном у элементов будут идти прототипы; наличие (у 1 и 2 пунктов) и положение фонов будут зависеть от устройства -->
           <li class="features__item features__item--mood">
             <h3 class="features__item-title">Поднимает настроение</h3>
             <p class="features__item-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -112,13 +110,15 @@
           </li>
         </ul>
 
-        <div class="features__effect">
-          <h3 class="features__effect-title">Эффект на 24 часа!</h3>
-          <p class="features__effect-desc">
-            Британские ученые провели исследования и доказали,
-            что положительный эффект от использования приложения длится целые сутки!
-          </p>
-          <a class="features__effect-link" href="#">Узнать больше об исследовании</a>
+        <div class="features__effect-wrap">
+          <div class="features__effect container">
+            <h3 class="features__effect-title">Эффект на 24 часа!</h3>
+            <p class="features__effect-desc">
+              Британские ученые провели исследования и доказали,
+              что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a class="features__effect-link" href="#">Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
 
@@ -127,21 +127,30 @@
           <h2 class="visually-hidden">Отзывы о приложении</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author">Николай Петров</cite>
+              <div class="reviews__author">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <span class="reviews__author-info">25 лет, водитель трамвая</span>
+              </div>
               <p class="reviews__text">
                 &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
                 А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </p>
             </blockquote>
-            <blockquote class="reviews__item slider__item"> <!-- Текст отзыва не из макета -->
-              <cite class="reviews__author">Андрей Любомиров</cite>
+            <blockquote class="reviews__item slider__item">
+              <div class="reviews__author">
+                <cite class="reviews__author-name">Андрей Любомиров</cite>
+                <span class="reviews__author-info">30 лет, электрик</span>
+              </div>
               <p class="reviews__text">
                 &laquo;Снова полюбил жизнь благодаря приложению Pink! Действительно поднимает настроение!
                 С удовольствием посоветовал всем знакомым!&raquo;
               </p>
             </blockquote>
-            <blockquote class="reviews__item slider__item"> <!-- Текст отзыва не из макета -->
-              <cite class="reviews__author">Максим Апчхинбахский</cite>
+            <blockquote class="reviews__item slider__item">
+              <div class="reviews__author">
+                <cite class="reviews__author-name">Максим Апчхинбахский</cite>
+                <span class="reviews__author-info">33 года, младший редактор газеты</span>
+              </div>
               <p class="reviews__text">
                 &laquo;Друг посоветовал это приложение, после того как в который раз увидел моё угрюмое лицо.
                 Теперь улыбаюсь каждый день. Спасибо, разработчики Pink!&raquo;
@@ -149,98 +158,99 @@
             </blockquote>
           </div>
           <p class="reviews__toggles slider__toggles">
-              <button class="slider__toggle slider__toggle--current" type="button">1</button>
-              <button class="slider__toggle" type="button">2</button>
-              <button class="slider__toggle" type="button">3</button>
+              <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый отзыв"></button>
+              <button class="slider__toggle" type="button" aria-label="Второй отзыв"></button>
+              <button class="slider__toggle" type="button" aria-label="Третий отзыв"></button>
           </p>
-          <!-- В других версиях будут кнопки "предыдущий отзыв" и "слудующий отзыв" по бокам -->
-          <button class="reviews__switch reviews__switch--previous" type="button">Предыдущий отзыв</button>
-          <button class="reviews__switch reviews__switch--next" type="button">Следующий отзыв</button>
+          <!-- Для десктопной версии - кнопки "предыдущий отзыв" и "слудующий отзыв" по бокам -->
+          <button class="reviews__switch reviews__switch--previous" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="reviews__switch reviews__switch--next" type="button" aria-label="Следующий отзыв"></button>
         </div>
       </section>
 
       <section class="price">
         <div class="price__wrapper slider">
           <h2 class="visually-hidden">Цены на приложение и доступные функции</h2>
-          <table class="price__table table-prices">
-            <thead class="table-prices__header prices-header">
-              <tr class="prices-header__row">
-                <th class="prices-header__cell prices-header__cell--empty"></th>
-                <th class="prices-header__cell">
-                  <b class="prices-header__name">База</b>
-                  <p class="prices-header__cost">1,99 USD</p>
-                </th>
-                <th class="prices-header__cell prices-header__cell--bestseller">
-                  <b class="prices-header__name">Стандарт</b>
-                  <p class="prices-header__cost">3,99 USD</p>
-                </th>
-                <th class="prices-header__cell">
-                  <b class="prices-header__name">Анлим</b>
-                  <p class="prices-header__cost">9,99 USD</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="table-prices__body prices-body">
-              <tr class="prices-body__row">
-                <!-- Нужно подумать, как скрывать левую колонку с названиями и показывать текст в других -->
-                <td class="prices-body__cell">Розовый фильтр</td>
-                <td class="prices-body__cell">
-                  Розовый фильтр<!-- наверное, нужно обернуть тест в <span>, например, чтобы легче было скрывать -->
-                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
-                </td>
-                <td class="prices-body__cell">
-                  Розовый фильтр
-                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
-                </td>
-                <td class="prices-body__cell">
-                  Розовый фильтр
-                  <span class="prices-body__marker prices-body__marker--on">Включен</span>
-                </td>
-              </tr>
-              <tr class="prices-body__row">
-                <td class="prices-body__cell">Смайлики</td>
-                <td class="prices-body__cell">
-                  Смайлики
-                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
-                </td>
-                <td class="prices-body__cell">
-                  Смайлики
-                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
-                </td>
-                <td class="prices-body__cell">
-                  Смайлики
-                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
-                </td>
-              </tr>
-              <tr class="prices-body__row">
-                <td class="prices-body__cell">Комментарии</td>
-                <td class="prices-body__cell">
-                  Комментарии
-                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
-                </td>
-                <td class="prices-body__cell">
-                  Комментарии
-                  <span class="prices-body__marker prices-body__marker--off">Отсутствуют</span>
-                </td>
-                <td class="prices-body__cell">
-                  Комментарии
-                  <span class="prices-body__marker prices-body__marker--on">Включены</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="price__slides">
+            <table class="price__table container">
+              <thead class="table-prices__header">
+                <tr class="table-prices__header-row">
+                  <th class="table-prices__header-cell table-prices__header-cell--empty table-prices__header-cell--first"></th>
+                  <th class="table-prices__header-cell">
+                    <b class="table-prices__header-name">База</b>
+                    <p class="table-prices__header-cost">1,99 USD</p>
+                  </th>
+                  <th class="table-prices__header-cell table-prices__header-cell--bestseller">
+                    <b class="table-prices__header-name">Стандарт</b>
+                    <p class="table-prices__header-cost">3,99 USD</p>
+                  </th>
+                  <th class="table-prices__header-cell">
+                    <b class="table-prices__header-name">Анлим</b>
+                    <p class="table-prices__header-cost">9,99 USD</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="table-prices__body">
+                <tr class="table-prices__body-row">
+                  <td class="table-prices__body-cell table-prices__body-cell--first">Розовый фильтр</td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Розовый фильтр</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включен</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Розовый фильтр</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включен</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Розовый фильтр</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включен</span>
+                  </td>
+                </tr>
+                <tr class="table-prices__body-row">
+                  <td class="table-prices__body-cell table-prices__body-cell--first">Смайлики</td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Смайлики</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--off">Отсутствуют</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Смайлики</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включены</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Смайлики</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включены</span>
+                  </td>
+                </tr>
+                <tr class="table-prices__body-row">
+                  <td class="table-prices__body-cell table-prices__body-cell--first">Комментарии</td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Комментарии</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--off">Отсутствуют</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Комментарии</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--off">Отсутствуют</span>
+                  </td>
+                  <td class="table-prices__body-cell">
+                    <span class="table-prices__body-option">Комментарии</span>
+                    <span class="table-prices__body-marker table-prices__body-marker--on">Включены</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle slider__toggle--current" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
+            <button class="slider__toggle slider__toggle--current" type="button" aria-label="Второй слайд"></button>
+            <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
           </p>
         </div>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="contacts__wrapper">
-          <p class="contacts__slogan">Остались вопросы? Свяжитесь с нами!</p>
+        <div class="contacts__wrapper container">
+          <p class="contacts__slogan container">Остались вопросы? Свяжитесь с нами!</p>
           <ul class="contacts__list">
             <li class="contacts__item">
               <p class="contacts__form">
@@ -248,7 +258,7 @@
                 <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
               </p>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--mail">
               <p class="contacts__form">
                 Пишите:<br>
                 <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
@@ -311,7 +321,7 @@
         </ul>
 
         <p class="copyright">
-          Разработано:
+          Разработано
           <a class="copyright__link" href="#" aria-label="HTML Academy">
             <svg class="copyright__logo" width="26.943px" height="34.09px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path fill="#d22856" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>

@@ -5,12 +5,12 @@
 }
 
 .reviews__wrapper {
-  margin: 0 auto;
+  width: 280px;
 }
 
-// .reviews__list {
-
-// }
+.reviews__list {
+  margin-bottom: 30px;
+}
 
 .reviews__item {
   margin: 0;
@@ -19,12 +19,18 @@
   outline: 1px solid cadetblue;
 }
 
-.reviews__author {
+.reviews__author-name {
+  display: block;
+  margin-bottom: 11px;
   font-size: $bigest-size;
   line-height: $big-height;
   font-weight: 700;
   font-style: normal;
-  color: $base-text-color;
+  color: $other-text-color;
+}
+
+.reviews__author-info {
+  display: none;
 }
 
 .reviews__text {
@@ -32,17 +38,119 @@
 }
 
 .reviews__toggles {
-  margin-top: 35px;
-  text-align: center;
+  margin: 0;
 }
 
-// .reviews__switch {
+.reviews__switch {
+  display: none;
+}
 
-//   &--previous {
+@media (min-width: $tablet-width) {
+  .reviews {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
 
-//   }
+  .reviews__wrapper {
+    width: 620px;
+  }
 
-//   &--next {
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-//   }
-// }
+  .reviews__author-name {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .reviews__author-info {
+    display: block;
+    line-height: $big-height;
+  }
+
+  .reviews__text {
+    margin-bottom: 35px;
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    padding-top: 190px;
+    padding-bottom: 35px;
+    // background-image: url("../../img/");
+    // background-repeat: no-repeat
+    // background-position: center 72px;
+  }
+
+  .reviews__wrapper {
+    padding: 0 10px;
+    width: 960px;
+  }
+
+  .reviews__list {
+    margin-bottom: 0;
+  }
+
+  .reviews__author-name {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+
+  .reviews__author-info {
+    font-size: $bigest-size;
+  }
+
+  .reviews__text {
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
+
+  .reviews__switch {
+    position: absolute;
+    top: 20px;
+    display: block;
+    width: 25px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -3px;
+      width: 30px;
+      height: 2px;
+      background-color: $base-text-color;
+      opacity: 0.3;
+    }
+
+    &::before {
+      top: 11px;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      bottom: 11px;
+      transform: rotate(45deg);
+    }
+
+    &--previous {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+      transform: rotate(180deg);
+    }
+  }
+}

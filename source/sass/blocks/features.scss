@@ -47,8 +47,10 @@
 }
 
 .features__item {
-  &:not(:last-child) {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   outline: 1px solid lightseagreen;
@@ -69,6 +71,7 @@
   display: none;
 }
 
+// ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .features__slogan-wrap {
     padding-bottom: 45px;
@@ -86,21 +89,18 @@
 
   .features__list {
     position: relative;
-    // margin-right: 20px;
-    margin-left: 330px;
     padding-top: 75px;
-    width: 310px;
+    padding-left: 310px;
+    width: 620px;
     text-align: left;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      // right: 0;
       bottom: 0;
-      left: -310px;
-      // margin: 0 auto;
-      width: 300px;
+      left: 0;
+      width: 270px;
       height: 530px;
       background-image: url("../../img/iphone-screen-mobile@1x.png"); /* заменить потом на нужное изображение */
       background-repeat: no-repeat;
@@ -114,17 +114,46 @@
   }
 
   .features__item {
-    &:not(:last-child) {
-      margin-bottom: 46px;
-    }
+    margin-bottom: 46px;
+  }
+
+  .features__effect-wrap {
+    background-color: $base-bg-color;
   }
 
   .features__effect {
     display: block;
+    padding-top: 99px;
+    padding-bottom: 63px;
+    padding-left: 310px;
+    width: 620px;
+    // заготовка для часов
+    // background-image: url("../../img/[часы]");
+    background-repeat: no-repeat;
+    background-position: 0 59px;
+  }
+
+  .features__effect-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $other-text-color;
+  }
+
+  .features__effect-desc {
+    margin-top: 0;
+    margin-bottom: 11px;
+  }
+
+  .features__effect-link {
+    color: $secondary-text-color;
+    text-decoration: underline;
   }
 }
 
-
+// ДЕСКТОП
 @media (min-width: $desktop-width) {
   .features__slogan-wrap {
     padding-bottom: 75px;
@@ -141,7 +170,7 @@
 
   .features__list {
     display: flex;
-    margin-left: auto;
+    margin-bottom: 63px;
     padding-top: 360px;
     padding-right: 10px;
     padding-left: 10px;
@@ -155,12 +184,8 @@
 
   .features__item {
     position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
     width: 250px;
 
@@ -196,6 +221,38 @@
   }
 
   .features__item-desc {
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
+
+  .features__effect-wrap {
+    background-color: $secondary-bg-color;
+  }
+
+  .features__effect {
+    padding-top: 95px;
+    padding-bottom: 112px;
+    padding-left: 380px;
+    width: 960px;
+    // заготовка для часов
+    // background-image: url("../../img/[часы]");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .features__effect-title {
+    margin-bottom: 23px;
+    font-size: 30px;
+    line-height: $big-height;
+  }
+
+  .features__effect-desc {
+    margin-bottom: 32px;
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
+
+  .features__effect-link {
     font-size: $bigest-size;
     line-height: $big-height;
   }

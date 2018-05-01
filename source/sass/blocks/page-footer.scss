@@ -49,11 +49,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-footer__wrap {
+  .page-footer {
     padding-top: 70px;
-    padding-right: 10px;
     padding-bottom: 70px;
-    padding-left: 10px;
+  }
+
+  .page-footer__wrap {
+    padding: 0 10px;
     width: 960px;
     font-size: $bigest-size;
   }

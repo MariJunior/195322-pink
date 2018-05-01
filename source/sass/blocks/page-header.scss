@@ -7,7 +7,6 @@
   font-weight: 700;
   color: $base-bg-color;
   text-transform: uppercase;
-  // background-color: rgba(0, 0, 0, 0.3);
   background-color: $base-text-color;
 
   outline: 1px solid lightcoral;
@@ -117,6 +116,7 @@
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .page-header__container {

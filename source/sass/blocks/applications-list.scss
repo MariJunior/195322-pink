@@ -9,8 +9,10 @@
 
 .applications-list__item {
   display: flex;
-  &:not(:last-child) {
-    margin-right: 35px;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

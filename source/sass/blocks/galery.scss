@@ -1,9 +1,9 @@
 .galery {
-  padding-bottom: 45px;
+  // padding-bottom: 45px;
   outline: 1px solid palevioletred;
 }
 
-.galery__intro-wrap {
+.galery__intro-container {
   padding-top: 50px;
   padding-right: 15px;
   padding-bottom: 50px;
@@ -19,8 +19,10 @@
   line-height: $big-height;
 }
 
-.galery__list {
-  margin-bottom: 45px;
+.galery__slogan-container {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  width: 280px;
 }
 
 .galery__slogan {
@@ -29,7 +31,7 @@
 }
 
 @media(min-width: $tablet-width) {
-  .galery__intro-wrap {
+  .galery__intro-container {
     padding-top: 95px;
     padding-right: 80px;
     padding-bottom: 75px;
@@ -40,13 +42,29 @@
   .galery__intro {
     font-size: $bigest-size;
   }
+
+  .galery__slogan-container {
+    padding-top: 70px;
+    padding-bottom: 65px;
+    width: 620px;
+  }
+
+  .galery__slogan {
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .galery__intro-wrap {
+  .galery__intro-container {
     padding-right: 190px;
     padding-bottom: 85px;
     padding-left: 190px;
     width: 960px;
+  }
+
+  .galery__slogan-container {
+    padding-top: 65px;
+    width: 940px;
   }
 }

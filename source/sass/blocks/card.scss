@@ -1,9 +1,10 @@
 .card {
-  position: relative;
   width: 280px;
   text-align: left;
 
   &--panorama {
+    position: relative;
+    margin-bottom: 20px;
     width: 320px;
   }
 
@@ -60,15 +61,19 @@
   margin-bottom: 15px;
 }
 
+.card__like-wrap {
+  display: flex;
+}
+
 .card__like-button {
+  margin-right: 15px;
+  padding: 0;
   border: none;
   background: none;
 }
 
 .card__like-info {
   margin: 0;
-  display: inline-block;
-  vertical-align: baseline;
   color: $secondary-text-color;
 }
 
@@ -79,6 +84,7 @@
     width: 300px;
 
     &--panorama {
+      margin-bottom: 50px;
       width: 660px;
     }
 
@@ -87,7 +93,19 @@
     }
   }
 
+  .card__photo {
+    // временно для того, чтобы посмотреть, как будет
+    width: 300px;
+    height: 300px;
+
+    &--panorama {
+      width: $tablet-width;
+      height: 509px;
+    }
+  }
+
   .card__info {
+    position: relative;
     flex-grow: 1;
     flex-basis: 155px;
     padding-top: 25px;
@@ -96,7 +114,64 @@
     padding-left: 25px;
 
     &--panorama {
+      flex-basis: auto;
       width: 620px;
+    }
+  }
+
+  // .card__text {
+  //   margin-bottom: 40px;
+  // }
+
+  .card__like-wrap {
+    position: absolute;
+    bottom: 30px;
+    justify-content: space-between;
+    width: 240px;
+
+    &--panorama {
+      top: 30px;
+      right: 30px;
+      bottom: auto;
+      justify-content: flex-end;
+      // width: auto;
+    }
+  }
+
+  .card__like-button {
+    order: 2;
+    margin-right: 0;
+
+    &--panorama {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    &--panorama {
+      width: 1200px;
+    }
+
+    &--panorama::before {
+      right: 130px;
+    }
+  }
+
+  .card__photo {
+    // временно для того, чтобы посмотреть, как будет
+    height: 400px;
+
+    &--panorama {
+      width: $desktop-width;
+      height: 506px;
+    }
+  }
+
+  .card__info {
+    &--panorama {
+      width: 940px;
     }
   }
 }

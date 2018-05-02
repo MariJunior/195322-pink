@@ -1,39 +1,43 @@
-// .editor-publisher {
+.editor-publisher {
+  width: 280px;
+}
 
-// }
+.editor-publisher__photo-wrap {
+  margin-bottom: 35px;
+}
 
-// .editor-publisher__photo-wrap {
+.editor-publisher__tools {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-// }
+.editor-publisher__tool {
+  display: block;
+  font-size: 0;
+  background-repeat: no-repeat;
+  // из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position
 
-// .editor-publisher__photo {
+  &--crop {
+    width: 44px;
+    height: 44px;
+    background-image: url("../../img/icon-editor-crop.svg");
+  }
 
-// }
+  &--pouring {
+    width: 48px;
+    height: 43px;
+    background-image: url("../../img/icon-editor-fill.svg");
+  }
 
-// .editor-publisher__tools {
+  &--brightness {
+    width: 32px;
+    height: 32px;
+    background-image: url("../../img/icon-editor-contrast.svg");
+  }
+}
 
-// }
-
-// .editor-publisher__tool {
-
-//   &--crop {
-
-//   }
-
-//   &--current {
-
-//   }
-
-//   &--pouring {
-
-//   }
-
-//   &--brightness {
-
-//   }
-// }
-
-// .editor-publisher__toddler {
+// .editor-publisher__toggler {
 
 // }
 

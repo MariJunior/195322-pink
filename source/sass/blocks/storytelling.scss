@@ -1,28 +1,46 @@
 .storytelling {
-  padding-top: 46px;
   padding-bottom: 16px;
 }
 
-.storytelling__desc {
-  line-height: 30px;
-  text-align: center;
+.storytelling__container {
+  padding-top: 46px;
+  padding-bottom: 10px;
+  width: 280px;
 }
 
-// .storytelling__full-desc {
+.storytelling__desc {
+  margin: 0;
+  line-height: $big-height;
+  text-align: center;
 
-// }
+  &--full {
+    display: none;
+  }
+}
 
 .storytelling__form {
-  margin-bottom: 36px;
+  // margin-bottom: 36px;
   outline: 1px solid violet;
 }
 
-.storytelling__form-footnote {
-  margin: 0;
-  line-height: $big-height;
-  text-transform: uppercase;
+@media (min-width: $tablet-width) {
+  .storytelling__container {
+    padding-top: 95px;
+    padding-bottom: 70px;
+    width: 500px;
+  }
+
+  .storytelling__desc {
+    font-size: $bigest-size;
+
+    &--full {
+      display: inline-block;
+    }
+  }
 }
 
-.storytelling__form-sup {
-  color: $secondary-text-color;
+@media (min-width: $desktop-width) {
+  .storytelling__container {
+    width: 820px;
+  }
 }

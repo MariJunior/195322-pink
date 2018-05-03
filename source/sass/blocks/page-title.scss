@@ -37,9 +37,9 @@
       padding-bottom: 145px;
     }
 
-    // &--form-page {
-    //   padding-bottom: ;
-    // }
+    &--form-page {
+      padding-bottom: 75px;
+    }
   }
 
   .page-title__text {
@@ -56,13 +56,13 @@
       padding-bottom: 110px;
     }
 
-    // &--form-page {
-    //   padding-bottom: ;
-    // }
+    &--form-page {
+      padding-bottom: 95px;
+    }
   }
 
   .page-title__text {
     margin: 0 auto;
-    width: 360px;
+    max-width: 940px;
   }
 }

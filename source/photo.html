@@ -223,7 +223,7 @@
       <section class="editor">
         <h2 class="visually-hidden">Отредактируйте Вашу фотографию с помощью встроенного редактора и разместите её в галерее!</h2>
         <form class="editor__form editor-publisher container" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="editor-publisher__photo-wrap"> <!-- TODO: заменить на ссылку -->
+            <div class="editor-publisher__photo-wrap"> <!-- TODO: заменить на ссылку? -->
               <img class="editor-publisher__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Выбранная для редактирования фотография">
             </div>
             <div class="editor-publisher__tools">
@@ -235,11 +235,11 @@
               <input class="visually-hidden" type="radio" name="instruments" id="brightness">
               <label class="editor-publisher__tool editor-publisher__tool--brightness" for="brightness">Яркость</label>
             </div>
-            <div class="editor-publisher__toggler">
+            <div class="editor-publisher__togglers">
               <p class="visually-hidden">Задайте нужное значение выбранного параметра</p>
-              <input type="range" name="setting-value" id="setting-value-crop" min="0" max="100" value="80">
-              <input type="range" name="setting-value" id="setting-value-pouring" min="0" max="100" value="10">
-              <input type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" value="50">
+              <input class="editor-publisher__toggler editor-publisher__togler--currnet" type="range" name="setting-value" id="setting-value-crop" min="0" max="100" step="1" value="80">
+              <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-pouring" min="0" max="100" step="1" value="10">
+              <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" step="1" value="50">
             </div>
             <div class="editor-publisher__actions">
               <button class="editor-publisher__button button button--submit" type="submit">Запостить</button>

@@ -10,13 +10,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .editor-publisher__tool {
   display: block;
   font-size: 0;
   background-repeat: no-repeat;
-  // из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position
+  background-position: center;
+  // из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position?
 
   &--crop {
     width: 44px;
@@ -37,8 +39,17 @@
   }
 }
 
-// .editor-publisher__toggler {
+.editor-publisher__togglers {
+  margin-bottom: 34px;
+  background-color: rgba(tomato, 0.5);
+  outline: 1px solid red;
+}
 
+// .editor-publisher__toggler {
+//   display: none;
+//   &--current {
+//     display: block;
+//   }
 // }
 
 // .editor-publisher__actions {

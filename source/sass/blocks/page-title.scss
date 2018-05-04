@@ -2,7 +2,7 @@
   margin-top: -66px;
   padding-top: 100px;
   text-align: center;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 0;
@@ -31,7 +31,7 @@
   .page-title {
     margin-top: -110px;
     padding-top: 191px;
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
 
     &--photo-page {
       padding-bottom: 145px;
@@ -50,7 +50,7 @@
 @media (min-width: $desktop-width) {
   .page-title {
     padding-top: 184px;
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
 
     &--photo-page {
       padding-bottom: 110px;

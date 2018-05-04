@@ -1,10 +1,10 @@
 .download-app {
-  margin-top: -66px; /* чтобы секция частично была под хедером */
+  margin-top: -63px; /* чтобы секция частично была под хедером */
   padding-top: 460px; /* толкает блок с содержимым вниз */
   text-align: center;
   color: $base-bg-color;
   background-color: $base-text-color;
-  background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, 100% auto;
   background-position: 0 175px, 0 0;
@@ -53,7 +53,7 @@
 @media (min-width: $tablet-width) {
   .download-app {
     padding-top: 184px;
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
     // background-position: 0 0;
   }
 
@@ -62,7 +62,7 @@
     padding-bottom: 110px;
     width: 620px;
     // закидываем фон-руку в контейнер, чтобы центровался вместе с содержимым
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
     // background-position: 150px bottom;
   }
 
@@ -99,8 +99,9 @@
 // ДЕСКТОП
 @media (min-width: $desktop-width) {
   .download-app {
+    margin-top: -110px;
     padding-top: 209px; /* ? */
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
     // background-position: 0 0;
   }
 
@@ -110,7 +111,7 @@
     padding-left: 10px;
     width: 960px;
     // фон-рука
-    // background-image: url("../../img/");
+    // background-image: url("../img/");
     // background-position: 358px bottom;
   }
 

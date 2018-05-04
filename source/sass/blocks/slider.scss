@@ -21,12 +21,14 @@
 .slider__toggle {
   display: inline-block;
   margin: 0 10px;
+  padding: 0;
   width: 6px;
-  height: 7px;
-  vertical-align: top;
+  height: 6px;
+  vertical-align: middle;
   background-color: $base-text-color;
   border-radius: 50%;
   opacity: 0.3;
+  box-sizing: content-box;
 
   &--current {
     background-color: $base-bg-color;

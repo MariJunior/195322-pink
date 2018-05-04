@@ -40,7 +40,7 @@
     content: "";
     display: block;
     height: 330px;
-    background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center 50px;
   }
@@ -102,7 +102,7 @@
       left: 0;
       width: 270px;
       height: 530px;
-      background-image: url("../../img/iphone-screen-mobile@1x.png"); /* заменить потом на нужное изображение */
+      background-image: url("../img/iphone-screen-mobile@1x.png"); /* заменить потом на нужное изображение */
       background-repeat: no-repeat;
       background-position: center 50px;
       background-size: 270px;
@@ -128,7 +128,7 @@
     padding-left: 310px;
     width: 620px;
     // заготовка для часов
-    // background-image: url("../../img/[часы]");
+    // background-image: ur../img/[часы]");
     background-repeat: no-repeat;
     background-position: 0 59px;
   }
@@ -203,15 +203,15 @@
     /* ещё им нужно задать нижний отступ (или верхний самому элементу списка?) */
 
     &--mood::before {
-      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-mobile@1x.png");
     }
 
     &--world::before {
-      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-mobile@1x.png");
     }
 
     &--friends::before {
-      background-image: url("../../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-mobile@1x.png");
     }
   }
 
@@ -235,7 +235,7 @@
     padding-left: 380px;
     width: 960px;
     // заготовка для часов
-    // background-image: url("../../img/[часы]");
+    // background-image: url("../img/[часы]");
     background-repeat: no-repeat;
     background-position: 0 0;
   }

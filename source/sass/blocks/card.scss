@@ -151,7 +151,7 @@
 @media (min-width: $desktop-width) {
   .card {
     &--panorama {
-      width: 1200px;
+      width: $desktop-width;
     }
 
     &--panorama::before {

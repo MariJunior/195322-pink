@@ -220,7 +220,7 @@
         </div>
       </section>
 
-      <section class="editor">
+      <section class="editor container">
         <h2 class="visually-hidden">Отредактируйте Вашу фотографию с помощью встроенного редактора и разместите её в галерее!</h2>
         <form class="editor__form editor-publisher container" action="https://echo.htmlacademy.ru/" method="post">
             <div class="editor-publisher__photo-wrap"> <!-- TODO: заменить на ссылку? -->
@@ -237,10 +237,16 @@
             </div>
             <div class="editor-publisher__togglers">
               <p class="visually-hidden">Задайте нужное значение выбранного параметра</p>
-              <input class="editor-publisher__toggler editor-publisher__togler--currnet" type="range" name="setting-value" id="setting-value-crop" min="0" max="100" step="1" value="80">
-              <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-pouring" min="0" max="100" step="1" value="10">
-              <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" step="1" value="50">
-            </div>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--crop editor-publisher__togglers-wrap--current">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-crop" min="0" max="100" step="1" value="80">
+              </div>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--pouring">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-pouring" min="0" max="100" step="1" value="10">
+              </div>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--brightness">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" step="1" value="50">
+              </div>
+              </div>
             <div class="editor-publisher__actions">
               <button class="editor-publisher__button button button--submit" type="submit">Запостить</button>
               <button class="editor-publisher__button button button--reset" type="reset">Отмена</button>

@@ -1,13 +1,11 @@
 .main-nav {
-  background-color: $base-text-color;
+  // background-color: $base-text-color;
 
   outline: 1px solid lemonchiffon;
 }
 
-// .main-nav__list {
-
-// }
-
-// .main-nav__list--closed {
-
-// }
+@media (min-width: $desktop-width) {
+  .main-nav {
+    background: none;
+  }
+}

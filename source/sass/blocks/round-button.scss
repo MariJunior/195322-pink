@@ -1,7 +1,9 @@
 .round-button {
-  display: inline-block; /* временно */
-  width: 46px;
-  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
   text-align: center;
   border: 3px solid rgba($base-text-color, 0.2);
   border-radius: 50%;

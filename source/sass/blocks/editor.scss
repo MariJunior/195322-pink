@@ -1,10 +1,23 @@
 .editor {
   padding-top: 20px;
+  padding-bottom: 40px;
   background-color: $secondary-bg-color;
 
   outline: 1px solid powderblue;
 }
 
-// .editor__form {
+@media (min-width: $tablet-width) {
+  .editor {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: $tablet-width;
+  }
+}
 
-// }
+@media (min-width: $desktop-width) {
+  .editor {
+    padding-top: 57px;
+    padding-bottom: 57px;
+    width: 940px;
+  }
+}

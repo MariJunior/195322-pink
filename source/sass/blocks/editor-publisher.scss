@@ -1,52 +1,205 @@
-// .editor-publisher {
+.editor-publisher {
+  width: 280px;
+}
 
-// }
+.editor-publisher__photo-wrap {
+  margin-bottom: 35px;
+}
 
-// .editor-publisher__photo-wrap {
+.editor-publisher__tools {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 35px;
+}
 
-// }
+.editor-publisher__tool {
+  display: block;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  // из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position?
 
-// .editor-publisher__photo {
+  &--crop {
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/icon-editor-crop.svg");
+  }
 
-// }
+  &--pouring {
+    width: 48px;
+    height: 43px;
+    background-image: url("../img/icon-editor-fill.svg");
+  }
 
-// .editor-publisher__tools {
+  &--brightness {
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
+}
 
-// }
+.editor-publisher__togglers {
+  margin-bottom: 34px;
+  width: 280px;
+  text-align: center;
+  // background-color: rgba(tomato, 0.5);
+  // outline: 1px solid red;
+}
 
-// .editor-publisher__tool {
+.editor-publisher__togglers-wrap {
+  display: none;
 
-//   &--crop {
+  &--current {
+    display: block;
+  }
+}
 
-//   }
-
-//   &--current {
-
-//   }
-
-//   &--pouring {
-
-//   }
-
-//   &--brightness {
-
-//   }
-// }
-
-// .editor-publisher__toddler {
-
-// }
-
-// .editor-publisher__actions {
-
-// }
+.editor-publisher__toggler {
+  appearance: none;
+  margin-bottom: 30px;
+  width: 240px;
+  height: 2px;
+  background-color: $base-text-color;
+}
 
 .editor-publisher__button {
+  margin-bottom: 12px;
   font-size: $bigest-size;
   line-height: 18px;
   font-weight: 700;
 
-  &:not(:last-child) {
-    margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .editor-publisher {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 660px;
+  }
+
+  .editor-publisher__photo-wrap {
+    float: left;
+    margin-bottom: 0;
+  }
+
+  .editor-publisher__tools {
+    display: none;
+  }
+
+  .editor-publisher__togglers {
+    margin-bottom: 58px;
+    margin-left: auto;
+    width: 275px;
+    text-align: right;
+  }
+
+  .editor-publisher__togglers-wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    height: 45px;
+    border-bottom: 1px solid rgba($base-text-color, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      // background: gray;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--crop::before {
+      width: 22px;
+      height: 22px;
+      background-image: url("../img/icon-editor-crop.svg");
+    }
+
+    &--pouring::before {
+      width: 24px;
+      height: 22px;
+      background-image: url("../img/icon-editor-fill.svg");
+    }
+
+    &--brightness::before {
+      top: 7px;
+      left: 3px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/icon-editor-contrast.svg");
+    }
+  }
+
+  .editor-publisher__toggler {
+    margin-right: 18px;
+    width: 202px;
+  }
+
+  .editor-publisher__actions {
+    margin-left: auto;
+    width: 280px;
+  }
+
+  .editor-publisher__button {
+    width: 260px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .editor-publisher {
+    padding: 0;
+    width: 800px;
+  }
+
+  .editor-publisher__togglers {
+    margin-bottom: 133px;
+    width: 410px;
+  }
+
+  .editor-publisher__togglers-wrap {
+    margin-bottom: 26px;
+
+    &::before {
+      top: -3px;
+    }
+
+    &--crop::before {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--pouring::before {
+      width: 48px;
+      height: 43px;
+    }
+
+    &--brightness::before {
+      top: 0;
+      left: 5px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .editor-publisher__toggler {
+    margin-right: 30px;
+    width: 288px;
+  }
+
+  .editor-publisher__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .editor-publisher__button {
+    margin-bottom: 0;
+    width: 183px;
   }
 }

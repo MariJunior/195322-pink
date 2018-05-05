@@ -8,141 +8,154 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo-link" href="index.html" aria-label="Приложение &ldquo;Pink&rdquo;">
-          <svg class="page-header__logo-image" enable-background="new 0 0 74.426 22.859" width="74.426" height="22.859" viewBox="0 0 74.426 22.859" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#ffffff">
-              <path d="m0 1.449c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373h-5.474v6.825c0 .708-.58 1.288-1.288 1.288-.676.001-1.256-.579-1.256-1.287zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917z"/>
-              <path d="m21.729 1.288c0-.708.579-1.288 1.254-1.288.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288v-20.283z"/>
-              <path d="m30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45v-16.998c-.001-.676.546-1.256 1.255-1.256.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772l-13.974-17.87v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256z"/>
-              <path d="m56.3 1.288c0-.708.579-1.288 1.256-1.288.708 0 1.287.58 1.287 1.288v12.331l12.846-13.168c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288v-20.284z"/>
-            </g>
-          </svg>
-        </a>
-        <!-- Вид кнопки можно задать стилями (спан + псевдоэлементы). Два спана - чтобы их потом в крестик перестраивать красиво -->
-        <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
-          <span></span>
-          <span></span>
-        </button>
+      <div class="page-header__container container"> <!-- отвечает за центрирование контента на десктопе -->
+        <div class="page-header__wrapper wrap"> <!-- отвечает за лого и кнопку на мобильной и планшетной версиях -->
+          <a class="page-header__logo-link" href="index.html" aria-label="Приложение &ldquo;Pink&rdquo;">
+            <svg class="page-header__logo-image" enable-background="new 0 0 74.426 22.859" width="74.426" height="22.859" viewBox="0 0 74.426 22.859" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#ffffff">
+                <path d="m0 1.449c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373h-5.474v6.825c0 .708-.58 1.288-1.288 1.288-.676.001-1.256-.579-1.256-1.287zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917z"/>
+                <path d="m21.729 1.288c0-.708.579-1.288 1.254-1.288.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288v-20.283z"/>
+                <path d="m30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45v-16.998c-.001-.676.546-1.256 1.255-1.256.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772l-13.974-17.87v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256z"/>
+                <path d="m56.3 1.288c0-.708.579-1.288 1.256-1.288.708 0 1.287.58 1.287 1.288v12.331l12.846-13.168c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288v-20.284z"/>
+              </g>
+            </svg>
+          </a>
+          <button class="page-header__nav-toggle page-header__nav-toggle--to-close" type="button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="page-header__navigation main-nav">
+          <ul class="main-nav__list main-nav__list--closed site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="page-header__navigation main-nav">
-        <ul class="main-nav__list main-nav__list--closed site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item"> <!-- Возможно, модификатор не нужен, но по мобильному макету непонятно -->
-            <a class="site-list__link site-list__link--current">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page-main">
-      <div class="page-title page-title--form-page">
+      <div class="page-title page-title--form-page wrap">
         <h1 class="page-title__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
 
       <section class="storytelling">
         <h2 class="visually-hidden">Расскажите миру о своём путешествии!</h2>
-        <div class="container">
+        <div class="storytelling__container container">
           <p class="storytelling__desc">
             Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-            <span class="storytelling__full-desc">
+            <span class="storytelling__desc--full">
               Пожалуйста, заполните форму ниже:
             </span>
           </p>
         </div>
 
-        <form class="storytelling__form flashback-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="flashback-form__group">
-            <legend class="visually-hidden">Как Вас зовут?</legend>
-            <label class="flashback-form__label" for="user-surname">Фамилия:</label>
-            <input class="flashback-form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
-            <label class="flashback-form__label" for="user-name">Имя:</label>
-            <input class="flashback-form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
-            <label class="flashback-form__label" for="user-patronymic">Отчество:</label>
-            <input class="flashback-form__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
-          </fieldset>
-
-          <fieldset class="flashback-form__group flashback-form__group--gray">
-            <legend class="flashback-form__group-title">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="flashback-form__achievements-list">
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-selfie" id="achievements-selfie" checked>
-                <label class="flashback-form__list-label" for="achievements-selfie">Сделал селфи с акулой</label>
+        <form class="storytelling__form flashback-form container" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="flashback-form__group flashback-form__group--no-border flashback-form__group--order-null container">
+            <ul class="flashback-form__fullname-list">
+              <li class="flashback-form__fullname-item">
+                <label class="flashback-form__label" for="user-surname">Фамилия:</label>
+                <input class="flashback-form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
               </li>
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-scorched" id="achievements-scorched" checked>
-                <label class="flashback-form__list-label" for="achievements-scorched">Обгорел на пляже</label>
-              </li>
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-chuck" id="achievements-chuck">
-                <label class="flashback-form__list-label" for="achievements-chuck">Видел Чака Норриса</label>
-              </li>
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-souvenirs" id="achievements-souvenirs">
-                <label class="flashback-form__list-label" for="achievements-souvenirs">Накупил сувениров</label>
-              </li>
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-tower" id="achievements-tower" checked>
-                <label class="flashback-form__list-label" for="achievements-tower">Удержал башню</label>
-              </li>
-              <li class="flashback-form__achievements-item">
-                <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-destruction" id="achievements-destruction">
-                <label class="flashback-form__list-label" for="achievements-destruction">Разгромил отель</label>
+              <li class="flashback-form__fullname-item">
+                <label class="flashback-form__label" for="user-name">Имя:</label>
+                <input class="flashback-form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
+              <li class="flashback-form__fullname-item">
+                <label class="flashback-form__label" for="user-patronymic">Отчество:</label>
+                <input class="flashback-form__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="flashback-form__group">
-            <legend class="flashback-form__group-title">Контактная информация</legend> <!-- есть в других версиях -->
-            <p class="flashback-form__contacts">
-              <label class="flashback-form__label" for="contacts-tel">Номер телефона</label>
-              <!-- У инпутов 1й класс - общий для инпутов, 2й - для добавления фона иконок, 3й - для добавления личного фона иконки -->
-              <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-tel" type="tel" name="contacts-tel" id="contacts-tel" placeholder="Номер, пожалуйста">
-            </p>
-            <p class="flashback-form__contacts">
-              <label class="flashback-form__label" for="contacts-email">Адрес почты</label>
-              <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-email" type="email" name="contacts-email" id="contacts-email" placeholder="Введите почту *" required>
-            </p>
+          <div class="flashback-form__wrap-color flashback-form__wrap-color--order-two container">
+            <fieldset class="flashback-form__group container"> <!-- flashback-form__group--gray -->
+              <legend class="flashback-form__group-title">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="flashback-form__achievements-list">
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-selfie" id="achievements-selfie" checked>
+                  <label class="flashback-form__list-label" for="achievements-selfie">Сделал селфи с акулой</label>
+                </li>
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-scorched" id="achievements-scorched" checked>
+                  <label class="flashback-form__list-label" for="achievements-scorched">Обгорел на пляже</label>
+                </li>
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-chuck" id="achievements-chuck">
+                  <label class="flashback-form__list-label" for="achievements-chuck">Видел Чака Норриса</label>
+                </li>
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-souvenirs" id="achievements-souvenirs">
+                  <label class="flashback-form__list-label" for="achievements-souvenirs">Накупил сувениров</label>
+                </li>
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-tower" id="achievements-tower" checked>
+                  <label class="flashback-form__list-label" for="achievements-tower">Удержал башню</label>
+                </li>
+                <li class="flashback-form__achievements-item">
+                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-destruction" id="achievements-destruction">
+                  <label class="flashback-form__list-label" for="achievements-destruction">Разгромил отель</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <fieldset class="flashback-form__group flashback-form__group--order-one flashback-form__group--contacts container">
+            <legend class="flashback-form__group-title flashback-form__group-title--close">Контактная информация</legend> <!-- есть в других версиях -->
+            <div class="flashback-form__contacts-wrap">
+              <p class="flashback-form__contacts container">
+                <label class="flashback-form__label" for="contacts-tel">Номер телефона</label>
+                <!-- У инпутов 1й класс - общий для инпутов, 2й - для добавления фона иконок, 3й - для добавления личного фона иконки -->
+                <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-tel" type="tel" name="contacts-tel" id="contacts-tel" placeholder="Номер, пожалуйста">
+              </p>
+              <p class="flashback-form__contacts container">
+                <label class="flashback-form__label" for="contacts-email">Адрес почты</label>
+                <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-email" type="email" name="contacts-email" id="contacts-email" placeholder="Введите почту *" required>
+              </p>
+            </div>
           </fieldset>
 
+          <div class="flashback-form__wrap-color flashback-form__wrap-color--order-null  flashback-form__wrap-color--narrow container">
+            <fieldset class="flashback-form__group container">
+              <legend class="flashback-form__group-title">С каким приложением путешествовали?</legend>
+              <ul class="flashback-form__platform-list">
+                <li class="flashback-form__platform-item">
+                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-ios" value="iOS" checked>
+                  <label class="flashback-form__list-label" for="platrofm-ios">Pink для iOS</label>
+                </li>
+                <li class="flashback-form__platform-item">
+                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-android" value="Android">
+                  <label class="flashback-form__list-label" for="platrofm-android">Pink на Android</label>
+                </li>
+                <li class="flashback-form__platform-item">
+                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-windows" value="Windows Phone">
+                  <label class="flashback-form__list-label" for="platrofm-windows">Windows Phone</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
-          <fieldset class="flashback-form__group flashback-form__group--gray">
-            <legend class="flashback-form__group-title">С каким приложением путешествовали?</legend>
-            <ul class="flashback-form__platform-list">
-              <li class="flashback-form__platform-item">
-                <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-ios" value="iOS" checked>
-                <label class="flashback-form__list-label" for="platrofm-ios">Pink для iOS</label>
-              </li>
-              <li class="flashback-form__platform-item">
-                <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-android" value="Android">
-                <label class="flashback-form__list-label" for="platrofm-android">Pink на Android</label>
-              </li>
-              <li class="flashback-form__platform-item">
-                <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-windows" value="Windows Phone">
-                <label class="flashback-form__list-label" for="platrofm-windows">Windows Phone</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="flashback-form__group">
+          <fieldset class="flashback-form__group flashback-form__group--order-two container">
             <legend class="flashback-form__group-title">Опишите свои эмоции</legend>
             <textarea class="flashback-form__input flashback-form__input--textarea" name="impression-text" id="impression-text" cols="25" rows="10" maxlength="500" wrap="soft" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
-          <button class="flashback-form__buton green-button" type="submit">Отправить форму</button>
+          <div class="flashback-form__submit container">
+            <button class="flashback-form__submit-button green-button" type="submit">Отправить форму</button>
+            <p class="flashback-form__submit-footnote">
+              <sup class="flashback-form__sup">*</sup> — обязательные поля
+            </p>
+          </div>
         </form>
-
-        <p class="storytelling__form-footnote">
-          <sup class="storytelling__form-sup">*</sup> — обязательные поля
-        </p>
       </section>
     </main>
 

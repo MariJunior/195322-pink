@@ -8,89 +8,88 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo-link" href="index.html" aria-label="Приложение &ldquo;Pink&rdquo;">
-          <svg class="page-header__logo-image" enable-background="new 0 0 74.426 22.859" width="74.426" height="22.859" viewBox="0 0 74.426 22.859" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#ffffff">
-              <path d="m0 1.449c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373h-5.474v6.825c0 .708-.58 1.288-1.288 1.288-.676.001-1.256-.579-1.256-1.287zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917z"/>
-              <path d="m21.729 1.288c0-.708.579-1.288 1.254-1.288.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288v-20.283z"/>
-              <path d="m30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45v-16.998c-.001-.676.546-1.256 1.255-1.256.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772l-13.974-17.87v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256z"/>
-              <path d="m56.3 1.288c0-.708.579-1.288 1.256-1.288.708 0 1.287.58 1.287 1.288v12.331l12.846-13.168c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288v-20.284z"/>
-            </g>
-          </svg>
-        </a>
-        <!-- Вид кнопки можно задать стилями (спан + псевдоэлементы). Два спана - чтобы их потом в крестик перестраивать красиво -->
-        <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
-          <span></span>
-          <span></span>
-        </button>
+      <div class="page-header__container container"> <!-- отвечает за центрирование контента на десктопе -->
+        <div class="page-header__wrapper wrap"> <!-- отвечает за лого и кнопку на мобильной и планшетной версиях -->
+          <a class="page-header__logo-link" href="index.html" aria-label="Приложение &ldquo;Pink&rdquo;">
+            <svg class="page-header__logo-image" enable-background="new 0 0 74.426 22.859" width="74.426" height="22.859" viewBox="0 0 74.426 22.859" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#ffffff">
+                <path d="m0 1.449c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373h-5.474v6.825c0 .708-.58 1.288-1.288 1.288-.676.001-1.256-.579-1.256-1.287zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917z"/>
+                <path d="m21.729 1.288c0-.708.579-1.288 1.254-1.288.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288v-20.283z"/>
+                <path d="m30.87 1.32c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45v-16.998c-.001-.676.546-1.256 1.255-1.256.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772l-13.974-17.87v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256z"/>
+                <path d="m56.3 1.288c0-.708.579-1.288 1.256-1.288.708 0 1.287.58 1.287 1.288v12.331l12.846-13.168c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288v-20.284z"/>
+              </g>
+            </svg>
+          </a>
+          <button class="page-header__nav-toggle page-header__nav-toggle--to-close" type="button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="page-header__navigation main-nav">
+          <ul class="main-nav__list main-nav__list--closed site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="page-header__navigation main-nav">
-        <ul class="main-nav__list main-nav__list--closed site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item"> <!-- Возможно, модификатор не нужен, но по мобильному макету непонятно -->
-            <a class="site-list__link site-list__link--current">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page-main">
-      <div class="page-title page-title--photo-page">
+      <div class="page-title page-title--photo-page wrap">
         <h1 class="page-title__text">Фотографии пользователей</h1>
       </div>
 
       <section class="galery">
         <h2 class="visually-hidden">Фотогалерея</h2>
-        <div class="galery__intro-wrap">
+        <div class="galery__intro-container container">
           <p class="galery__intro">
             Взгляните на фотографии, которые выкладывают пользователи!
-          </p>
-          <p class="galery__intro">
             Видите, как не хватает ваших?
           </p>
         </div>
-        <ul class="galery__list user-photos">
-          <li class="user-photos__item user-photos__item--panorama"> <!-- наклейка "панорама дня" будет псевдоэлементом у лишки или у артикла? -->
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo card__photo--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня">
-              <div class="card__info">
-                <cite class="card__author">Анна</cite>
-                <span class="card__time">(5 минут назад)</span>
-                <p class="card__text">
-                  Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-                </p>
-                <button class="card__like-button" type="button" aria-label="Мне нравится">
-                  <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
-                  </svg>
-                </button>
-                <p class="card__like-info">
-                  Нравится:
-                  <span class="card__like-quantity">215</span>
-                </p>
-              </div>
-            </article>
-          </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Левон</cite>
-                <span class="card__time">(5 часов назад)</span>
-                <p class="card__text">
-                  Вчера он на луну летал, сегодня в руки к нам попал.
-                </p>
+        <article class="card card--panorama container">
+          <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+          <img class="card__photo card__photo--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня">
+          <div class="card__info card__info--panorama container">
+            <cite class="card__author">Анна</cite>
+            <span class="card__time">(5 минут назад)</span>
+            <p class="card__text">
+              Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <div class="card__like-wrap card__like-wrap--panorama">
+              <button class="card__like-button card__like-button--panorama" type="button" aria-label="Мне нравится">
+                <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                </svg>
+              </button>
+              <p class="card__like-info">
+                Нравится:
+                <span class="card__like-quantity">215</span>
+              </p>
+            </div>
+          </div>
+        </article>
+        <ul class="galery__list user-photos container">
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Левон</cite>
+              <span class="card__time">(5 часов назад)</span>
+              <p class="card__text">
+                Вчера он на луну летал, сегодня в руки к нам попал.
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -101,18 +100,18 @@
                   <span class="card__like-quantity">356</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Антон</cite>
-                <span class="card__time">(12 часов назад)</span>
-                <p class="card__text">
-                  Соседи будут рады!
-                </p>
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Антон</cite>
+              <span class="card__time">(12 часов назад)</span>
+              <p class="card__text">
+                Соседи будут рады!
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -123,18 +122,18 @@
                   <span class="card__like-quantity">666</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Борис</cite>
-                <span class="card__time">(20 часов назад)</span>
-                <p class="card__text">
-                  Здесь могла быть ваша цитата о высоком и вечном.
-                </p>
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Борис</cite>
+              <span class="card__time">(20 часов назад)</span>
+              <p class="card__text">
+                Здесь могла быть ваша цитата о высоком и вечном.
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -145,18 +144,18 @@
                   <span class="card__like-quantity">215</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Сергей</cite>
-                <span class="card__time">(25 часов назад)</span>
-                <p class="card__text">
-                  Самая кубанская в мире!
-                </p>
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Сергей</cite>
+              <span class="card__time">(25 часов назад)</span>
+              <p class="card__text">
+                Самая кубанская в мире!
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -167,18 +166,18 @@
                   <span class="card__like-quantity">4</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Максим</cite>
-                <span class="card__time">(40 часов назад)</span>
-                <p class="card__text">
-                  Где снег-то?
-                </p>
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Максим</cite>
+              <span class="card__time">(40 часов назад)</span>
+              <p class="card__text">
+                Где снег-то?
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -189,18 +188,18 @@
                   <span class="card__like-quantity">150</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
-          <li class="user-photos__item">
-            <article class="user-photos__card card">
-              <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-              <img class="card__photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-              <div class="card__info">
-                <cite class="card__author">Надежда</cite>
-                <span class="card__time">(45 часов назад)</span>
-                <p class="card__text">
-                  Всем GM и взаимные лайки!
-                </p>
+          <li class="user-photos__item card">
+            <h3 class="visually-hidden">Фотокарточка с описанием</h3>
+            <img class="card__photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <div class="card__info">
+              <cite class="card__author">Надежда</cite>
+              <span class="card__time">(45 часов назад)</span>
+              <p class="card__text">
+                Всем GM и взаимные лайки!
+              </p>
+              <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.545px" height="11.99px" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
                     <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
@@ -211,33 +210,43 @@
                   <span class="card__like-quantity">2560</span>
                 </p>
               </div>
-            </article>
+            </div>
           </li>
         </ul>
 
-        <p class="galery__slogan">Затмите их всех!</p>
-        <p class="galery__slogan">Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="galery__slogan-container container">
+          <p class="galery__slogan">Затмите их всех!</p>
+          <p class="galery__slogan">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
       </section>
 
-      <section class="editor">
+      <section class="editor container">
         <h2 class="visually-hidden">Отредактируйте Вашу фотографию с помощью встроенного редактора и разместите её в галерее!</h2>
-        <form class="editor__form editor-publisher" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="editor-publisher__photo-wrap">
+        <form class="editor__form editor-publisher container" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="editor-publisher__photo-wrap"> <!-- TODO: заменить на ссылку? -->
               <img class="editor-publisher__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Выбранная для редактирования фотография">
             </div>
             <div class="editor-publisher__tools">
-              <input type="radio" name="crop" id="crop" checked>
+              <p class="visually-hidden">Выберите параметр редактирования</p>
+              <input class="visually-hidden" type="radio" name="instruments" id="crop" checked>
               <label class="editor-publisher__tool editor-publisher__tool--crop editor-publisher__tool--current" for="crop">Обрезка</label>
-              <!-- А можно ли как-то заинлайнить svg или сделать что-то такое, чтобы управлять цветом? -->
-              <input type="radio" name="pouring" id="pouring">
+              <input class="visually-hidden" type="radio" name="instruments" id="pouring">
               <label class="editor-publisher__tool editor-publisher__tool--pouring" for="pouring">Заливка</label>
-              <input type="radio" name="brightness" id="brightness">
+              <input class="visually-hidden" type="radio" name="instruments" id="brightness">
               <label class="editor-publisher__tool editor-publisher__tool--brightness" for="brightness">Яркость</label>
             </div>
-            <div class="editor-publisher__toddler">
-              <label class="visually-hidden" for="setting-value">Задайте нужное значение выбранного параметра</label>
-              <input type="range" name="setting-value" id="setting-value" min="0" max="100" value="80">
-            </div>
+            <div class="editor-publisher__togglers">
+              <p class="visually-hidden">Задайте нужное значение выбранного параметра</p>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--crop editor-publisher__togglers-wrap--current">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-crop" min="0" max="100" step="1" value="80">
+              </div>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--pouring">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-pouring" min="0" max="100" step="1" value="10">
+              </div>
+              <div class="editor-publisher__togglers-wrap editor-publisher__togglers-wrap--brightness">
+                <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" step="1" value="50">
+              </div>
+              </div>
             <div class="editor-publisher__actions">
               <button class="editor-publisher__button button button--submit" type="submit">Запостить</button>
               <button class="editor-publisher__button button button--reset" type="reset">Отмена</button>

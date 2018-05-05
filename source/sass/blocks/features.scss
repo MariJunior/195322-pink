@@ -4,47 +4,53 @@
 }
 
 .features__slogan-wrap {
-  margin: 0 auto;
-  padding-top: 42px;
+  padding-top: 40px;
   padding-bottom: 30px;
   text-align: center;
   background-color: $base-bg-color;
-  // Надо подумать насчёт этого скошенного края 😒 Псевдоэлемент с транформацией?
-  // background-image: url(..//..//img/bg-triangle-white.svg);
-  // background-repeat: no-repeat;
-  // background-position: 50% 100%;
+  //Скошенную часть сделать с помощью рамок у псевдоэлемента
 
   outline: 1px solid blueviolet;
 }
 
 .features__slogan {
-  margin: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 35px;
+  margin-left: auto;
   padding: 0;
+  width: 205px;
   font-size: 24px;
   font-weight: 300;
+  line-height: normal;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-// .features__list-wrap {
-// }
-
 .features__list {
-  margin: 0;
   padding: 0;
-  padding-top: 85px; /* для белой скошенной бесячей штуки */
+  padding-top: 85px;
+  width: 280px;
   text-align: center;
   list-style: none;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 330px;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 50px;
+  }
 }
 
 .features__item {
-  &:not(:last-child) {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 40px;
 
-  &--friends {
-    padding-bottom: 320px; /* для улыбчивого прототипа */
-    background-image: url("..//..//img/iphone-screen-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: center bottom -43px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   outline: 1px solid lightseagreen;
@@ -54,9 +60,200 @@
   margin: 0;
   margin-bottom: 15px;
   font-size: $bigest-size;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 .features__item-desc {
   margin: 0;
+}
+
+.features__effect {
+  display: none;
+}
+
+// ПЛАНШЕТ
+@media (min-width: $tablet-width) {
+  .features__slogan-wrap {
+    padding-bottom: 45px;
+  }
+
+  .features__slogan {
+    margin-bottom: 0;
+    width: 340px;
+    font-size: 40px;
+
+    &--wide {
+      width: 590px;
+    }
+  }
+
+  .features__list {
+    position: relative;
+    padding-top: 75px;
+    padding-left: 310px;
+    width: 620px;
+    text-align: left;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 270px;
+      height: 530px;
+      background-image: url("../img/iphone-screen-mobile@1x.png"); /* заменить потом на нужное изображение */
+      background-repeat: no-repeat;
+      background-position: center 50px;
+      background-size: 270px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .features__item {
+    margin-bottom: 46px;
+  }
+
+  .features__effect-wrap {
+    background-color: $base-bg-color;
+  }
+
+  .features__effect {
+    display: block;
+    padding-top: 99px;
+    padding-bottom: 63px;
+    padding-left: 310px;
+    width: 620px;
+    // заготовка для часов
+    // background-image: ur../img/[часы]");
+    background-repeat: no-repeat;
+    background-position: 0 59px;
+  }
+
+  .features__effect-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $other-text-color;
+  }
+
+  .features__effect-desc {
+    margin-top: 0;
+    margin-bottom: 11px;
+  }
+
+  .features__effect-link {
+    color: $secondary-text-color;
+    text-decoration: underline;
+  }
+}
+
+// ДЕСКТОП
+@media (min-width: $desktop-width) {
+  .features__slogan-wrap {
+    padding-bottom: 75px;
+  }
+
+  .features__slogan {
+    width: 415px;
+    font-size: 50px;
+
+    &--wide {
+      width: 735px;
+    }
+  }
+
+  .features__list {
+    display: flex;
+    margin-bottom: 63px;
+    padding-top: 360px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 960px;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .features__item {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 250px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -360px;
+      width: 242px;
+      height: 308px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 292px;
+    }
+    /* ещё им нужно задать нижний отступ (или верхний самому элементу списка?) */
+
+    &--mood::before {
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+    }
+
+    &--world::before {
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+    }
+
+    &--friends::before {
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+    }
+  }
+
+  .features__item-title {
+    font-size: 30px;
+    line-height: $big-height;
+  }
+
+  .features__item-desc {
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
+
+  .features__effect-wrap {
+    background-color: $secondary-bg-color;
+  }
+
+  .features__effect {
+    padding-top: 95px;
+    padding-bottom: 112px;
+    padding-left: 380px;
+    width: 960px;
+    // заготовка для часов
+    // background-image: url("../img/[часы]");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .features__effect-title {
+    margin-bottom: 23px;
+    font-size: 30px;
+    line-height: $big-height;
+  }
+
+  .features__effect-desc {
+    margin-bottom: 32px;
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
+
+  .features__effect-link {
+    font-size: $bigest-size;
+    line-height: $big-height;
+  }
 }

@@ -1,13 +1,28 @@
-// .flashback-form {
+.flashback-form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
 
-// }
+.flashback-form__fullname-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flashback-form__wrap-color {
+  padding-top: 36px;
+  padding-bottom: 18px;
+  width: 320px;
+  background-color: $secondary-bg-color;
+}
 
 .flashback-form__group {
-  margin: 0;
   padding-top: 33px;
   padding-right: 0;
   padding-bottom: 42px;
   padding-left: 0;
+  width: 280px;
   border: none;
 
   &:last-of-type {
@@ -15,18 +30,18 @@
     margin-bottom: 48px;
   }
 
-  &--gray {
-    background-color: $secondary-bg-color;
-  }
-
   outline: 1px solid crimson;
 }
 
-// Позиционировать? Не хочет отступами по-хорошему 😰
 .flashback-form__group-title {
   padding: 0;
+  text-align: center;
   color: $secondary-text-color;
   text-transform: uppercase;
+
+  &--close {
+    display: none; /* или лучше чем-то типа visually-hidden скрывать? */
+  }
 }
 
 .flashback-form__label {
@@ -38,6 +53,8 @@
 
 .flashback-form__input {
   display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: 20px;
   padding-top: 16px;
   padding-right: 28px;
   padding-bottom: 12px;
@@ -46,6 +63,10 @@
   font-size: 18px;
   line-height: 30px;
   border: 2px solid $base-border-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   // тут будет миксин для стилизации плейсхолдера (наверное)
 
@@ -112,6 +133,179 @@
 
 // }
 
-// .flashback-form__buton {
+.flashback-form__submit {
+  width: 280px;
+}
 
-// }
+.flashback-form__submit-button {
+  margin-bottom: 40px;
+}
+
+.flashback-form__submit-footnote {
+  margin: 0;
+  line-height: $big-height;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.flashback-form__sup {
+  color: $secondary-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .flashback-form {
+    width: $tablet-width;
+  }
+
+  .flashback-form__group {
+    width: 620px;
+    border: 2px solid $base-border-color;
+
+    &--no-border {
+      border: none;
+    }
+
+    &--order-null {
+      order: 0;
+    }
+
+    &--order-one {
+      order: 1;
+    }
+
+    &--order-two {
+      order: 2;
+    }
+  }
+
+  .flashback-form__group-title {
+    &--close {
+      display: block;
+    }
+  }
+
+  .flashback-form__fullname-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .flashback-form__label {
+      margin-right: 22px;
+      padding-left: 0;
+    }
+
+    .flashback-form__input {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+
+  .flashback-form__wrap-color {
+    width: 620px;
+    background-color: transparent;
+
+    &--order-null {
+      order: 0;
+    }
+
+    &--order-two {
+      order: 2;
+    }
+
+    .flashback-form__group {
+      width: 100%;
+    }
+  }
+
+  .flashback-form__achievements-list {
+    padding-bottom: 50px;
+    padding-left: 60px;
+  }
+
+  .flashback-form__contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 500px;
+  }
+
+  .flashback-form__platform-list {
+    padding-bottom: 56px;
+    padding-left: 60px;
+  }
+
+  .flashback-form__input {
+    &--textarea {
+      margin-right: 60px;
+      margin-left: 60px;
+      width: 500px;
+    }
+  }
+
+  .flashback-form__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+    width: 620px;
+  }
+
+  .flashback-form__submit-button {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .flashback-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 960px;
+  }
+
+  .flashback-form__group {
+    width: 940px;
+
+    &--no-border {
+      width: 440px;
+    }
+  }
+
+  .flashback-form__wrap-color {
+    width: 940px;
+
+    &--narrow {
+      width: 435px;
+    }
+  }
+
+  .flashback-form__input {
+    &--textarea {
+      width: 820px;
+    }
+  }
+
+  .flashback-form__contacts-wrap {
+    display: flex;
+  }
+
+  .flashback-form__contacts {
+    margin-bottom: 0;
+    width: 375px;
+  }
+
+  .flashback-form__achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    // пока элементы выглядят странно, но, по идее, когда будут кастомные чекбоксы, они станут занимать больще места и распределятся так как надо
+  }
+
+  .flashback-form__submit {
+    width: 940px;
+  }
+}

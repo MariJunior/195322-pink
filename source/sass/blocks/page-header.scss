@@ -8,16 +8,12 @@
   color: $base-bg-color;
   text-transform: uppercase;
   background-color: $base-text-color;
-
-  outline: 1px solid lightcoral;
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-
-  outline: 1px solid lightcyan;
 }
 
 .page-header__logo-link {

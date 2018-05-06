@@ -1,6 +1,5 @@
 .features {
   background-color: $secondary-bg-color;
-  outline: 1px solid magenta;
 }
 
 .features__slogan-wrap {
@@ -9,8 +8,6 @@
   text-align: center;
   background-color: $base-bg-color;
   //Скошенную часть сделать с помощью рамок у псевдоэлемента
-
-  outline: 1px solid blueviolet;
 }
 
 .features__slogan {
@@ -52,8 +49,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  outline: 1px solid lightseagreen;
 }
 
 .features__item-title {

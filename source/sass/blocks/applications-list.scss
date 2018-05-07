@@ -16,6 +16,13 @@
   }
 }
 
-// .applications-list__link {
+.applications-list__link {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 
-// }
+  &:active {
+    opacity: 0.3;
+  }
+}

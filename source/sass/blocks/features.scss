@@ -7,13 +7,12 @@
   padding-bottom: 30px;
   text-align: center;
   background-color: $base-bg-color;
-  //Скошенную часть сделать с помощью рамок у псевдоэлемента
 }
 
 .features__slogan {
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   margin-left: auto;
   padding: 0;
   width: 205px;
@@ -26,9 +25,16 @@
   }
 }
 
+.features__list-wrap {
+  padding-top: 75px;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 101% auto;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
 .features__list {
   padding: 0;
-  padding-top: 85px;
   width: 280px;
   text-align: center;
   list-style: none;
@@ -36,15 +42,15 @@
   &::after {
     content: "";
     display: block;
-    height: 330px;
+    height: 320px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: center 50px;
+    background-position: center 40px;
   }
 }
 
 .features__item {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,7 +59,7 @@
 
 .features__item-title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: $bigest-size;
   line-height: 24px;
 }

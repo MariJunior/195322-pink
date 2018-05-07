@@ -6,7 +6,7 @@
 
 .table-prices__header-cell {
   padding-top: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 20px;
   min-width: 277px;
   text-align: center;
   color: $base-bg-color;
@@ -67,7 +67,7 @@
 
 .table-prices__header-cost {
   margin: 0;
-  font-size: $bigest-size;
+  font-size: 24px;
   line-height: $big-height;
   font-weight: 300;
 }
@@ -92,17 +92,18 @@
   display: block;
   font-size: 0;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
+  background-size: 100%;
 
   &--on {
     width: 31px;
-    height: 21px;
+    height: 28px;
     background-image: url("../img/icon-yes.svg");
   }
 
   &--off {
     width: 27px;
-    height: 26px;
+    height: 27px;
     background-image: url("../img/icon-no.svg");
   }
 }

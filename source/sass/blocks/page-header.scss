@@ -17,20 +17,20 @@
 }
 
 .page-header__logo-link {
-  &:hover g,
-  &:focus g {
+  &[href]:hover g,
+  &[href]:focus g {
     fill: $secondary-text-color;
   }
 
-  &:active g {
+  &:focus {
+    outline: 0;
+  }
+
+  &[href]:active g {
     fill: #ffffff;
     opacity: 0.3;
   }
 }
-
-// .page-header__logo-image {
-
-// }
 
 .page-header__nav-toggle {
   display: block;
@@ -68,11 +68,29 @@
     height: 4px;
     background-color: $base-bg-color;
   }
+
+  &:hover &::before,
+  &:hover &::after,
+  &:hover span,
+  &:focus &::before,
+  &:focus &::after,
+  &:focus span {
+    background-color: $secondary-text-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.page-header__nav-toggle--to-close {
-  width: 24px;
-  height: 23px;
+.page-header__nav-toggle--opened {
+  margin-right: -3px;
+  width: 30px;
+  height: 25px;
 
   &::before,
   &::after {
@@ -87,11 +105,6 @@
     transform: rotate(-45deg);
   }
 }
-
-// .page-header__navigation {
-
-// }
-
 
 @media (min-width: $tablet-width) {
   .page-header {

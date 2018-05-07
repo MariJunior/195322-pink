@@ -13,10 +13,13 @@
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: flex-end;
+  margin-bottom: 25px;
 }
 
 .page-header__logo-link {
+  display: flex;
+
   &[href]:hover g,
   &[href]:focus g {
     fill: $secondary-text-color;
@@ -30,6 +33,11 @@
     fill: #ffffff;
     opacity: 0.3;
   }
+}
+
+.page-header__logo-image {
+  width: 75px;
+  height: 22px;
 }
 
 .page-header__nav-toggle {
@@ -113,9 +121,14 @@
 
   .page-header__wrapper {
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 43px;
     margin-left: auto;
     width: $tablet-width;
+  }
+
+  .page-header__logo-image {
+    width: 146px;
+    height: 40px;
   }
 }
 

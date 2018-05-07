@@ -7,11 +7,11 @@
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, 100% auto;
-  background-position: 0 175px, 0 0;
+  background-position: 0 173px, 0 0;
 }
 
 .download-app__wrap {
-  padding-top: 28px;
+  padding-top: 25px;
   padding-bottom: 30px;
   background-color: $base-text-color;
 }
@@ -43,18 +43,23 @@
 // ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .download-app {
-    padding-top: 184px;
-    // background-image: url("../img/");
-    // background-position: 0 0;
+    padding-top: 135px;
+    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-size: 100% auto;
+    background-position: 0 0;
   }
 
   .download-app__container {
-    padding-top: 15px;
+    padding-top: 17px;
     padding-bottom: 110px;
     width: 620px;
-    // закидываем фон-руку в контейнер, чтобы центровался вместе с содержимым
-    // background-image: url("../img/");
-    // background-position: 150px bottom;
+    // закидываем фон-руку в контейнер, чтобы центрировался вместе с содержимым
+    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-size: 470px 545px;
+    background-repeat: no-repeat;
+    background-position: 150px 0;
   }
 
   .download-app__wrap {
@@ -67,11 +72,11 @@
     display: block;
     margin-top: 0;
     margin-right: auto;
-    margin-bottom: 35px;
+    margin-bottom: 27px;
     margin-left: auto;
     max-width: 190px;
     font-size: 40px;
-    line-height: normal;
+    line-height: 50px;
     font-weight: 300;
   }
 
@@ -83,40 +88,53 @@
   }
 
   .download-app__list {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+
+  .download-app__info {
+    font-size: $bigest-size;
   }
 }
 
 // ДЕСКТОП
 @media (min-width: $desktop-width) {
   .download-app {
-    margin-top: -110px;
-    padding-top: 209px; /* ? */
-    // background-image: url("../img/");
-    // background-position: 0 0;
+    margin-top: -115px;
+    padding-top: 210px;
+    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-size: 100% auto;
+    background-position: 0 0;
   }
 
   .download-app__container {
+    padding-top: 10px;
     padding-right: 10px;
-    padding-bottom: 125px;
+    padding-bottom: 122px;
     padding-left: 10px;
     width: 960px;
     // фон-рука
-    // background-image: url("../img/");
-    // background-position: 358px bottom;
+    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-size: 555px 648px;
+    background-position: 355px bottom;
   }
 
   .download-app__slogan {
-    font-size: 50px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     min-width: 235px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .download-app__button {
     margin-bottom: 65px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 21px;
   }
 
   .download-app__list {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }

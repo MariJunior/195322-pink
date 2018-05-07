@@ -23,7 +23,7 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding-top: 35px;
+    padding-top: 30px;
 
     &--index {
       display: block;
@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* или baseline? */
+    flex-wrap: wrap;
     width: 620px;
   }
 
@@ -42,7 +43,10 @@
   }
 
   .page-footer__socials {
+    margin-right: auto;
     margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 5px;
   }
 }
 

@@ -10,14 +10,13 @@
 
 .contacts__slogan {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-size: 24px;
-  line-height: normal;
+  line-height: 30px;
   font-weight: 300;
 }
 
 .contacts__list {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -45,7 +44,6 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 55px;
     padding-bottom: 30px;
   }
 
@@ -57,24 +55,30 @@
     width: 370px;
     margin-bottom: 45px;
     font-size: 40px;
+    line-height: 50px;
   }
 
   .contacts__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
   }
 
   .contacts__item {
-    margin-right: auto;
     margin-bottom: 45px;
-    margin-left: auto;
     width: 300px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
-    padding-top: 75px;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
@@ -86,6 +90,11 @@
     width: 470px;
     margin-bottom: 60px;
     font-size: 50px;
+    line-height: 57px;
+  }
+
+  .contacts__list {
+    width: 920px;
   }
 
   .contacts__item {
@@ -94,5 +103,11 @@
     &--mail {
       order: 2;
     }
+  }
+
+  .contacts__link {
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 30px;
   }
 }

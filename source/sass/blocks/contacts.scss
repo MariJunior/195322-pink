@@ -53,7 +53,7 @@
 
   .contacts__slogan {
     width: 370px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     font-size: 40px;
     line-height: 50px;
   }
@@ -99,8 +99,9 @@
 
   .contacts__item {
     margin-bottom: 0;
+    width: 280px;
 
-    &--mail {
+    &--order-two {
       order: 2;
     }
   }

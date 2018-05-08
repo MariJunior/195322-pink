@@ -33,7 +33,7 @@
   .page-footer__wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* или baseline? */
+    align-items: center;
     flex-wrap: wrap;
     width: 620px;
   }
@@ -45,8 +45,9 @@
   .page-footer__socials {
     margin-right: auto;
     margin-bottom: 0;
-    margin-left: auto;
+    margin-left: 70px;
     padding-top: 5px;
+    width: 190px;
   }
 }
 
@@ -60,5 +61,11 @@
     padding: 0 10px;
     width: 960px;
     font-size: $bigest-size;
+  }
+
+  .page-footer__socials {
+    margin-left: auto;
+    padding-left: 5px;
+    width: 200px;
   }
 }

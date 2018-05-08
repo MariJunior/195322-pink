@@ -3,6 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/pink-photo-mobile.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 660px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/pink-photo-tablet.jpg");
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/pink-photo-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="pixel-glass/styles.css">
+    <script src="pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
     <link rel="stylesheet" href="css/style.css">
     <title>Фотогалерея пользователей приложения &ldquo;Pink&rdquo;</title>
   </head>
@@ -20,7 +50,7 @@
               </g>
             </svg>
           </a>
-          <button class="page-header__nav-toggle page-header__nav-toggle--to-close" type="button" aria-label="Открыть меню">
+          <button class="page-header__nav-toggle page-header__nav-toggle--opened" type="button" aria-label="Открыть меню">
             <span></span>
             <span></span>
           </button>
@@ -223,10 +253,10 @@
       <section class="editor container">
         <h2 class="visually-hidden">Отредактируйте Вашу фотографию с помощью встроенного редактора и разместите её в галерее!</h2>
         <form class="editor__form editor-publisher container" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="editor-publisher__photo-wrap"> <!-- TODO: заменить на ссылку? -->
+            <div class="editor-publisher__photo-wrap container"> <!-- FIXME: заменить на ссылку? -->
               <img class="editor-publisher__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Выбранная для редактирования фотография">
             </div>
-            <div class="editor-publisher__tools">
+            <div class="editor-publisher__tools container">
               <p class="visually-hidden">Выберите параметр редактирования</p>
               <input class="visually-hidden" type="radio" name="instruments" id="crop" checked>
               <label class="editor-publisher__tool editor-publisher__tool--crop editor-publisher__tool--current" for="crop">Обрезка</label>
@@ -247,7 +277,7 @@
                 <input class="editor-publisher__toggler" type="range" name="setting-value" id="setting-value-brightness" min="0" max="100" step="1" value="50">
               </div>
               </div>
-            <div class="editor-publisher__actions">
+            <div class="editor-publisher__actions container">
               <button class="editor-publisher__button button button--submit" type="submit">Запостить</button>
               <button class="editor-publisher__button button button--reset" type="reset">Отмена</button>
             </div>

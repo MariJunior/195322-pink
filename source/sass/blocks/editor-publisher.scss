@@ -1,24 +1,28 @@
 .editor-publisher {
-  width: 280px;
+  // width: 280px;
+  width: 320px;
 }
 
 .editor-publisher__photo-wrap {
   margin-bottom: 35px;
+  width: 280px;
 }
 
 .editor-publisher__tools {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
+  padding-right: 46px;
+  padding-left: 36px;
+  width: 280px;
 }
 
 .editor-publisher__tool {
-  display: block;
   font-size: 0;
   background-repeat: no-repeat;
   background-position: center;
-  // из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position?
+  //TODO: из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position?
 
   &--crop {
     width: 44px;
@@ -41,14 +45,13 @@
 
 .editor-publisher__togglers {
   margin-bottom: 34px;
-  width: 280px;
   text-align: center;
-  // background-color: rgba(tomato, 0.5);
-  // outline: 1px solid red;
 }
 
 .editor-publisher__togglers-wrap {
   display: none;
+  height: 52px;
+  border-bottom: 1px solid rgba($base-text-color, 0.1);
 
   &--current {
     display: block;
@@ -57,10 +60,13 @@
 
 .editor-publisher__toggler {
   appearance: none;
-  margin-bottom: 30px;
   width: 240px;
   height: 2px;
   background-color: $base-text-color;
+}
+
+.editor-publisher__actions {
+  width: 280px;
 }
 
 .editor-publisher__button {
@@ -101,8 +107,6 @@
     position: relative;
     display: block;
     margin-bottom: 30px;
-    height: 45px;
-    border-bottom: 1px solid rgba($base-text-color, 0.1);
 
     &::before {
       content: "";

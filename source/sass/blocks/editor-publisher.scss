@@ -1,11 +1,16 @@
 .editor-publisher {
-  // width: 280px;
   width: 320px;
 }
 
 .editor-publisher__photo-wrap {
-  margin-bottom: 35px;
+  margin-bottom: 43px;
   width: 280px;
+  height: 374px;
+}
+
+.editor-publisher__photo {
+  width: 280px;
+  height: 374px;
 }
 
 .editor-publisher__tools {
@@ -50,19 +55,12 @@
 
 .editor-publisher__togglers-wrap {
   display: none;
-  height: 52px;
+  height: 55px;
   border-bottom: 1px solid rgba($base-text-color, 0.1);
 
   &--current {
     display: block;
   }
-}
-
-.editor-publisher__toggler {
-  appearance: none;
-  width: 240px;
-  height: 2px;
-  background-color: $base-text-color;
 }
 
 .editor-publisher__actions {
@@ -80,6 +78,7 @@
   }
 }
 
+//TABLET
 @media (min-width: $tablet-width) {
   .editor-publisher {
     padding-right: 20px;
@@ -90,6 +89,13 @@
   .editor-publisher__photo-wrap {
     float: left;
     margin-bottom: 0;
+    width: 300px;
+    height: 400px;
+  }
+
+  .editor-publisher__photo {
+    width: 300px;
+    height: 400px;
   }
 
   .editor-publisher__tools {
@@ -97,7 +103,7 @@
   }
 
   .editor-publisher__togglers {
-    margin-bottom: 58px;
+    margin-bottom: 62px;
     margin-left: auto;
     width: 275px;
     text-align: right;
@@ -106,26 +112,29 @@
   .editor-publisher__togglers-wrap {
     position: relative;
     display: block;
-    margin-bottom: 30px;
+    // margin-top: 5px;
+    margin-bottom: 20px;
+    padding-top: 5px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 2px;
-      left: 0;
-      // background: gray;
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
     }
 
     &--crop::before {
+      top: 5px;
+      left: 3px;
       width: 22px;
       height: 22px;
       background-image: url("../img/icon-editor-crop.svg");
     }
 
     &--pouring::before {
+      top: 8px;
+      left: 3px;
       width: 24px;
       height: 22px;
       background-image: url("../img/icon-editor-fill.svg");
@@ -133,7 +142,7 @@
 
     &--brightness::before {
       top: 7px;
-      left: 3px;
+      left: 8px;
       width: 16px;
       height: 16px;
       background-image: url("../img/icon-editor-contrast.svg");
@@ -146,46 +155,47 @@
   }
 
   .editor-publisher__actions {
-    margin-left: auto;
-    width: 280px;
+    margin-right: 0;
+    padding-left: 7px;
   }
 
   .editor-publisher__button {
+    margin-bottom: 25px;
     width: 260px;
   }
 }
 
+//DESTOP
 @media (min-width: $desktop-width) {
   .editor-publisher {
-    padding: 0;
-    width: 800px;
+    padding-right: 60px;
+    padding-left: 80px;
+    width: 940px;
   }
 
   .editor-publisher__togglers {
-    margin-bottom: 133px;
+    margin-bottom: 140px;
     width: 410px;
   }
 
   .editor-publisher__togglers-wrap {
-    margin-bottom: 26px;
-
-    &::before {
-      top: -3px;
-    }
-
     &--crop::before {
+      top: -2px;
+      left: 0;
       width: 44px;
       height: 44px;
     }
 
     &--pouring::before {
+      top: -2px;
+      left: 0;
       width: 48px;
       height: 43px;
     }
 
     &--brightness::before {
-      top: 0;
-      left: 5px;
+      top: -2px;
+      left: 6px;
       width: 32px;
       height: 32px;
     }
@@ -199,6 +209,7 @@
   .editor-publisher__actions {
     display: flex;
     justify-content: space-between;
+    padding-left: 0;
     width: 410px;
   }
 

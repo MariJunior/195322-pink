@@ -28,11 +28,11 @@
 @media (min-width: $tablet-width) {
   .page-title {
     margin-top: -110px;
-    padding-top: 191px;
+    padding-top: 180px;
     // background-image: url("../img/");
 
     &--photo-page {
-      padding-bottom: 145px;
+      padding-bottom: 140px;
     }
 
     &--form-page {
@@ -42,16 +42,18 @@
 
   .page-title__text {
     font-size: 50px;
+    line-height: 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-title {
-    padding-top: 184px;
+    margin-top: -115px;
+    padding-top: 175px;
     // background-image: url("../img/");
 
     &--photo-page {
-      padding-bottom: 110px;
+      padding-bottom: 100px;
     }
 
     &--form-page {
@@ -62,5 +64,9 @@
   .page-title__text {
     margin: 0 auto;
     max-width: 940px;
+
+    &--photo-page {
+      max-width: 600px;
+    }
   }
 }

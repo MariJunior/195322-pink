@@ -30,9 +30,9 @@
 
 @media (min-width: $tablet-width) {
   .galery__intro-container {
-    padding-top: 95px;
+    padding-top: 90px;
     padding-right: 80px;
-    padding-bottom: 75px;
+    padding-bottom: 77px;
     padding-left: 80px;
     width: 620px;
   }
@@ -42,8 +42,8 @@
   }
 
   .galery__slogan-container {
-    padding-top: 70px;
-    padding-bottom: 65px;
+    padding-top: 65px;
+    padding-bottom: 70px;
     width: 620px;
   }
 
@@ -56,13 +56,13 @@
 @media (min-width: $desktop-width) {
   .galery__intro-container {
     padding-right: 190px;
-    padding-bottom: 85px;
+    padding-bottom: 90px;
     padding-left: 190px;
     width: 960px;
   }
 
   .galery__slogan-container {
-    padding-top: 65px;
+    padding-top: 58px;
     width: 940px;
   }
 }

@@ -60,6 +60,7 @@
           </p>
         </div>
 
+        <!-- TODO: Может, сделать все инпуты самостоятельными блоками? -->
         <form class="storytelling__form flashback-form container" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="flashback-form__group flashback-form__group--no-border flashback-form__group--order-null container">
             <ul class="flashback-form__fullname-list">
@@ -82,28 +83,28 @@
               <legend class="flashback-form__group-title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="flashback-form__achievements-list">
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-selfie" id="achievements-selfie" checked>
-                  <label class="flashback-form__list-label" for="achievements-selfie">Сделал селфи с акулой</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-selfie" id="achievements-selfie" checked>
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-selfie">Сделал селфи с акулой</label>
                 </li>
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-scorched" id="achievements-scorched" checked>
-                  <label class="flashback-form__list-label" for="achievements-scorched">Обгорел на пляже</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-scorched" id="achievements-scorched" checked>
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-scorched">Обгорел на пляже</label>
                 </li>
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-chuck" id="achievements-chuck">
-                  <label class="flashback-form__list-label" for="achievements-chuck">Видел Чака Норриса</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-chuck" id="achievements-chuck">
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-chuck">Видел Чака Норриса</label>
                 </li>
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-souvenirs" id="achievements-souvenirs">
-                  <label class="flashback-form__list-label" for="achievements-souvenirs">Накупил сувениров</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-souvenirs" id="achievements-souvenirs">
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-souvenirs">Накупил сувениров</label>
                 </li>
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-tower" id="achievements-tower" checked>
-                  <label class="flashback-form__list-label" for="achievements-tower">Удержал башню</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-tower" id="achievements-tower" checked>
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-tower">Удержал башню</label>
                 </li>
                 <li class="flashback-form__achievements-item">
-                  <input class="flashback-form__achievements-checkbox" type="checkbox" name="achievements-destruction" id="achievements-destruction">
-                  <label class="flashback-form__list-label" for="achievements-destruction">Разгромил отель</label>
+                  <input class="flashback-form__achievements-checkbox visually-hidden" type="checkbox" name="achievements-destruction" id="achievements-destruction">
+                  <label class="flashback-form__list-label flashback-form__list-label--checkbox" for="achievements-destruction">Разгромил отель</label>
                 </li>
               </ul>
             </fieldset>
@@ -129,16 +130,16 @@
               <legend class="flashback-form__group-title">С каким приложением путешествовали?</legend>
               <ul class="flashback-form__platform-list">
                 <li class="flashback-form__platform-item">
-                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-ios" value="iOS" checked>
-                  <label class="flashback-form__list-label" for="platrofm-ios">Pink для iOS</label>
+                  <input class="flashback-form__platform-radio visually-hidden" type="radio" name="app-platrofms" id="platrofm-ios" value="iOS" checked>
+                  <label class="flashback-form__list-label flashback-form__list-label--radio" for="platrofm-ios">Pink для iOS</label>
                 </li>
                 <li class="flashback-form__platform-item">
-                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-android" value="Android">
-                  <label class="flashback-form__list-label" for="platrofm-android">Pink на Android</label>
+                  <input class="flashback-form__platform-radio visually-hidden" type="radio" name="app-platrofms" id="platrofm-android" value="Android">
+                  <label class="flashback-form__list-label flashback-form__list-label--radio" for="platrofm-android">Pink на Android</label>
                 </li>
                 <li class="flashback-form__platform-item">
-                  <input class="flashback-form__platform-radio" type="radio" name="app-platrofms" id="platrofm-windows" value="Windows Phone">
-                  <label class="flashback-form__list-label" for="platrofm-windows">Windows Phone</label>
+                  <input class="flashback-form__platform-radio visually-hidden" type="radio" name="app-platrofms" id="platrofm-windows" value="Windows Phone">
+                  <label class="flashback-form__list-label flashback-form__list-label--radio" for="platrofm-windows">Windows Phone</label>
                 </li>
               </ul>
             </fieldset>

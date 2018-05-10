@@ -66,6 +66,15 @@
     margin-bottom: 0;
   }
 
+  &:hover {
+    border-color: $base-text-color;
+  }
+
+  &:focus {
+    border-color: $secondary-text-color;
+    outline: none;
+  }
+
   // тут будет миксин для стилизации плейсхолдера (наверное)
 
   // &--contacts {
@@ -97,13 +106,71 @@
   }
 }
 
-// .flashback-form__achievements-checkbox {
-
-// }
-
 .flashback-form__list-label {
+  position: relative;
+  display: block;
   font-size: $bigest-size;
   line-height: $big-height;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    border: 2px solid $base-border-color;
+  }
+
+  &--checkbox::before {
+    border-radius: 2px;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+}
+
+.flashback-form__achievements-checkbox {
+  &:hover + .flashback-form__list-label::before,
+  &:focus + .flashback-form__list-label::before {
+    border-color: $base-text-color;
+  }
+
+  &:active + .flashback-form__list-label::before {
+    border-color: $secondary-text-color;
+  }
+
+  &:checked + .flashback-form__list-label::before {
+    background-image: url("../img/checkbox-checked.svg");
+    background-position: center;
+  }
+}
+
+.flashback-form__platform-radio {
+  &:hover + .flashback-form__list-label::before,
+  &:focus + .flashback-form__list-label::before {
+    border-color: $base-text-color;
+  }
+
+  &:active + .flashback-form__list-label::before {
+    border-color: $secondary-text-color;
+  }
+
+  &:checked + .flashback-form__list-label::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-color: $secondary-text-color;
+    border-radius: 50%;
+  }
 }
 
 .flashback-form__contacts {
@@ -126,10 +193,6 @@
     margin-bottom: 39px;
   }
 }
-
-// .flashback-form__platform-radio {
-
-// }
 
 .flashback-form__submit {
   width: 280px;

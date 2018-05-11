@@ -12,20 +12,10 @@
   background-color: transparent;
   cursor: pointer;
 
-  &--submit {
-    color: $secondary-text-color;
-    border-color: $secondary-text-color;
-  }
-
-  &--reset {
-    color: rgba($base-text-color, 0.1);
-    border-color: rgba($base-text-color, 0.1);
-  }
-
   &:hover,
   &:focus, {
-    background-color: $base-bg-color;
     color: $secondary-text-color;
+    background-color: $base-bg-color;
   }
 
   &:focus {
@@ -33,7 +23,42 @@
   }
 
   &:active {
-    background-color: $base-bg-color;
     color: rgba($secondary-text-color, 0.3);
+    background-color: $base-bg-color;
+  }
+
+  &--submit {
+    color: $secondary-text-color;
+    border-color: $secondary-text-color;
+  }
+
+  &--submit:hover,
+  &--submit:focus {
+    color: $base-bg-color;
+    background-color: $secondary-text-color;
+  }
+
+  &--submit:active {
+    color: rgba($base-bg-color, 0.3);
+    background-color: $secondary-text-color;
+  }
+
+  &--reset {
+    color: rgba($base-text-color, 0.1);
+    border-color: rgba($base-text-color, 0.1);
+  }
+
+  &--reset:hover,
+  &--reset:focus {
+    color: rgba($base-text-color, 0.3);
+    background-color: transparent;
+    border-color: rgba($base-text-color, 0.3);
+  }
+
+  // FIXME: при нажатии рамка и фон чудом оказываются разного цвета
+  &--reset:active {
+    color: rgba($base-bg-color, 0.3);
+    background-color: rgba($base-text-color, 0.3);
+    border-color: rgba($base-text-color, 0.3);
   }
 }

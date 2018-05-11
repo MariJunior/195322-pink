@@ -7,4 +7,17 @@
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
+
+  &:hover path,
+  &:focus path {
+    fill: $base-text-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active path {
+    fill: rgba($base-text-color, 0.3);
+  }
 }

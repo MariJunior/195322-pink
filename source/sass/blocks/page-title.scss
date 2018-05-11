@@ -25,6 +25,7 @@
   color: $base-bg-color;
 }
 
+// TABLET
 @media (min-width: $tablet-width) {
   .page-title {
     margin-top: -110px;
@@ -46,6 +47,7 @@
   }
 }
 
+// DESKTOP
 @media (min-width: $desktop-width) {
   .page-title {
     margin-top: -115px;
@@ -57,7 +59,7 @@
     }
 
     &--form-page {
-      padding-bottom: 95px;
+      padding-bottom: 100px;
     }
   }
 

@@ -155,6 +155,15 @@
   .features__effect-link {
     color: $secondary-text-color;
     text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $base-text-color;
+    }
+
+    &:active {
+      color: rgba($base-text-color, 0.3);
+    }
   }
 }
 

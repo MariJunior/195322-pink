@@ -117,6 +117,7 @@
 
 .flashback-form__achievements-item {
   margin-bottom: 43px;
+  width: 280px;
 
   &:first-child {
     margin-top: 4px;
@@ -400,10 +401,13 @@
   }
 }
 
+// DESKTOP
 @media (min-width: $desktop-width) {
   .flashback-form {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-right: 10px;
+    padding-left: 10px;
     width: 960px;
   }
 
@@ -411,15 +415,26 @@
     width: 940px;
 
     &--no-border {
-      width: 440px;
+      padding-top: 45px;
+      padding-right: 35px;
+      width: 470px;
     }
   }
 
-  .flashback-form__wrap-color {
+  .flashback-form__wrap {
     width: 940px;
 
     &--narrow {
-      width: 435px;
+      padding-left: 35px;
+      width: 470px;
+    }
+
+    &--other-padding {
+      padding-top: 38px;
+    }
+
+    .flashback-form__group {
+      padding-top: 33px;
     }
   }
 
@@ -431,6 +446,9 @@
 
   .flashback-form__contacts-wrap {
     display: flex;
+    margin-bottom: 0;
+    padding-right: 23px;
+    padding-left: 23px;
   }
 
   .flashback-form__contacts {
@@ -443,6 +461,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    margin-top: 15px;
+  }
+
+  .flashback-form__platform-list {
+    padding-top: 14px;
+    padding-left: 75px;
   }
 
   .flashback-form__submit {

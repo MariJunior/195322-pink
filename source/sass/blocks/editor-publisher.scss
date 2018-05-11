@@ -27,6 +27,8 @@
   font-size: 0;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.3;
+  cursor: pointer;
   //TODO: из изображений собрать спрайт, и потом, в зависимости от нужной иконки, задавать background-position?
 
   &--crop {
@@ -45,6 +47,18 @@
     width: 32px;
     height: 32px;
     background-image: url("../img/icon-editor-contrast.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active,
+  &--current {
+    // FIXME: розовая иконка
+    // background-image: url();
+    opacity: 1;
   }
 }
 
@@ -112,7 +126,6 @@
   .editor-publisher__togglers-wrap {
     position: relative;
     display: block;
-    // margin-top: 5px;
     margin-bottom: 20px;
     padding-top: 5px;
 
@@ -122,8 +135,10 @@
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
+      opacity: 0.3;
     }
 
+    // FIXME: значки имеют заливку тёмно-синим цветом
     &--crop::before {
       top: 5px;
       left: 3px;
@@ -147,6 +162,25 @@
       height: 16px;
       background-image: url("../img/icon-editor-contrast.svg");
     }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.5;
+    }
+
+
+    // FIXME: активные элементы становятся розовыми
+    // &--crop:active::before {
+    //   background-image: url(); /* или backgroud-position, если будет спрайт */
+    // }
+
+    // &--pouring:active::before {
+    //   background-image: url();
+    // }
+
+    // &--brightness:active::before {
+    //   background-image: url();
+    // }
   }
 
   .editor-publisher__toggler {

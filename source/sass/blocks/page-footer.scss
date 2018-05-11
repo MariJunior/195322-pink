@@ -15,6 +15,23 @@
 .page-footer__logo-link {
   display: block;
   margin-bottom: 33px;
+
+  &[href]:hover path,
+  &[href]:focus path {
+    fill: $secondary-text-color;
+  }
+
+  &[href]:focus {
+    outline: none;
+  }
+
+  &[href]:active g path {
+    fill: $base-text-color;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__socials {

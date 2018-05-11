@@ -152,4 +152,19 @@
       transform: rotate(180deg);
     }
   }
+
+  .reviews__switch:hover,
+  .reviews__switch:focus {
+    &::before,
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  .reviews__switch:active {
+    &::before,
+    &::after {
+      opacity: 0.1;
+    }
+  }
 }

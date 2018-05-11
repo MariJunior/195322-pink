@@ -40,6 +40,16 @@
   font-size: 24px;
   font-weight: 300;
   color: $secondary-text-color;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $base-text-color;
+    text-decoration: underline;
+  }
+
+  &[href]:active {
+    color: rgba($base-text-color, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

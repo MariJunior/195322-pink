@@ -68,6 +68,15 @@
   padding: 0;
   border: none;
   background: none;
+
+  &:hover path,
+  &:focus path {
+    fill: $base-text-color;
+  }
+
+  &:active path {
+    fill: rgba($secondary-text-color, 0.6);
+  }
 }
 
 .card__like-info {

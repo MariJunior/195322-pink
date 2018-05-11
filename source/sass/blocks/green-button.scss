@@ -11,6 +11,23 @@
   border: 2px solid $form-btn-color;
   background-color: $form-btn-color;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $form-btn-color-hover;
+    border-color: $form-btn-color-hover;
+  }
+
+  &:active {
+    color: rgba($base-bg-color, 0.3);
+    background-color: $form-btn-color-hover;
+    border-color: $form-btn-color-hover;
+  }
+
+  &:disabled {
+    background-color: $base-border-color;
+    border-color: $base-border-color;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -3,6 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/pink-form-mobile.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 660px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img/pink-form-tablet.jpg");
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img/pink-form-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: 0.5;
+      }
+    </style>
+    <link rel="stylesheet" href="pixel-glass/styles.css">
+    <script src="pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
     <link rel="stylesheet" href="css/style.css">
     <title>Конкурс на самое безбашенное путешествие с Pink</title>
   </head>
@@ -20,7 +50,7 @@
               </g>
             </svg>
           </a>
-          <button class="page-header__nav-toggle page-header__nav-toggle--to-close" type="button" aria-label="Открыть меню">
+          <button class="page-header__nav-toggle page-header__nav-toggle--opened" type="button" aria-label="Открыть меню">
             <span></span>
             <span></span>
           </button>
@@ -78,8 +108,8 @@
             </ul>
           </fieldset>
 
-          <div class="flashback-form__wrap-color flashback-form__wrap-color--order-two container">
-            <fieldset class="flashback-form__group container"> <!-- flashback-form__group--gray -->
+          <div class="flashback-form__wrap flashback-form__wrap--color flashback-form__wrap--other-padding flashback-form__wrap--order-two container">
+            <fieldset class="flashback-form__group container">
               <legend class="flashback-form__group-title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="flashback-form__achievements-list">
                 <li class="flashback-form__achievements-item">
@@ -110,24 +140,25 @@
             </fieldset>
           </div>
 
-          <fieldset class="flashback-form__group flashback-form__group--order-one flashback-form__group--contacts container">
-            <legend class="flashback-form__group-title flashback-form__group-title--close">Контактная информация</legend> <!-- есть в других версиях -->
-            <div class="flashback-form__contacts-wrap">
-              <p class="flashback-form__contacts container">
-                <label class="flashback-form__label" for="contacts-tel">Номер телефона</label>
-                <!-- У инпутов 1й класс - общий для инпутов, 2й - для добавления фона иконок, 3й - для добавления личного фона иконки -->
-                <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-tel" type="tel" name="contacts-tel" id="contacts-tel" placeholder="Номер, пожалуйста">
-              </p>
-              <p class="flashback-form__contacts container">
-                <label class="flashback-form__label" for="contacts-email">Адрес почты</label>
-                <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-email" type="email" name="contacts-email" id="contacts-email" placeholder="Введите почту *" required>
-              </p>
-            </div>
-          </fieldset>
-
-          <div class="flashback-form__wrap-color flashback-form__wrap-color--order-null  flashback-form__wrap-color--narrow container">
+          <div class="flashback-form__wrap flashback-form__wrap--null-padding-top  flashback-form__wrap--other-padding flashback-form__wrap--order-one container">
             <fieldset class="flashback-form__group container">
-              <legend class="flashback-form__group-title">С каким приложением путешествовали?</legend>
+              <legend class="flashback-form__group-title flashback-form__group-title--close">Контактная информация</legend> <!-- есть в других версиях -->
+              <div class="flashback-form__contacts-wrap">
+                <p class="flashback-form__contacts container">
+                  <label class="flashback-form__label" for="contacts-tel">Номер телефона</label>
+                  <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-tel" type="tel" name="contacts-tel" id="contacts-tel" placeholder="Номер, пожалуйста">
+                </p>
+                <p class="flashback-form__contacts container">
+                  <label class="flashback-form__label" for="contacts-email">Адрес почты</label>
+                  <input class="flashback-form__input flashback-form__input--contacts flashback-form__input--contacts-email" type="email" name="contacts-email" id="contacts-email" placeholder="Введите почту *" required>
+                </p>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="flashback-form__wrap flashback-form__wrap--color flashback-form__wrap--order-null  flashback-form__wrap--narrow container">
+            <fieldset class="flashback-form__group container">
+              <legend class="flashback-form__group-title flashback-form__group-title--small-paddings">С каким приложением путешествовали?</legend>
               <ul class="flashback-form__platform-list">
                 <li class="flashback-form__platform-item">
                   <input class="flashback-form__platform-radio visually-hidden" type="radio" name="app-platrofms" id="platrofm-ios" value="iOS" checked>
@@ -145,10 +176,12 @@
             </fieldset>
           </div>
 
-          <fieldset class="flashback-form__group flashback-form__group--order-two container">
-            <legend class="flashback-form__group-title">Опишите свои эмоции</legend>
-            <textarea class="flashback-form__input flashback-form__input--textarea" name="impression-text" id="impression-text" cols="25" rows="10" maxlength="500" wrap="soft" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </fieldset>
+          <div class="flashback-form__wrap flashback-form__wrap--other-padding flashback-form__wrap--order-two container">
+            <fieldset class="flashback-form__group flashback-form__group--small-padding container">
+              <legend class="flashback-form__group-title flashback-form__group-title--big-paddings">Опишите свои эмоции</legend>
+              <textarea class="flashback-form__input flashback-form__input--textarea" name="impression-text" id="impression-text" maxlength="500" wrap="soft" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+          </div>
 
           <div class="flashback-form__submit container">
             <button class="flashback-form__submit-button green-button" type="submit">Отправить форму</button>

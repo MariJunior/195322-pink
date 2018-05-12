@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .page-header__logo-link {
@@ -77,11 +77,11 @@
     background-color: $base-bg-color;
   }
 
-  &:hover &::before,
-  &:hover &::after,
+  &:hover::before,
+  &:hover::after,
   &:hover span,
-  &:focus &::before,
-  &:focus &::after,
+  &:focus::before,
+  &:focus::after,
   &:focus span {
     background-color: $secondary-text-color;
   }
@@ -114,6 +114,12 @@
   }
 }
 
+@media (max-width: $not-desktop-width) {
+  .page-header--closed {
+    background-color: rgba($other-text-color, 0.3);
+  }
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     padding-top: 27px;
@@ -121,8 +127,8 @@
 
   .page-header__wrapper {
     margin-right: auto;
-    margin-bottom: 43px;
     margin-left: auto;
+    padding-bottom: 43px;
     width: $tablet-width;
   }
 

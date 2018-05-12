@@ -1,5 +1,5 @@
 .download-app {
-  margin-top: -63px; /* чтобы секция частично была под хедером */
+  margin-top: -69px; /* чтобы секция частично была под хедером */
   padding-top: 460px; /* толкает блок с содержимым вниз */
   text-align: center;
   color: $base-bg-color;
@@ -37,12 +37,12 @@
   padding: 0;
   font-weight: 300;
   text-align: center;
-  // color: $base-bg-color;
 }
 
 // ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .download-app {
+    margin-top: -110px;
     padding-top: 135px;
     //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
     background-image: url("../img/bg-back-mobile@1x.jpg");

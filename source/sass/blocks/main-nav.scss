@@ -1,8 +1,5 @@
-// .main-nav {
-// }
-
-// @media (min-width: $desktop-width) {
-//   .main-nav {
-//     background: none;
-//   }
-// }
+@media (max-width: $not-desktop-width) {
+  .main-nav--closed {
+    display: none;
+  }
+}

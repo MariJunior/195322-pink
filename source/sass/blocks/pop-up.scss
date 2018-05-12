@@ -25,9 +25,9 @@
   width: 320px;
   box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.3);
 
-  // &--closed {
-  //   display: none;
-  // }
+  &--closed {
+    display: none;
+  }
 
   &--opened {
     display: block;
@@ -43,9 +43,14 @@
   text-align: center;
   background-color: $base-bg-color;
 
-  &--failture {
+  &--failure {
     padding-bottom: 40px;
   }
+}
+
+.pop-up__title {
+  font-size: $bigest-size;
+  font-weight: 700;
 }
 
 .pop-up__button-wrap {
@@ -55,7 +60,7 @@
   padding-left: 22px;
   background-color: $secondary-bg-color;
 
-  &--failture {
+  &--failure {
     padding-top: 0;
     background-color: $base-bg-color;
   }
@@ -68,8 +73,17 @@
   }
 
   .pop-up__text-wrap {
-    padding-right: 84px;
-    padding-left: 84px;
+    padding-right: 79px;
+    padding-left: 79px;
+  }
+
+  .pop-up__title {
+    font-size: $gigantic-size;
+    line-height: 40px;
+  }
+
+  .pop-up__message {
+    font-size: $bigest-size;
   }
 
   .pop-up__button-wrap {
@@ -92,7 +106,7 @@
     padding-right: 240px;
     padding-left: 240px;
 
-    &--failture {
+    &--failure {
       padding-top: 50px;
       background-color: $secondary-bg-color;
     }

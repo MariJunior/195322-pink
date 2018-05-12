@@ -18,8 +18,8 @@
     padding-top: 7px;
     width: 140px;
     height: 36px;
-    font-size: 12px;
-    line-height: 24px;
+    font-size: $small-size;
+    line-height: $base-height;
     font-weight: 700;
     text-align: center;
     color: $base-bg-color;
@@ -82,7 +82,7 @@
 .card__like-info {
   margin: 0;
   color: $secondary-text-color;
-  font-size: 12px;
+  font-size: $small-size;
   text-transform: uppercase;
 }
 

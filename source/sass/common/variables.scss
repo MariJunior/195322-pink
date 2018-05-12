@@ -14,9 +14,13 @@ $big-size: ($base-size * 8)/7; /* 16px */
 $bigest-size: ($base-size * 9)/7; /* 18px */
 $huge-size: ($base-size * 12)/7; /* 24px */
 $gigantic-size: ($base-size * 15)/7; /* 30px */
+$large-size: ($base-size * 20)/7; /* 40px */
 // Интерлиньяж
 $base-height: ($base-size * 12)/7; /* 24px */
+$small-heigth: ($base-size * 9)/7; /* 18px */
 $big-height: ($base-size * 15)/7; /* 30px */
+$huge-heigth: ($base-size * 20)/7; /* 40px */
+$gigantic-heigth: ($base-size * 25)/7; /* 50px */
 // Брейкпоинты
 $tablet-width: 660px;
 $desktop-width: 960px;

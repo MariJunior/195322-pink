@@ -16,9 +16,9 @@
   margin-left: auto;
   padding: 0;
   width: 205px;
-  font-size: 24px;
+  font-size: $huge-size;
   font-weight: 300;
-  line-height: 30px;
+  line-height: $big-height;
 
   &:last-child {
     margin-bottom: 0;
@@ -61,7 +61,7 @@
   margin: 0;
   margin-bottom: 13px;
   font-size: $bigest-size;
-  line-height: 24px;
+  line-height: $base-height;
 }
 
 .features__item-desc {
@@ -82,8 +82,8 @@
   .features__slogan {
     margin-bottom: 0;
     width: 340px;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: $large-size;
+    line-height: $gigantic-heigth;
 
     &--wide {
       width: 590px;
@@ -141,7 +141,7 @@
     margin-top: 0;
     margin-bottom: 10px;
     width: 185px;
-    font-size: 30px;
+    font-size: $gigantic-size;
     line-height: 36px;
     font-weight: 700;
     color: $other-text-color;
@@ -239,7 +239,7 @@
 
   .features__item-title {
     margin-bottom: 22px;
-    font-size: 30px;
+    font-size: $gigantic-size;
     line-height: $big-height;
   }
 
@@ -266,7 +266,7 @@
   .features__effect-title {
     margin-bottom: 25px;
     width: auto;
-    font-size: 30px;
+    font-size: $gigantic-size;
     line-height: $big-height;
   }
 

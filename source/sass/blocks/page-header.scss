@@ -133,7 +133,7 @@
 @media (min-width: $desktop-width) {
   .page-header {
     padding-bottom: 40px;
-    line-height: 18px;
+    line-height: $small-heigth;
     font-weight: 400;
     text-transform: none;
     background-color: rgba(0, 0, 0, 0.3);

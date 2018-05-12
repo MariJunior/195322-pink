@@ -23,7 +23,7 @@
 .download-app__button {
   margin-bottom: 30px;
   font-size: $bigest-size;
-  line-height: 18px;
+  line-height: $small-heigth;
   font-weight: 700;
   color: $base-bg-color;
 }
@@ -75,8 +75,8 @@
     margin-bottom: 27px;
     margin-left: auto;
     max-width: 190px;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: $large-size;
+    line-height: $gigantic-heigth;
     font-weight: 300;
   }
 

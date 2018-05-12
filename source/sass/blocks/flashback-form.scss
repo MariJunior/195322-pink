@@ -80,8 +80,8 @@
   padding-bottom: 15px;
   padding-left: 20px;
   min-width: 280px;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: $bigest-size;
+  line-height: $big-height;
   border: 2px solid $base-border-color;
 
   .flashback-form__fullname-item:last-child & {
@@ -328,7 +328,6 @@
   }
 
   .flashback-form__achievements-list {
-    // padding-right: 60px;
     padding-bottom: 24px;
     padding-left: 60px;
   }

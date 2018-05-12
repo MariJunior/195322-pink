@@ -66,7 +66,7 @@
 
 .table-prices__header-cost {
   margin: 0;
-  font-size: 24px;
+  font-size: $huge-size;
   line-height: $big-height;
   font-weight: 300;
 }
@@ -181,13 +181,13 @@
   }
 
   .table-prices__header-cost {
-    font-size: 24px;
+    font-size: $huge-size;
   }
 
   .table-prices__body-cell {
     padding-top: 15px;
     padding-bottom: 15px;
     min-width: 233px;
-    font-size: 18px;
+    font-size: $bigest-size;
   }
 }

@@ -83,7 +83,7 @@
 .editor-publisher__button {
   margin-bottom: 12px;
   font-size: $bigest-size;
-  line-height: 18px;
+  line-height: $small-heigth;
   font-weight: 700;
 
   &:last-child {

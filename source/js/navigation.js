@@ -4,7 +4,7 @@ var pageHeader = document.querySelector('.page-header');
 
 pageHeader.classList.add('page-header--closed');
 mainMenu.classList.add('main-nav--closed');
-mainMenuToggle.classList.remove('page-header__nav-toggle--opened');
+mainMenuToggle.classList.remove('page-header__nav-toggle--no-js');
 
 mainMenuToggle.addEventListener('click', function() {
   if (mainMenu.classList.contains('main-nav--closed')) {

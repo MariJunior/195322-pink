@@ -115,7 +115,6 @@
 
 .flashback-form__achievements-item {
   margin-bottom: 43px;
-  max-width: 280px;
 
   &:first-child {
     margin-top: 4px;
@@ -329,7 +328,7 @@
   }
 
   .flashback-form__achievements-list {
-    padding-right: 60px;
+    // padding-right: 60px;
     padding-bottom: 24px;
     padding-left: 60px;
   }
@@ -433,6 +432,10 @@
     }
 
     &--other-padding {
+      padding-top: 55px;
+    }
+
+    &--contacts {
       padding-top: 38px;
     }
 
@@ -443,6 +446,7 @@
 
   .flashback-form__input {
     &--textarea {
+      margin-top: 0;
       width: 820px;
       min-height: 125px;
     }
@@ -466,16 +470,19 @@
     justify-content: space-between;
     align-items: flex-start;
     align-content: space-between;
-    margin-top: 20px;
+    margin-top: 5px;
+    padding-right: 10px;
     padding-bottom: 0;
   }
 
   .flashback-form__achievements-item {
     order: 7;
     margin-top: 4px;
+    width: 260px;
 
     &--first {
       order: 1;
+      margin-right: 20px;
     }
 
     &--second {
@@ -488,14 +495,18 @@
 
     &--fourth {
       order: 4;
+      margin-right: 20px;
+      margin-bottom: 30px;
     }
 
     &--fifth {
       order: 5;
+      margin-bottom: 30px;
     }
 
     &--sixth {
       order: 6;
+      margin-bottom: 30px;
     }
   }
 

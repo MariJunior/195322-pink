@@ -44,6 +44,10 @@
   background: none;
   border: none;
 
+  &--no-js {
+    display: none;
+  }
+
   &::before,
   &::after {
     content: "";

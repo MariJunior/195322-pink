@@ -1,8 +1,19 @@
 @keyframes bounce {
-  0% { transform: translateY(-2000px); }
-  70% { transform: translateY(30px); }
-  90% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .pop-up {
@@ -12,7 +23,7 @@
   right: 0;
   z-index: 1000;
   width: 320px;
-  box-shadow: 0px 10px 50px -10px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.3);
 
   // &--closed {
   //   display: none;

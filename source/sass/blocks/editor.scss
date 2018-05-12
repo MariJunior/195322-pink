@@ -1,22 +1,20 @@
 .editor {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
   background-color: $secondary-bg-color;
-
-  outline: 1px solid powderblue;
 }
 
 @media (min-width: $tablet-width) {
   .editor {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 55px;
+    padding-bottom: 53px;
     width: $tablet-width;
   }
 }
 
 @media (min-width: $desktop-width) {
   .editor {
-    padding-top: 57px;
+    padding-top: 53px;
     padding-bottom: 57px;
     width: 940px;
   }

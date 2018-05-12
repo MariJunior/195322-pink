@@ -1,0 +1,115 @@
+.range-filter {
+  appearance: none;
+  width: 240px;
+  height: 2px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  &::-webkit-slider-thumb:active {
+    background-color: $secondary-text-color;
+  }
+
+  &::-moz-range-thumb:active {
+    background-color: $secondary-text-color;
+  }
+
+  &::-ms-thumb:active {
+    background-color: $secondary-text-color;
+  }
+
+  &::-moz-focus-outer {
+    border: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 2px;
+    background-color: $base-text-color;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    box-sizing: content-box;
+    width: 10px;
+    height: 10px;
+    margin-top: -7px;
+    border: 2px solid $secondary-text-color;
+    border-radius: 50%;
+    background-color: $secondary-bg-color;
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    appearance: none;
+    width: 240px;
+    height: 2px;
+    background-color: $secondary-bg-color;
+    outline: none;
+    border: none;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $secondary-text-color;
+    border-radius: 50%;
+    background-color: $secondary-bg-color;
+    cursor: pointer;
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background: transparent;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  &::-ms-track {
+    width: 240px;
+    height: 0;
+    background-color: $base-text-color;
+    color: transparent;
+    border-color: transparent;
+  }
+
+  &::-ms-thumb {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 2px solid $secondary-text-color;
+    border-radius: 50%;
+    background-color: $secondary-bg-color;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range-filter {
+    width: 202px;
+
+    &::-moz-range-track {
+      width: 202px;
+    }
+
+    &::-ms-track {
+      width: 202px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range-filter {
+    width: 288px;
+
+    &::-moz-range-track {
+      width: 288px;
+    }
+
+    &::-ms-track {
+      width: 288px;
+    }
+  }
+}

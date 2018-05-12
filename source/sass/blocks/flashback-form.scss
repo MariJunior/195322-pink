@@ -10,37 +10,56 @@
   list-style: none;
 }
 
-.flashback-form__wrap-color {
+.flashback-form__wrap {
   padding-top: 36px;
-  padding-bottom: 18px;
   width: 320px;
-  background-color: $secondary-bg-color;
+
+  &--color {
+    background-color: $secondary-bg-color;
+  }
+
+  &--null-padding-top {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 48px;
+  }
 }
 
 .flashback-form__group {
-  padding-top: 33px;
+  padding-top: 32px;
   padding-right: 0;
   padding-bottom: 42px;
   padding-left: 0;
   width: 280px;
   border: none;
 
-  &:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 48px;
+  &--small-padding {
+    padding-top: 7px;
   }
-
-  outline: 1px solid crimson;
 }
 
 .flashback-form__group-title {
-  padding: 0;
+  padding-right: 30px;
+  padding-left: 30px;
+  line-height: 20px;
   text-align: center;
   color: $secondary-text-color;
   text-transform: uppercase;
 
+  &--small-paddings {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  &--big-paddings {
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+
   &--close {
-    display: none; /* или лучше чем-то типа visually-hidden скрывать? */
+    display: none;
   }
 }
 
@@ -54,37 +73,38 @@
 .flashback-form__input {
   display: inline-block;
   vertical-align: baseline;
-  margin-bottom: 20px;
-  padding-top: 16px;
-  padding-right: 28px;
-  padding-bottom: 12px;
+  margin-top: 5px;
+  margin-bottom: 17px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
   padding-left: 20px;
-  min-width: 276px;
-  font-size: 18px;
-  line-height: 30px;
+  min-width: 280px;
+  font-size: $bigest-size;
+  line-height: $big-height;
   border: 2px solid $base-border-color;
 
-  &:last-child {
+  .flashback-form__fullname-item:last-child & {
     margin-bottom: 0;
   }
 
-  // тут будет миксин для стилизации плейсхолдера (наверное)
+  &:hover {
+    border-color: $base-text-color;
+  }
 
-  // &--contacts {
+  &:focus {
+    border-color: $secondary-text-color;
+    outline: none;
+  }
 
-  // }
+  &--contacts {
+    margin-bottom: 0;
+  }
 
-  // &--contacts-tel {
-
-  // }
-
-  // &--contacts-email {
-
-  // }
-
-  // &--textarea {
-
-  // }
+  &--textarea {
+    margin-bottom: 0;
+    min-height: 201px;
+  }
 }
 
 .flashback-form__achievements-list {
@@ -94,23 +114,11 @@
 }
 
 .flashback-form__achievements-item {
-  &:not(:last-child) {
-    margin-bottom: 47px;
+  margin-bottom: 43px;
+
+  &:first-child {
+    margin-top: 4px;
   }
-}
-
-// .flashback-form__achievements-checkbox {
-
-// }
-
-.flashback-form__list-label {
-  font-size: $bigest-size;
-  line-height: $big-height;
-}
-
-.flashback-form__contacts {
-  margin-top: 0;
-  margin-bottom: 18px;
 
   &:last-child {
     margin-bottom: 0;
@@ -124,21 +132,95 @@
 }
 
 .flashback-form__platform-item {
-  &:not(:last-child) {
-    margin-bottom: 39px;
+  margin-bottom: 37px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
-// .flashback-form__platform-radio {
+.flashback-form__list-label {
+  position: relative;
+  display: block;
+  font-size: $bigest-size;
+  line-height: $big-height;
+  cursor: pointer;
+  user-select: none;
 
-// }
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+    width: 39px;
+    height: 39px;
+    background-repeat: no-repeat;
+    border: 2px solid $base-border-color;
+  }
+
+  &--checkbox::before {
+    border-radius: 2px;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+}
+
+.flashback-form__achievements-checkbox {
+  &:hover + .flashback-form__list-label::before,
+  &:focus + .flashback-form__list-label::before {
+    border-color: $base-text-color;
+  }
+
+  &:active + .flashback-form__list-label::before {
+    border-color: $secondary-text-color;
+  }
+
+  &:checked + .flashback-form__list-label::before {
+    background-image: url("../img/checkbox-checked.svg");
+    background-position: center;
+  }
+}
+
+.flashback-form__platform-radio {
+  &:hover + .flashback-form__list-label::before,
+  &:focus + .flashback-form__list-label::before {
+    border-color: $base-text-color;
+  }
+
+  &:active + .flashback-form__list-label::before {
+    border-color: $secondary-text-color;
+  }
+
+  &:checked + .flashback-form__list-label::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-color: $secondary-text-color;
+    border-radius: 50%;
+  }
+}
+
+.flashback-form__contacts {
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .flashback-form__submit {
   width: 280px;
 }
 
 .flashback-form__submit-button {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .flashback-form__submit-footnote {
@@ -146,18 +228,24 @@
   line-height: $big-height;
   text-align: center;
   text-transform: uppercase;
+
+  &--full {
+    display: none;
+  }
 }
 
 .flashback-form__sup {
   color: $secondary-text-color;
 }
 
+// TABLET
 @media (min-width: $tablet-width) {
   .flashback-form {
     width: $tablet-width;
   }
 
   .flashback-form__group {
+    padding-bottom: 20px;
     width: 620px;
     border: 2px solid $base-border-color;
 
@@ -178,24 +266,58 @@
     }
   }
 
+  .flashback-form__wrap {
+    width: 620px;
+    background-color: transparent;
+
+    &:nth-last-of-type(2) {
+      margin-bottom: 66px;
+    }
+
+    &--other-padding {
+      padding-top: 57px;
+    }
+
+    &--order-null {
+      order: 0;
+    }
+
+    &--order-one {
+      order: 1;
+    }
+
+    &--order-two {
+      order: 2;
+    }
+
+    .flashback-form__group {
+      padding-top: 42px;
+      width: 100%;
+    }
+  }
+
   .flashback-form__group-title {
     &--close {
       display: block;
     }
   }
 
+  .flashback-form__label {
+    padding-left: 20px;
+  }
+
   .flashback-form__fullname-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 29px;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     .flashback-form__label {
-      margin-right: 22px;
+      margin-right: 18px;
       padding-left: 0;
     }
 
@@ -205,44 +327,65 @@
     }
   }
 
-  .flashback-form__wrap-color {
-    width: 620px;
-    background-color: transparent;
+  .flashback-form__achievements-list {
+    padding-bottom: 24px;
+    padding-left: 60px;
+  }
 
-    &--order-null {
-      order: 0;
-    }
+  .flashback-form__platform-list {
+    padding-bottom: 30px;
+    padding-left: 60px;
+  }
 
-    &--order-two {
-      order: 2;
-    }
-
-    .flashback-form__group {
-      width: 100%;
+  .flashback-form__list-label {
+    &::before {
+      margin-right: 18px;
     }
   }
 
-  .flashback-form__achievements-list {
-    padding-bottom: 50px;
-    padding-left: 60px;
+  .flashback-form__contacts-wrap {
+    margin-bottom: 9px;
   }
 
   .flashback-form__contacts {
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
+    margin-bottom: 30px;
     width: 500px;
-  }
 
-  .flashback-form__platform-list {
-    padding-bottom: 56px;
-    padding-left: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      // background-image: url("../img/");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .flashback-form__input {
+    &--contacts {
+      margin-top: 0;
+      margin-bottom: 5px;
+      border-right-width: 62px;
+    }
+
     &--textarea {
+      margin-top: -7px;
       margin-right: 60px;
+      margin-bottom: 25px;
       margin-left: 60px;
       width: 500px;
+      min-height: 193px;
     }
   }
 
@@ -259,10 +402,13 @@
   }
 }
 
+// DESKTOP
 @media (min-width: $desktop-width) {
   .flashback-form {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-right: 10px;
+    padding-left: 10px;
     width: 960px;
   }
 
@@ -270,26 +416,46 @@
     width: 940px;
 
     &--no-border {
-      width: 440px;
+      padding-top: 45px;
+      padding-right: 35px;
+      width: 470px;
     }
   }
 
-  .flashback-form__wrap-color {
+  .flashback-form__wrap {
     width: 940px;
 
     &--narrow {
-      width: 435px;
+      padding-left: 35px;
+      width: 470px;
+    }
+
+    &--other-padding {
+      padding-top: 55px;
+    }
+
+    &--contacts {
+      padding-top: 38px;
+    }
+
+    .flashback-form__group {
+      padding-top: 33px;
     }
   }
 
   .flashback-form__input {
     &--textarea {
+      margin-top: 0;
       width: 820px;
+      min-height: 125px;
     }
   }
 
   .flashback-form__contacts-wrap {
     display: flex;
+    margin-bottom: 0;
+    padding-right: 23px;
+    padding-left: 23px;
   }
 
   .flashback-form__contacts {
@@ -301,11 +467,60 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     align-content: space-between;
-    // пока элементы выглядят странно, но, по идее, когда будут кастомные чекбоксы, они станут занимать больще места и распределятся так как надо
+    margin-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 0;
+  }
+
+  .flashback-form__achievements-item {
+    order: 7;
+    margin-top: 4px;
+    width: 260px;
+
+    &--first {
+      order: 1;
+      margin-right: 20px;
+    }
+
+    &--second {
+      order: 2;
+    }
+
+    &--third {
+      order: 3;
+    }
+
+    &--fourth {
+      order: 4;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+
+    &--fifth {
+      order: 5;
+      margin-bottom: 30px;
+    }
+
+    &--sixth {
+      order: 6;
+      margin-bottom: 30px;
+    }
+  }
+
+  .flashback-form__platform-list {
+    padding-top: 14px;
+    padding-left: 75px;
   }
 
   .flashback-form__submit {
     width: 940px;
+  }
+
+  .flashback-form__submit-footnote {
+    &--full {
+      display: inline;
+    }
   }
 }

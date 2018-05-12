@@ -6,7 +6,7 @@
 
 .table-prices__header-cell {
   padding-top: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 20px;
   min-width: 277px;
   text-align: center;
   color: $base-bg-color;
@@ -62,12 +62,11 @@
   font-size: $big-size;
   line-height: $big-height;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .table-prices__header-cost {
   margin: 0;
-  font-size: $bigest-size;
+  font-size: $huge-size;
   line-height: $big-height;
   font-weight: 300;
 }
@@ -92,32 +91,34 @@
   display: block;
   font-size: 0;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
+  background-size: 100%;
 
   &--on {
     width: 31px;
-    height: 21px;
+    height: 28px;
     background-image: url("../img/icon-yes.svg");
   }
 
   &--off {
     width: 27px;
-    height: 26px;
+    height: 27px;
     background-image: url("../img/icon-no.svg");
   }
 }
 
 @media (min-width: $tablet-width) {
   .table-prices__header-cell {
-    min-width: 152px;
+    padding-bottom: 5px;
+    min-width: 150px;
 
     &--first {
       display: table-cell;
     }
 
     &--bestseller::before {
-      top: -32px;
-      left: -37px;
+      top: -29px;
+      left: -36px;
       width: 30px;
       height: 15px;
     }
@@ -137,7 +138,11 @@
   }
 
   .table-prices__body-cell {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
     min-width: 152px;
+    text-transform: none;
 
     &--first {
       display: table-cell;
@@ -156,6 +161,7 @@
 
 @media (min-width: $desktop-width) {
   .table-prices__header-cell {
+    padding-bottom: 22px;
     min-width: 233px;
 
     &--bestseller::before {
@@ -175,10 +181,13 @@
   }
 
   .table-prices__header-cost {
-    font-size: 24px;
+    font-size: $huge-size;
   }
 
   .table-prices__body-cell {
+    padding-top: 15px;
+    padding-bottom: 15px;
     min-width: 233px;
+    font-size: $bigest-size;
   }
 }

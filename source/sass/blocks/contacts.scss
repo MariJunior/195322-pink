@@ -1,37 +1,28 @@
 .contacts {
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 35px;
-
-  outline: 1px solid blue;
 }
 
 .contacts__wrapper {
   width: 280px;
   text-align: center;
-
-  outline: 1px solid seagreen;
 }
 
 .contacts__slogan {
   margin-top: 0;
   margin-bottom: 35px;
-  font-size: 24px;
-  line-height: normal;
+  font-size: $huge-size;
+  line-height: $big-height;
   font-weight: 300;
-
-  outline: 1px solid crimson;
 }
 
 .contacts__list {
-  margin: 0;
   padding: 0;
   list-style: none;
-
-  outline: 1px solid mediumslateblue;
 }
 
 .contacts__item {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 
   &:last-child {
     margin-bottom: 0;
@@ -41,18 +32,27 @@
 .contacts__form {
   margin: 0;
   font-size: $bigest-size;
+  line-height: normal;
   font-weight: 700;
 }
 
 .contacts__link {
-  font-size: 24px;
+  font-size: $huge-size;
   font-weight: 300;
   color: $secondary-text-color;
+
+  &[href]:hover {
+    color: $base-text-color;
+    text-decoration: underline;
+  }
+
+  &[href]:active {
+    color: rgba($base-text-color, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 55px;
     padding-bottom: 30px;
   }
 
@@ -62,26 +62,32 @@
 
   .contacts__slogan {
     width: 370px;
-    margin-bottom: 45px;
-    font-size: 40px;
+    margin-bottom: 40px;
+    font-size: $large-size;
+    line-height: $gigantic-heigth;
   }
 
   .contacts__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
   }
 
   .contacts__item {
-    margin-right: auto;
     margin-bottom: 45px;
-    margin-left: auto;
     width: 300px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
-    padding-top: 75px;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
@@ -93,13 +99,25 @@
     width: 470px;
     margin-bottom: 60px;
     font-size: 50px;
+    line-height: 57px;
+  }
+
+  .contacts__list {
+    width: 920px;
   }
 
   .contacts__item {
     margin-bottom: 0;
+    width: 280px;
 
-    &--mail {
+    &--order-two {
       order: 2;
     }
+  }
+
+  .contacts__link {
+    display: inline-block;
+    margin-top: 20px;
+    line-height: $big-height;
   }
 }

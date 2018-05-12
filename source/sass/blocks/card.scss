@@ -2,6 +2,7 @@
   width: 280px;
   text-align: left;
 
+  // FIXME: когда будет графика, сделать этот блок тянущимся на всю ширину окна
   &--panorama {
     position: relative;
     margin-bottom: 20px;
@@ -17,15 +18,13 @@
     padding-top: 7px;
     width: 140px;
     height: 36px;
-    font-size: 12px;
-    line-height: 24px;
+    font-size: $small-size;
+    line-height: $base-height;
     font-weight: 700;
     text-align: center;
     color: $base-bg-color;
     background-color: $secondary-text-color;
   }
-
-  outline: 1px solid mediumspringgreen;
 }
 
 .card__photo {
@@ -33,9 +32,9 @@
 }
 
 .card__info {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-right: 23px;
-  padding-bottom: 23px;
+  padding-bottom: 19px;
   padding-left: 17px;
   background-color: $secondary-bg-color;
 
@@ -58,7 +57,7 @@
 
 .card__text {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card__like-wrap {
@@ -66,15 +65,25 @@
 }
 
 .card__like-button {
-  margin-right: 15px;
+  margin-right: 20px;
   padding: 0;
   border: none;
   background: none;
+
+  &:hover path {
+    fill: $base-text-color;
+  }
+
+  &:active path {
+    fill: rgba($secondary-text-color, 0.6);
+  }
 }
 
 .card__like-info {
   margin: 0;
   color: $secondary-text-color;
+  font-size: $small-size;
+  text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
@@ -108,29 +117,30 @@
     position: relative;
     flex-grow: 1;
     flex-basis: 155px;
-    padding-top: 25px;
+    padding-top: 23px;
     padding-right: 30px;
-    padding-bottom: 25px;
+    padding-bottom: 55px;
     padding-left: 25px;
 
     &--panorama {
       flex-basis: auto;
       width: 620px;
+      padding-bottom: 25px;
     }
   }
 
-  // .card__text {
-  //   margin-bottom: 40px;
-  // }
+  .card__text {
+    margin-bottom: 0;
+  }
 
   .card__like-wrap {
     position: absolute;
-    bottom: 30px;
+    bottom: 22px;
     justify-content: space-between;
     width: 240px;
 
     &--panorama {
-      top: 30px;
+      top: 25px;
       right: 30px;
       bottom: auto;
       justify-content: flex-end;
@@ -155,7 +165,8 @@
     }
 
     &--panorama::before {
-      right: 130px;
+      top: 54px;
+      right: 10px;
     }
   }
 

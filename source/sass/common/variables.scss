@@ -1,4 +1,3 @@
-// тут будут хранится все переменные - часто встречающиеся цвета и размеры
 // Цвета
 $base-bg-color: #ffffff;
 $secondary-bg-color: #f2f2f2;
@@ -10,13 +9,19 @@ $form-btn-color: #2aab6d;
 $form-btn-color-hover: #1c9b5e;
 // Размеры шрифтов
 $base-size: 14px;
-$small-size: 12px;
-$big-size: 16px;
-$bigest-size: 18px;
-// Добавить какой-нибудь $giant-size: 24px?
+$small-size: ($base-size * 6)/7; /* 12px */
+$big-size: ($base-size * 8)/7; /* 16px */
+$bigest-size: ($base-size * 9)/7; /* 18px */
+$huge-size: ($base-size * 12)/7; /* 24px */
+$gigantic-size: ($base-size * 15)/7; /* 30px */
+$large-size: ($base-size * 20)/7; /* 40px */
 // Интерлиньяж
-$base-height: 24px;
-$big-height: 30px;
+$base-height: ($base-size * 12)/7; /* 24px */
+$small-heigth: ($base-size * 9)/7; /* 18px */
+$big-height: ($base-size * 15)/7; /* 30px */
+$huge-heigth: ($base-size * 20)/7; /* 40px */
+$gigantic-heigth: ($base-size * 25)/7; /* 50px */
 // Брейкпоинты
 $tablet-width: 660px;
 $desktop-width: 960px;
+$not-desktop-width: 959px;

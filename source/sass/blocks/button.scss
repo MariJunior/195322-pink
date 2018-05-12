@@ -12,13 +12,46 @@
   background-color: transparent;
   cursor: pointer;
 
+  &:hover {
+    color: $secondary-text-color;
+    background-color: $base-bg-color;
+  }
+
+  &:active {
+    color: rgba($secondary-text-color, 0.3);
+    background-color: $base-bg-color;
+  }
+
   &--submit {
     color: $secondary-text-color;
     border-color: $secondary-text-color;
   }
 
+  &--submit:hover {
+    color: $base-bg-color;
+    background-color: $secondary-text-color;
+  }
+
+  &--submit:active {
+    color: rgba($base-bg-color, 0.3);
+    background-color: $secondary-text-color;
+  }
+
   &--reset {
     color: rgba($base-text-color, 0.1);
     border-color: rgba($base-text-color, 0.1);
+  }
+
+  &--reset:hover {
+    color: rgba($base-text-color, 0.3);
+    background-color: transparent;
+    border-color: rgba($base-text-color, 0.3);
+  }
+
+  // FIXME: при нажатии рамка и фон чудом оказываются разного цвета
+  &--reset:active {
+    color: rgba($base-bg-color, 0.3);
+    background-color: rgba($base-text-color, 0.3);
+    border-color: rgba($base-text-color, 0.3);
   }
 }

@@ -1,12 +1,10 @@
 .page-footer {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 35px;
 
   &--index {
     display: none;
   }
-
-  outline: 1px solid steelblue;
 }
 
 .page-footer__wrap {
@@ -16,16 +14,28 @@
 
 .page-footer__logo-link {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
+
+  &[href]:hover path {
+    fill: $secondary-text-color;
+  }
+
+  &[href]:active g path {
+    fill: $base-text-color;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__socials {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding-top: 35px;
+    padding-top: 30px;
 
     &--index {
       display: block;
@@ -35,7 +45,8 @@
   .page-footer__wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* или baseline? */
+    align-items: center;
+    flex-wrap: wrap;
     width: 620px;
   }
 
@@ -44,19 +55,34 @@
   }
 
   .page-footer__socials {
+    margin-right: auto;
     margin-bottom: 0;
+    margin-left: 70px;
+    padding-top: 5px;
+    width: 190px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding-top: 70px;
+    padding-top: 62px;
     padding-bottom: 70px;
+
+    &--galery {
+      padding-top: 92px;
+    }
   }
 
   .page-footer__wrap {
     padding: 0 10px;
     width: 960px;
     font-size: $bigest-size;
+  }
+
+  .page-footer__socials {
+    margin-left: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 210px;
   }
 }

@@ -1,10 +1,7 @@
-// Сюда будут импортированы нормалайз, файл с переменными, все файлы блоков, примеси
-// Также здесь будут описаны глобальные стили
 // 1. Нормалайз
 @import "common/normalize.scss";
 // 2. Переменные, примеси
 @import "common/variables.scss";
-@import "common/mixins.scss";
 // 3. Стандартные блоки и общие для всех страниц
 @import "common/fonts.scss";
 @import "common/global.scss";
@@ -15,11 +12,11 @@
 @import "blocks/green-button.scss";
 @import "blocks/round-button.scss";
 @import "blocks/slider.scss";
+@import "blocks/range-filter.scss";
 // -- Хедер
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
-// @import "blocks/page-main.scss";
 // -- Футер
 @import "blocks/socials.scss";
 @import "blocks/copyright.scss";
@@ -43,3 +40,4 @@
 // 6. Блоки на странице с формой (form.html)
 @import "blocks/storytelling.scss";
 @import "blocks/flashback-form.scss";
+@import "blocks/pop-up.scss";

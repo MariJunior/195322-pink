@@ -1,17 +1,10 @@
-.galery {
-  // padding-bottom: 45px;
-  outline: 1px solid palevioletred;
-}
-
 .galery__intro-container {
-  padding-top: 50px;
+  padding-top: 45px;
   padding-right: 15px;
   padding-bottom: 50px;
   padding-left: 15px;
   width: 280px;
   text-align: center;
-
-  outline: 1px solid darkorange;
 }
 
 .galery__intro {
@@ -21,20 +14,21 @@
 
 .galery__slogan-container {
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   width: 280px;
 }
 
 .galery__slogan {
   margin: 0;
+  line-height: $big-height;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .galery__intro-container {
-    padding-top: 95px;
+    padding-top: 90px;
     padding-right: 80px;
-    padding-bottom: 75px;
+    padding-bottom: 77px;
     padding-left: 80px;
     width: 620px;
   }
@@ -44,8 +38,8 @@
   }
 
   .galery__slogan-container {
-    padding-top: 70px;
-    padding-bottom: 65px;
+    padding-top: 65px;
+    padding-bottom: 70px;
     width: 620px;
   }
 
@@ -58,13 +52,13 @@
 @media (min-width: $desktop-width) {
   .galery__intro-container {
     padding-right: 190px;
-    padding-bottom: 85px;
+    padding-bottom: 90px;
     padding-left: 190px;
     width: 960px;
   }
 
   .galery__slogan-container {
-    padding-top: 65px;
+    padding-top: 58px;
     width: 940px;
   }
 }

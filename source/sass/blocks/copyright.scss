@@ -1,9 +1,18 @@
 .copyright {
   margin: 0;
+  padding-top: 15px;
 }
 
 .copyright__link {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
+
+  &:hover path {
+    fill: $base-text-color;
+  }
+
+  &:active path {
+    fill: rgba($base-text-color, 0.3);
+  }
 }

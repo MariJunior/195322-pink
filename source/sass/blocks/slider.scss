@@ -20,7 +20,7 @@
 
 .slider__toggle {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 6px;
   padding: 0;
   width: 6px;
   height: 6px;
@@ -34,5 +34,19 @@
     background-color: $base-bg-color;
     border: 3px solid $base-text-color;
     opacity: 1;
+  }
+
+  // Или правильнее через js добавлять кнопке с модификаторома атрибут disabled?
+
+  &:not(&--current):hover {
+    opacity: 0.6;
+  }
+
+  &--current:focus {
+    outline: 0;
+  }
+
+  &:not(&--current):active {
+    opacity: 0.1;
   }
 }

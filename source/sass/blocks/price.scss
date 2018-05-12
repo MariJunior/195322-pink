@@ -1,10 +1,12 @@
 .price {
   position: relative;
   padding-top: 90px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   background-color: $secondary-bg-color;
-
-  outline: 1px solid deepskyblue;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 101% auto;
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
 .price__wrapper {
@@ -13,14 +15,13 @@
 
 .price__slides {
   width: 300%;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   transform: translateX(-33.33%);
   transition: transform 0.8s ease-in-out;
 }
 
 .price__table {
   width: 100%;
-  outline: 1px solid chartreuse;
 }
 
 .price__toggles {
@@ -29,6 +30,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .price {
+    padding-top: 85px;
+    padding-bottom: 35px;
+  }
+
   .price__slides {
     width: auto;
     transform: translateX(0);
@@ -40,6 +46,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .price {
+    padding-top: 158px;
+    padding-bottom: 55px;
+  }
+
+  .price__wrapper {
+    padding: 0 10px;
+  }
+
   .price__table {
     width: 80%;
   }

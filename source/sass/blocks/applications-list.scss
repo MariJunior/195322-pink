@@ -16,6 +16,12 @@
   }
 }
 
-// .applications-list__link {
+.applications-list__link {
+  &:hover {
+    opacity: 0.7;
+  }
 
-// }
+  &:active {
+    opacity: 0.3;
+  }
+}

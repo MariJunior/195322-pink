@@ -117,7 +117,7 @@
 
 .flashback-form__achievements-item {
   margin-bottom: 43px;
-  width: 280px;
+  max-width: 280px;
 
   &:first-child {
     margin-top: 4px;
@@ -231,6 +231,10 @@
   line-height: $big-height;
   text-align: center;
   text-transform: uppercase;
+
+  &--full {
+    display: none;
+  }
 }
 
 .flashback-form__sup {
@@ -327,6 +331,7 @@
   }
 
   .flashback-form__achievements-list {
+    padding-right: 60px;
     padding-bottom: 24px;
     padding-left: 60px;
   }
@@ -441,6 +446,7 @@
   .flashback-form__input {
     &--textarea {
       width: 820px;
+      min-height: 125px;
     }
   }
 
@@ -460,8 +466,39 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     align-content: space-between;
-    margin-top: 15px;
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .flashback-form__achievements-item {
+    order: 7;
+    margin-top: 4px;
+
+    &--first {
+      order: 1;
+    }
+
+    &--second {
+      order: 2;
+    }
+
+    &--third {
+      order: 3;
+    }
+
+    &--fourth {
+      order: 4;
+    }
+
+    &--fifth {
+      order: 5;
+    }
+
+    &--sixth {
+      order: 6;
+    }
   }
 
   .flashback-form__platform-list {
@@ -471,5 +508,11 @@
 
   .flashback-form__submit {
     width: 940px;
+  }
+
+  .flashback-form__submit-footnote {
+    &--full {
+      display: inline;
+    }
   }
 }

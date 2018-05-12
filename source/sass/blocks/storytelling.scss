@@ -38,6 +38,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .storytelling {
+    padding-bottom: 0;
+  }
+
   .storytelling__container {
     width: 820px;
   }

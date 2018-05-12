@@ -12,14 +12,9 @@
   background-color: transparent;
   cursor: pointer;
 
-  &:hover,
-  &:focus, {
+  &:hover {
     color: $secondary-text-color;
     background-color: $base-bg-color;
-  }
-
-  &:focus {
-    outline: 0;
   }
 
   &:active {
@@ -32,8 +27,7 @@
     border-color: $secondary-text-color;
   }
 
-  &--submit:hover,
-  &--submit:focus {
+  &--submit:hover {
     color: $base-bg-color;
     background-color: $secondary-text-color;
   }
@@ -48,8 +42,7 @@
     border-color: rgba($base-text-color, 0.1);
   }
 
-  &--reset:hover,
-  &--reset:focus {
+  &--reset:hover {
     color: rgba($base-text-color, 0.3);
     background-color: transparent;
     border-color: rgba($base-text-color, 0.3);

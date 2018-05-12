@@ -41,8 +41,7 @@
   font-weight: 300;
   color: $secondary-text-color;
 
-  &[href]:hover,
-  &[href]:focus {
+  &[href]:hover {
     color: $base-text-color;
     text-decoration: underline;
   }

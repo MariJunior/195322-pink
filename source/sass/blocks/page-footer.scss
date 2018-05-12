@@ -16,13 +16,8 @@
   display: block;
   margin-bottom: 33px;
 
-  &[href]:hover path,
-  &[href]:focus path {
+  &[href]:hover path {
     fill: $secondary-text-color;
-  }
-
-  &[href]:focus {
-    outline: none;
   }
 
   &[href]:active g path {

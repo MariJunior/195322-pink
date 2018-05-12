@@ -8,13 +8,8 @@
   margin-left: 10px;
   vertical-align: middle;
 
-  &:hover path,
-  &:focus path {
+  &:hover path {
     fill: $base-text-color;
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &:active path {

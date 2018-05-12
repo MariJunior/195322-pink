@@ -20,13 +20,8 @@
 .page-header__logo-link {
   display: flex;
 
-  &[href]:hover g,
-  &[href]:focus g {
+  &[href]:hover g {
     fill: $secondary-text-color;
-  }
-
-  &:focus {
-    outline: 0;
   }
 
   &[href]:active g {
@@ -79,15 +74,8 @@
 
   &:hover::before,
   &:hover::after,
-  &:hover span,
-  &:focus::before,
-  &:focus::after,
-  &:focus span {
+  &:hover span {
     background-color: $secondary-text-color;
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &:active {

@@ -49,8 +49,7 @@
     background-image: url("../img/icon-editor-contrast.svg");
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.5;
   }
 
@@ -167,7 +166,6 @@
     &:focus::before {
       opacity: 0.5;
     }
-
 
     // FIXME: активные элементы становятся розовыми
     // &--crop:active::before {

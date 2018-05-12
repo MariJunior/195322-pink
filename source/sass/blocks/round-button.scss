@@ -8,13 +8,8 @@
   border: 3px solid rgba($base-text-color, 0.2);
   border-radius: 50%;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $base-text-color;
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &:active {

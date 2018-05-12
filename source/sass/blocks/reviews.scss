@@ -104,7 +104,6 @@
 
   .reviews__text {
     margin-right: auto;
-    // margin-bottom: 38px;
     margin-left: auto;
     width: 700px;
   }
@@ -153,8 +152,7 @@
     }
   }
 
-  .reviews__switch:hover,
-  .reviews__switch:focus {
+  .reviews__switch:hover {
     &::before,
     &::after {
       opacity: 0.6;

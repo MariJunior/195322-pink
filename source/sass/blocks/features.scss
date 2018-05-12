@@ -156,8 +156,7 @@
     color: $secondary-text-color;
     text-decoration: underline;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: $base-text-color;
     }
 

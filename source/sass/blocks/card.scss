@@ -69,8 +69,7 @@
   border: none;
   background: none;
 
-  &:hover path,
-  &:focus path {
+  &:hover path {
     fill: $base-text-color;
   }
 

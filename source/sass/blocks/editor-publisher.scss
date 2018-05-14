@@ -5,12 +5,11 @@
 .editor-publisher__photo-wrap {
   margin-bottom: 43px;
   width: 280px;
-  height: 374px;
+  background-color: #c8d6e7;
 }
 
 .editor-publisher__photo {
-  width: 280px;
-  height: 374px;
+  display: block;
 }
 
 .editor-publisher__tools {
@@ -25,6 +24,7 @@
 
 .editor-publisher__tool {
   font-size: 0;
+  background: $secondary-bg-color;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
@@ -91,7 +91,6 @@
   }
 }
 
-//TABLET
 @media (min-width: $tablet-width) {
   .editor-publisher {
     padding-right: 20px;
@@ -103,12 +102,6 @@
     float: left;
     margin-bottom: 0;
     width: 300px;
-    height: 400px;
-  }
-
-  .editor-publisher__photo {
-    width: 300px;
-    height: 400px;
   }
 
   .editor-publisher__tools {
@@ -143,6 +136,7 @@
       left: 3px;
       width: 22px;
       height: 22px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-crop.svg");
     }
 
@@ -151,6 +145,7 @@
       left: 3px;
       width: 24px;
       height: 22px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-fill.svg");
     }
 
@@ -159,6 +154,7 @@
       left: 8px;
       width: 16px;
       height: 16px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-contrast.svg");
     }
 
@@ -197,7 +193,6 @@
   }
 }
 
-//DESTOP
 @media (min-width: $desktop-width) {
   .editor-publisher {
     padding-right: 60px;

@@ -44,8 +44,14 @@
     display: block;
     height: 320px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-size: 157px auto;
     background-repeat: no-repeat;
     background-position: center 40px;
+
+    // Можно ли в этом случае нарушить правило о вложенности или это будет невыполнением критерия?
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
   }
 }
 
@@ -72,7 +78,6 @@
   display: none;
 }
 
-// ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .features__slogan-wrap {
     padding-top: 45px;
@@ -105,11 +110,14 @@
       left: 0;
       width: 270px;
       height: 530px;
-      // FIXME: заменить потом на нужное изображение
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-repeat: no-repeat;
       background-position: center 50px;
-      background-size: 270px;
+      background-size: 268px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
 
     &::after {
@@ -126,15 +134,28 @@
   }
 
   .features__effect {
+    position: relative;
     display: block;
     padding-top: 99px;
     padding-bottom: 63px;
     padding-left: 310px;
     width: 620px;
-    // заготовка для часов
-    // background-image: ur../img/[часы]");
+    background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+    background-size: 204px 204px, 241px 278px;
     background-repeat: no-repeat;
-    background-position: 0 59px;
+    background-position: 18px 115px, 0 59px;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 115px;
+      left: 52px;
+      display: block;
+      font-size: 120px;
+      line-height: 186.84px;
+      font-weight: 700;
+      color: $secondary-text-color;
+    }
   }
 
   .features__effect-title {
@@ -166,7 +187,6 @@
   }
 }
 
-// ДЕСКТОП
 @media (min-width: $desktop-width) {
   .features__slogan-wrap {
     padding-top: 70px;
@@ -225,15 +245,27 @@
     }
 
     &--mood::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
     }
 
     &--world::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
     }
 
     &--friends::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 
@@ -257,10 +289,13 @@
     padding-bottom: 112px;
     padding-left: 375px;
     width: 960px;
-    // заготовка для часов
-    // background-image: url("../img/[часы]");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-size: 253px 253px, 298px 345px;
+    background-position: 32px 69px, 10px 0;
+
+    &::before {
+      top: 95px;
+      left: 88px;
+    }
   }
 
   .features__effect-title {

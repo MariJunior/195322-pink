@@ -2,6 +2,7 @@
   position: relative;
   height: 200px;
   overflow: hidden;
+  background-color: #f3f1ea;
 
   &::before {
     content: "";
@@ -9,13 +10,8 @@
     top: 0;
     z-index: 100;
     display: block;
-    width: 100%;
-    height: 123px;
-    // FIXME: несостыковка с макетом на десктопной ширине
-    background-image: url("../img/bg-triangle-white-footer.svg");
-    background-size: 101% auto;
-    background-repeat: no-repeat;
-    background-position: center 0;
+    border: 50vw solid transparent;
+    border-top: 35px solid $base-bg-color;
   }
 }
 
@@ -39,11 +35,19 @@
 @media (min-width: $tablet-width) {
   .map {
     height: 375px;
+
+    &::before {
+      border-top-width: 70px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
     height: 500px;
+
+    &::before {
+      border-top-width: 100px;
+    }
   }
 }

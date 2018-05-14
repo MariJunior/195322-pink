@@ -82,10 +82,16 @@
             Видите, как не хватает ваших?
           </p>
         </div>
-        <article class="card card--panorama container">
+
+        <article class="card card--panorama">
           <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-          <!-- FIXME: обернуть фотокарточки ссылками (пкт. ТЗ 6.1)? -->
-          <img class="card__photo card__photo--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня">
+          <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x img/panorama-tablet@2x.jpg 2x">
+              <img class="card__photo card__photo--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
+            </picture>
+          </a>
           <div class="card__info card__info--panorama container">
             <cite class="card__author">Анна</cite>
             <span class="card__time">(5 минут назад)</span>
@@ -105,10 +111,17 @@
             </div>
           </div>
         </article>
+
         <ul class="galery__list user-photos container">
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Левон</cite>
               <span class="card__time">(5 часов назад)</span>
@@ -128,9 +141,16 @@
               </div>
             </div>
           </li>
+
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Антон</cite>
               <span class="card__time">(12 часов назад)</span>
@@ -150,9 +170,16 @@
               </div>
             </div>
           </li>
+
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Борис</cite>
               <span class="card__time">(20 часов назад)</span>
@@ -172,9 +199,16 @@
               </div>
             </div>
           </li>
+
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Сергей</cite>
               <span class="card__time">(25 часов назад)</span>
@@ -194,9 +228,16 @@
               </div>
             </div>
           </li>
+
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Максим</cite>
               <span class="card__time">(40 часов назад)</span>
@@ -216,9 +257,16 @@
               </div>
             </div>
           </li>
+
           <li class="user-photos__item card">
             <h3 class="visually-hidden">Фотокарточка с описанием</h3>
-            <img class="card__photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+            <a class="card__photo-link" href="#" aria-label="Ссылка на полноразмерную фотографию">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="card__photo" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
             <div class="card__info">
               <cite class="card__author">Надежда</cite>
               <span class="card__time">(45 часов назад)</span>
@@ -250,7 +298,11 @@
         <h2 class="visually-hidden">Отредактируйте Вашу фотографию с помощью встроенного редактора и разместите её в галерее!</h2>
         <form class="editor__form editor-publisher container" action="https://echo.htmlacademy.ru/" method="post">
             <div class="editor-publisher__photo-wrap container">
-              <img class="editor-publisher__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Выбранная для редактирования фотография">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img class="editor-publisher__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" alt="Выбранная для редактирования фотография">
+              </picture>
             </div>
             <div class="editor-publisher__tools container">
               <p class="visually-hidden">Выберите параметр редактирования</p>

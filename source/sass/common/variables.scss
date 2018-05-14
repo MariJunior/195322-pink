@@ -25,3 +25,6 @@ $gigantic-heigth: ($base-size * 25)/7; /* 50px */
 $tablet-width: 660px;
 $desktop-width: 960px;
 $not-desktop-width: 959px;
+//Для ретины
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

@@ -42,7 +42,7 @@
   &::after {
     content: "";
     display: block;
-    height: 320px;
+    height: 317px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-size: 157px auto;
     background-repeat: no-repeat;
@@ -141,17 +141,17 @@
     padding-left: 310px;
     width: 620px;
     background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
-    background-size: 204px 204px, 241px 278px;
+    background-size: 202px 202px, 241px 278px;
     background-repeat: no-repeat;
-    background-position: 18px 115px, 0 59px;
+    background-position: 19px 113px, 0 59px;
 
     &::before {
       content: "24";
       position: absolute;
-      top: 115px;
-      left: 52px;
+      top: 117px;
+      left: 65px;
       display: block;
-      font-size: 120px;
+      font-size: 94px;
       line-height: 186.84px;
       font-weight: 700;
       color: $secondary-text-color;
@@ -236,7 +236,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: -360px;
+      top: -366px;
       width: 242px;
       height: 308px;
       background-repeat: no-repeat;
@@ -290,11 +290,12 @@
     padding-left: 375px;
     width: 960px;
     background-size: 253px 253px, 298px 345px;
-    background-position: 32px 69px, 10px 0;
+    background-position: 33px 70px, 11px 0;
 
     &::before {
-      top: 95px;
-      left: 88px;
+      top: 98px;
+      left: 91px;
+      font-size: 118px;
     }
   }
 

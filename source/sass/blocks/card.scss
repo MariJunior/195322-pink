@@ -109,6 +109,10 @@
     }
   }
 
+  .card__photo--panorama {
+    min-height: 509px;
+  }
+
   .card__info {
     position: relative;
     flex-grow: 1;
@@ -159,6 +163,10 @@
       top: 54px;
       right: 10px;
     }
+  }
+
+  .card__photo--panorama {
+    min-height: 505px;
   }
 
   .card__info {

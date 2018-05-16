@@ -1,17 +1,29 @@
 .download-app {
-  margin-top: -69px; /* чтобы секция частично была под хедером */
-  padding-top: 460px; /* толкает блок с содержимым вниз */
+  margin-top: -70px; /* чтобы секция частично была под хедером */
   text-align: center;
   color: $base-bg-color;
-  background-color: $base-text-color;
-  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, 100% auto;
-  background-position: 0 173px, 0 0;
+}
+
+.download-app__container {
+  &::before {
+    content: "";
+    display: block;
+    height: 465px;
+    background-color: $base-text-color;
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 258px 286px, cover;
+    // Нужно ли подгонять фон по пп?
+    background-position: 40% bottom, 50% 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+    }
+  }
 }
 
 .download-app__wrap {
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 30px;
   background-color: $base-text-color;
 }
@@ -39,15 +51,17 @@
   text-align: center;
 }
 
-// ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .download-app {
     margin-top: -110px;
-    padding-top: 135px;
-    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-size: 100% auto;
-    background-position: 0 0;
+    padding-top: 183px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px auto;
+    background-position: 50% 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .download-app__container {
@@ -55,11 +69,18 @@
     padding-bottom: 110px;
     width: 620px;
     // закидываем фон-руку в контейнер, чтобы центрировался вместе с содержимым
-    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-size: 470px 545px;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-size: 700px 545px;
     background-repeat: no-repeat;
-    background-position: 150px 0;
+    background-position: -40px bottom;
+
+    &::before {
+      display: none;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
   }
 
   .download-app__wrap {
@@ -96,15 +117,17 @@
   }
 }
 
-// ДЕСКТОП
 @media (min-width: $desktop-width) {
   .download-app {
     margin-top: -115px;
     padding-top: 210px;
-    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-size: 100% auto;
-    background-position: 0 0;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 2560px auto;
+    background-position: 50% 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .download-app__container {
@@ -114,10 +137,13 @@
     padding-left: 10px;
     width: 960px;
     // фон-рука
-    //FIXME: Фоновые изображения заменить, когда прийдёт оставшаяся графика
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-size: 555px 648px;
-    background-position: 355px bottom;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-size: 1050px 645px;
+    background-position: 27px bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
   }
 
   .download-app__slogan {

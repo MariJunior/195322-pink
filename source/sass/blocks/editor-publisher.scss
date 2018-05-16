@@ -5,12 +5,12 @@
 .editor-publisher__photo-wrap {
   margin-bottom: 43px;
   width: 280px;
-  height: 374px;
+  background-color: #c8d6e7;
 }
 
 .editor-publisher__photo {
-  width: 280px;
-  height: 374px;
+  display: block;
+  width: 100%; /* IE and Edge */
 }
 
 .editor-publisher__tools {
@@ -25,6 +25,7 @@
 
 .editor-publisher__tool {
   font-size: 0;
+  background: $secondary-bg-color;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
@@ -62,13 +63,13 @@
 }
 
 .editor-publisher__togglers {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   text-align: center;
 }
 
 .editor-publisher__togglers-wrap {
   display: none;
-  height: 55px;
+  height: 50px;
   border-bottom: 1px solid rgba($base-text-color, 0.1);
 
   &--current {
@@ -91,7 +92,6 @@
   }
 }
 
-//TABLET
 @media (min-width: $tablet-width) {
   .editor-publisher {
     padding-right: 20px;
@@ -103,12 +103,6 @@
     float: left;
     margin-bottom: 0;
     width: 300px;
-    height: 400px;
-  }
-
-  .editor-publisher__photo {
-    width: 300px;
-    height: 400px;
   }
 
   .editor-publisher__tools {
@@ -116,7 +110,7 @@
   }
 
   .editor-publisher__togglers {
-    margin-bottom: 62px;
+    margin-bottom: 65px;
     margin-left: auto;
     width: 275px;
     text-align: right;
@@ -125,8 +119,9 @@
   .editor-publisher__togglers-wrap {
     position: relative;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-top: 5px;
+    height: 57px;
 
     &::before {
       content: "";
@@ -139,26 +134,29 @@
 
     // FIXME: значки имеют заливку тёмно-синим цветом
     &--crop::before {
-      top: 5px;
+      top: 10px;
       left: 3px;
       width: 22px;
       height: 22px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-crop.svg");
     }
 
     &--pouring::before {
-      top: 8px;
+      top: 13px;
       left: 3px;
       width: 24px;
       height: 22px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-fill.svg");
     }
 
     &--brightness::before {
-      top: 7px;
+      top: 12px;
       left: 8px;
       width: 16px;
       height: 16px;
+      background-color: $secondary-bg-color;
       background-image: url("../img/icon-editor-contrast.svg");
     }
 
@@ -197,7 +195,6 @@
   }
 }
 
-//DESTOP
 @media (min-width: $desktop-width) {
   .editor-publisher {
     padding-right: 60px;
@@ -206,27 +203,27 @@
   }
 
   .editor-publisher__togglers {
-    margin-bottom: 140px;
+    margin-bottom: 145px;
     width: 410px;
   }
 
   .editor-publisher__togglers-wrap {
     &--crop::before {
-      top: -2px;
+      top: 0;
       left: 0;
       width: 44px;
       height: 44px;
     }
 
     &--pouring::before {
-      top: -2px;
+      top: 2px;
       left: 0;
       width: 48px;
       height: 43px;
     }
 
     &--brightness::before {
-      top: -2px;
+      top: 4px;
       left: 6px;
       width: 32px;
       height: 32px;

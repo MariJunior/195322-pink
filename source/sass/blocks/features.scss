@@ -42,10 +42,15 @@
   &::after {
     content: "";
     display: block;
-    height: 320px;
+    height: 317px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-size: 157px auto;
     background-repeat: no-repeat;
     background-position: center 40px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
   }
 }
 
@@ -72,7 +77,6 @@
   display: none;
 }
 
-// ПЛАНШЕТ
 @media (min-width: $tablet-width) {
   .features__slogan-wrap {
     padding-top: 45px;
@@ -105,11 +109,14 @@
       left: 0;
       width: 270px;
       height: 530px;
-      // FIXME: заменить потом на нужное изображение
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-repeat: no-repeat;
       background-position: center 50px;
-      background-size: 270px;
+      background-size: 268px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
 
     &::after {
@@ -126,15 +133,28 @@
   }
 
   .features__effect {
+    position: relative;
     display: block;
     padding-top: 99px;
     padding-bottom: 63px;
     padding-left: 310px;
     width: 620px;
-    // заготовка для часов
-    // background-image: ur../img/[часы]");
+    background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+    background-size: 202px 202px, 241px 278px;
     background-repeat: no-repeat;
-    background-position: 0 59px;
+    background-position: 19px 113px, 0 59px;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 117px;
+      left: 65px;
+      display: block;
+      font-size: 94px;
+      line-height: 186.84px;
+      font-weight: 700;
+      color: $secondary-text-color;
+    }
   }
 
   .features__effect-title {
@@ -166,7 +186,6 @@
   }
 }
 
-// ДЕСКТОП
 @media (min-width: $desktop-width) {
   .features__slogan-wrap {
     padding-top: 70px;
@@ -216,7 +235,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: -360px;
+      top: -366px;
       width: 242px;
       height: 308px;
       background-repeat: no-repeat;
@@ -225,15 +244,27 @@
     }
 
     &--mood::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
     }
 
     &--world::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
     }
 
     &--friends::before {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 
@@ -257,10 +288,14 @@
     padding-bottom: 112px;
     padding-left: 375px;
     width: 960px;
-    // заготовка для часов
-    // background-image: url("../img/[часы]");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-size: 253px 253px, 298px 345px;
+    background-position: 33px 70px, 11px 0;
+
+    &::before {
+      top: 98px;
+      left: 91px;
+      font-size: 118px;
+    }
   }
 
   .features__effect-title {

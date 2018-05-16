@@ -7,6 +7,7 @@ $other-text-color: #000000;
 $base-border-color: #e5e5e5;
 $form-btn-color: #2aab6d;
 $form-btn-color-hover: #1c9b5e;
+$editor-reset-btn-active: #b5babe;
 // Размеры шрифтов
 $base-size: 14px;
 $small-size: ($base-size * 6)/7; /* 12px */
@@ -25,3 +26,6 @@ $gigantic-heigth: ($base-size * 25)/7; /* 50px */
 $tablet-width: 660px;
 $desktop-width: 960px;
 $not-desktop-width: 959px;
+//Для ретины
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

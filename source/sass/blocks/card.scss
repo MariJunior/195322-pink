@@ -2,11 +2,10 @@
   width: 280px;
   text-align: left;
 
-  // FIXME: когда будет графика, сделать этот блок тянущимся на всю ширину окна
   &--panorama {
     position: relative;
     margin-bottom: 20px;
-    width: 320px;
+    width: 100%; /* Нужно ли задать какую-нибудь максимальную ширину? */
   }
 
   &--panorama::before {
@@ -27,8 +26,13 @@
   }
 }
 
+.card__photo-link {
+  background-color: $base-border-color;
+}
+
 .card__photo {
   display: block;
+  width: 100%; /* IE and Edge */
 }
 
 .card__info {
@@ -94,7 +98,7 @@
 
     &--panorama {
       margin-bottom: 50px;
-      width: 660px;
+      width: 100%;
     }
 
     &--panorama::before {
@@ -102,15 +106,8 @@
     }
   }
 
-  .card__photo {
-    // временно для того, чтобы посмотреть, как будет
-    width: 300px;
-    height: 300px;
-
-    &--panorama {
-      width: $tablet-width;
-      height: 509px;
-    }
+  .card__photo--panorama {
+    min-height: 509px;
   }
 
   .card__info {
@@ -144,7 +141,6 @@
       right: 30px;
       bottom: auto;
       justify-content: flex-end;
-      // width: auto;
     }
   }
 
@@ -160,24 +156,14 @@
 
 @media (min-width: $desktop-width) {
   .card {
-    &--panorama {
-      width: $desktop-width;
-    }
-
     &--panorama::before {
       top: 54px;
       right: 10px;
     }
   }
 
-  .card__photo {
-    // временно для того, чтобы посмотреть, как будет
-    height: 400px;
-
-    &--panorama {
-      width: $desktop-width;
-      height: 506px;
-    }
+  .card__photo--panorama {
+    min-height: 505px;
   }
 
   .card__info {

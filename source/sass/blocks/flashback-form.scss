@@ -41,6 +41,8 @@
 }
 
 .flashback-form__group-title {
+  display: block; /* IE and Edge */
+  margin: 0 auto; /* IE and Edge */
   padding-right: 30px;
   padding-left: 30px;
   line-height: 20px;
@@ -196,11 +198,11 @@
   &:checked + .flashback-form__list-label::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 12px;
     display: block;
     width: 15px;
-    height: 16px;
+    height: 15px;
     background-color: $secondary-text-color;
     border-radius: 50%;
   }
@@ -446,8 +448,9 @@
   .flashback-form__input {
     &--textarea {
       margin-top: 0;
+      margin-bottom: 16px;
       width: 820px;
-      min-height: 125px;
+      min-height: 128px;
     }
   }
 

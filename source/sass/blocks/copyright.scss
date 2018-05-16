@@ -16,3 +16,9 @@
     fill: rgba($base-text-color, 0.3);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    padding-top: 23px;
+  }
+}

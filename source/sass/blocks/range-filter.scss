@@ -1,10 +1,11 @@
 .range-filter {
   appearance: none;
   width: 240px;
-  height: 2px;
-  background-color: transparent;
-  outline: none;
   border: none;
+
+  &:focus {
+    outline: none;
+  }
 
   &::-webkit-slider-thumb:active {
     background-color: $secondary-text-color;
@@ -23,8 +24,10 @@
   }
 
   &::-webkit-slider-runnable-track {
+    width: 240px;
     height: 2px;
     background-color: $base-text-color;
+    cursor: pointer;
   }
 
   &::-webkit-slider-thumb {
@@ -40,16 +43,13 @@
   }
 
   &::-moz-range-track {
-    appearance: none;
     width: 240px;
     height: 2px;
-    background-color: $secondary-bg-color;
-    outline: none;
+    background-color: $base-text-color;
     border: none;
   }
 
   &::-moz-range-thumb {
-    appearance: none;
     width: 10px;
     height: 10px;
     border: 2px solid $secondary-text-color;
@@ -60,7 +60,8 @@
 
   &::-ms-fill-lower,
   &::-ms-fill-upper {
-    background: transparent;
+    height: 2px;
+    background-color: $base-text-color;
   }
 
   &::-ms-tooltip {
@@ -69,13 +70,15 @@
 
   &::-ms-track {
     width: 240px;
-    height: 0;
-    background-color: $base-text-color;
+    height: 14px;
+    background-color: transparent;
     color: transparent;
-    border-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   &::-ms-thumb {
+    margin-top: 0;
     width: 10px;
     height: 10px;
     padding: 0;
@@ -90,6 +93,10 @@
   .range-filter {
     width: 202px;
 
+    &::-webkit-slider-runnable-track {
+      width: 202px;
+    }
+
     &::-moz-range-track {
       width: 202px;
     }
@@ -103,6 +110,10 @@
 @media (min-width: $desktop-width) {
   .range-filter {
     width: 288px;
+
+    &::-webkit-slider-runnable-track {
+      width: 288px;
+    }
 
     &::-moz-range-track {
       width: 288px;

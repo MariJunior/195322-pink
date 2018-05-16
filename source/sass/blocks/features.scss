@@ -48,7 +48,6 @@
     background-repeat: no-repeat;
     background-position: center 40px;
 
-    // Можно ли в этом случае нарушить правило о вложенности или это будет невыполнением критерия?
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/iphone-screen-mobile@2x.png");
     }

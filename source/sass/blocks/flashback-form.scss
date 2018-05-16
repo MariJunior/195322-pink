@@ -41,6 +41,8 @@
 }
 
 .flashback-form__group-title {
+  display: block; /* IE and Edge */
+  margin: 0 auto; /* IE and Edge */
   padding-right: 30px;
   padding-left: 30px;
   line-height: 20px;

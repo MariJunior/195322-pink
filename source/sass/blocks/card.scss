@@ -32,10 +32,7 @@
 
 .card__photo {
   display: block;
-
-  &--panorama {
-    width: 100%;
-  }
+  width: 100%; /* IE and Edge */
 }
 
 .card__info {

@@ -10,6 +10,7 @@
 
 .editor-publisher__photo {
   display: block;
+  width: 100%; /* IE and Edge */
 }
 
 .editor-publisher__tools {

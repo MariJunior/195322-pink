@@ -13,6 +13,21 @@
     border: 50vw solid transparent;
     border-top: 35px solid $base-bg-color;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/icon-map-marker.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%);
+  }
 }
 
 .map__image {
@@ -40,6 +55,10 @@
       border-top-width: 70px;
     }
   }
+
+  .map__image {
+    transform: translate(-50%, -40%);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -49,5 +68,9 @@
     &::before {
       border-top-width: 100px;
     }
+  }
+
+  .map__image {
+    transform: translate(-50%, -22.5%);
   }
 }

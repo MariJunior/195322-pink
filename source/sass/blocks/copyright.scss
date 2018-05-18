@@ -3,16 +3,20 @@
   padding-top: 15px;
 }
 
+.copyright__logo {
+  fill: $secondary-text-color;
+}
+
 .copyright__link {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
 
-  &:hover path {
+  &:hover use {
     fill: $base-text-color;
   }
 
-  &:active path {
+  &:active use {
     fill: rgba($base-text-color, 0.3);
   }
 }

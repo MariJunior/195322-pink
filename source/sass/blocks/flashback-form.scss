@@ -240,7 +240,6 @@
   color: $secondary-text-color;
 }
 
-// TABLET
 @media (min-width: $tablet-width) {
   .flashback-form {
     width: $tablet-width;
@@ -363,14 +362,22 @@
     &::after {
       content: "";
       position: absolute;
-      top: 22px;
-      right: 22px;
+      top: 2px;
+      right: 2px;
       display: block;
-      width: 20px;
-      height: 20px;
-      // background-image: url("../img/");
+      width: 60px;
+      height: 60px;
+      background-color: $base-border-color;
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    &--tel::after {
+      background-image: url("../img/icon-phone.svg");
+    }
+
+    &--email::after {
+      background-image: url("../img/icon-mail.svg");
     }
   }
 
@@ -378,7 +385,6 @@
     &--contacts {
       margin-top: 0;
       margin-bottom: 5px;
-      border-right-width: 62px;
     }
 
     &--textarea {
@@ -404,7 +410,6 @@
   }
 }
 
-// DESKTOP
 @media (min-width: $desktop-width) {
   .flashback-form {
     flex-direction: row;

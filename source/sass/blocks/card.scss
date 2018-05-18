@@ -5,7 +5,7 @@
   &--panorama {
     position: relative;
     margin-bottom: 20px;
-    width: 100%; /* Нужно ли задать какую-нибудь максимальную ширину? */
+    width: 100%;
   }
 
   &--panorama::before {
@@ -68,17 +68,21 @@
   display: flex;
 }
 
+.card__like-icon {
+  fill: $secondary-text-color;
+}
+
 .card__like-button {
   margin-right: 20px;
   padding: 0;
   border: none;
   background: none;
 
-  &:hover path {
+  &:hover use {
     fill: $base-text-color;
   }
 
-  &:active path {
+  &:active use {
     fill: rgba($secondary-text-color, 0.6);
   }
 }

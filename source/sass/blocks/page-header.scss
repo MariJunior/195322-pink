@@ -19,10 +19,11 @@
 
 .page-header__logo-image {
   width: 75px;
-  height: 22px;
+  height: 23px;
   fill: $base-bg-color;
 }
 
+.page-header__logo-letters,
 .page-header__logo-glasses,
 .page-header__logo-glasses-with-gaps,
 .page-header__logo-stars {
@@ -136,6 +137,11 @@
     height: 40px;
   }
 
+  .page-header__logo-letters-full {
+    display: none;
+  }
+
+  .page-header__logo-letters,
   .page-header__logo-glasses {
     display: inline-block;
   }

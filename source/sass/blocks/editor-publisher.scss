@@ -243,14 +243,17 @@ input[type="radio"]:checked + .editor-publisher__tool {
   }
 
   .editor-publisher__actions {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0;
-    width: 410px;
+    padding-left: 40px;
+    width: 450px;
   }
 
   .editor-publisher__button {
     margin-bottom: 0;
+    margin-right: 40px;
     width: 183px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

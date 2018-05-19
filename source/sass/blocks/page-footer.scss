@@ -12,15 +12,27 @@
   text-align: center;
 }
 
+.page-footer__logo-image {
+  width: 147px;
+  height: 40px;
+  fill: $base-text-color;
+}
+
+.page-footer__logo-glasses-with-gaps,
+.page-footer__logo-stars {
+  display: none;
+}
+
 .page-footer__logo-link {
   display: block;
   margin-bottom: 33px;
 
-  &[href]:hover path {
+  &[href]:hover g {
     fill: $secondary-text-color;
   }
 
-  &[href]:active g path {
+  &[href]:active .page-footer__logo-stars,
+  &[href]:active .page-footer__logo-letters {
     fill: $base-text-color;
   }
 
@@ -77,6 +89,15 @@
     padding: 0 10px;
     width: 960px;
     font-size: $bigest-size;
+  }
+
+  .page-footer__logo-glasses {
+    display: none;
+  }
+
+  .page-footer__logo-glasses-with-gaps,
+  .page-footer__logo-stars {
+    display: inline-block;
   }
 
   .page-footer__socials {

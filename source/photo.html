@@ -3,37 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Pixel Glass -->
-    <!-- <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        background-image: url("img/pink-photo-mobile.jpg");
-      }
-      @media ( min-width: 660px ) {
-        HTML {
-          background-image: url("img/pink-photo-tablet.jpg");
-        }
-      }
-      @media ( min-width: 960px ) {
-        HTML {
-          background-image: url("img/pink-photo-desktop.jpg");
-        }
-      }
 
-      BODY {
-        opacity: 0.5;
-      }
-    </style>
-    <link rel="stylesheet" href="pixel-glass/styles.css">
-    <script src="pixel-glass/script.js"></script> -->
-    <!-- // Pixel Glass -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <!-- <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"> -->
-    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/navigation.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon-180x180.png" sizes="180x180">
+
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgxuse.min.js"></script>
     <title>Фотогалерея пользователей приложения &ldquo;Pink&rdquo;</title>
@@ -132,7 +113,7 @@
             <div class="card__like-wrap card__like-wrap--panorama">
               <button class="card__like-button card__like-button--panorama" type="button" aria-label="Мне нравится">
                 <svg class="card__like-icon" width="12.5" height="12" role="img">
-                  <use xlink:href="img/sprite.svg#heart"/>
+                  <use xlink:href="img/sprite.svg#icon-heart"/>
                 </svg>
               </button>
               <p class="card__like-info">
@@ -166,7 +147,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -199,7 +180,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -232,7 +213,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -265,7 +246,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -298,7 +279,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -331,7 +312,7 @@
               <div class="card__like-wrap">
                 <button class="card__like-button" type="button" aria-label="Мне нравится">
                   <svg class="card__like-icon" width="12.5" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#heart"/>
+                    <use xlink:href="img/sprite.svg#icon-heart"/>
                   </svg>
                 </button>
                 <p class="card__like-info">
@@ -422,21 +403,21 @@
           <li class="socials__item">
             <a class="socials__button round-button" href="#" aria-label="Страница приложения в Twitter">
               <svg class="socials__logo" width="17.5" height="14.663" role="img">
-                <use xlink:href="img/sprite.svg#twitter"/>
+                <use xlink:href="img/sprite.svg#icon-twitter"/>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__button round-button" href="#" aria-label="Страница приложения в Facebook">
               <svg class="socials__logo" width="8.673" height="18.944" role="img">
-                <use xlink:href="img/sprite.svg#facebook"/>
+                <use xlink:href="img/sprite.svg#icon-facebook"/>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__button round-button" href="#" aria-label="Страница приложения на Youtube">
               <svg class="socials__logo" width="14.64" height="13.96" role="img">
-                <use xlink:href="img/sprite.svg#youtube"/>
+                <use xlink:href="img/sprite.svg#icon-youtube"/>
               </svg>
             </a>
           </li>
@@ -446,7 +427,7 @@
           Разработано
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__logo" width="26.943" height="34.09" role="img">
-              <use xlink:href="img/sprite.svg#htmlacademy"/>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"/>
             </svg>
           </a>
         </p>

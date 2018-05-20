@@ -26,8 +26,6 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**"
-    // "source/js/**",
-    // "source/*.html"
   ], {
     base: "source"
   })
@@ -97,7 +95,7 @@ gulp.task("js", function (cb) {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "copy", "style", "sprite", "images", "webp", "html", "js", done);
+  run("clean", "copy", "style", "sprite", "html", "js", done);
 });
 
 gulp.task("serve", function() {

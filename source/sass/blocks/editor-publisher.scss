@@ -122,14 +122,15 @@ input[type="radio"]:checked + .editor-publisher__tool {
 
 @media (min-width: $tablet-width) {
   .editor-publisher {
+    display: flex;
+    justify-content: space-between;
     padding-right: 20px;
     padding-left: 20px;
     width: 660px;
   }
 
   .editor-publisher__photo-wrap {
-    float: left;
-    margin-bottom: 0;
+    margin: 0;
     width: 300px;
   }
 

@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url("img/pink-index-mobile.jpg");
+      }
+      /* Tablet */
+      @media ( min-width: 660px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url("img/pink-index-tablet.jpg");
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url("img/pink-index-desktop.jpg");
+        }
+      }
+    </style>
+    <link href="pixel-glass-js-master/styles.css" rel="stylesheet">
+    <script src="pixel-glass-js-master/script.js"></script>
+    <!-- // Pixel Glass -->
+
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="js/navigation.js" as="script">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
@@ -305,15 +332,6 @@
 
       <section class="map">
         <h2 class="visually-hidden">Расположение офиса команды разработчиков приложения</h2>
-        <picture>
-          <source type="image/webp" media="(min-width:960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width:660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-
-          <source media="(min-width:960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-          <source media="(min-width:660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x">
-          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@1x.png 1x, img/bg-map-mobile@2x.jpg 2x" alt="Мы находимся в Санкт-Петербурге по адресу ул. Большая Конюшенная, 19/8.">
-        </picture>
         <div class="map__block map__block--pointer" id="map"></div>
       </section>
     </main>

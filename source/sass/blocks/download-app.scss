@@ -13,8 +13,7 @@
     background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: 258px 286px, cover;
-    // Нужно ли подгонять фон по пп?
-    background-position: 40% bottom, 50% 0;
+    background-position: 0 bottom, 50% 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
@@ -120,7 +119,7 @@
 
 @media (min-width: $desktop-width) {
   .download-app {
-    margin-top: -115px;
+    margin-top: -110px;
     padding-top: 210px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;

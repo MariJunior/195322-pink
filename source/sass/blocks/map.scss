@@ -3,40 +3,35 @@
   height: 200px;
   overflow: hidden;
   background-color: #f3f1ea;
+  background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 56.5%, center bottom;
+  background-size: 36px, cover;
 
-  &::before {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-mobile@2x.jpg");
+  }
+
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
     z-index: 100;
     display: block;
-    border: 50vw solid transparent;
-    border-top: 35px solid $base-bg-color;
+    width: 50%;
+    height: 30px;
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(to right top, transparent 50%, white 50%);
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    display: block;
-    width: 36px;
-    height: 36px;
-    background-image: url("../img/icon-map-marker.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translate(-50%);
+    right: 0;
+    background-image: linear-gradient(to left top, transparent 50%, white 50%);
   }
-}
-
-.map__image {
-  position: absolute;
-  left: 50%;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  transform: translate(-50%, -69%);
 }
 
 .map__block {
@@ -49,10 +44,17 @@
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 375px;
+    height: 370px;
+    background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-tablet@1x.jpg");
+    background-position: center 56.5%, center 74%;
 
-    &::before {
-      border-top-width: 70px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-tablet@2x.jpg");
+    }
+
+    &::before,
+    &::after {
+      height: 65px;
     }
   }
 
@@ -64,13 +66,40 @@
 @media (min-width: $desktop-width) {
   .map {
     height: 500px;
+    background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-desktop@1x.jpg");
+    background-position: center 56.5%, center 58%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-desktop@2x.jpg");
+    }
+
+    &::before,
+    &::after {
+      height: 123px;
+    }
 
     &::before {
-      border-top-width: 100px;
+      left: 0;
+      background-image: linear-gradient(10deg, transparent 50%, white 50%);
+    }
+
+    &::after {
+      right: 0;
+      background-image: linear-gradient(-10deg, transparent 50%, white 50%);
     }
   }
 
   .map__image {
     transform: translate(-50%, -22.5%);
+  }
+}
+
+// Для экранов с большим разрешением, просто чтоб было нормально до конца)
+@media (min-width: 1400px) {
+  .map {
+    &::before,
+    &::after {
+      height: 145px;
+    }
   }
 }

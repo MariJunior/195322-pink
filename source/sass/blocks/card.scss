@@ -60,7 +60,7 @@
 }
 
 .card__text {
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -110,41 +110,50 @@
     }
   }
 
-  .card__photo--panorama {
-    min-height: 509px;
-  }
-
-  .card__info {
-    position: relative;
-    flex-grow: 1;
-    flex-basis: 155px;
-    padding-top: 23px;
-    padding-right: 30px;
-    padding-bottom: 55px;
-    padding-left: 25px;
-
+  .card__photo {
     &--panorama {
-      flex-basis: auto;
-      width: 620px;
-      padding-bottom: 25px;
+      min-height: 509px;
     }
   }
 
+  .card__info {
+    flex-grow: 1;
+    flex-basis: 155px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 23px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 27px;
+
+    &--panorama {
+      flex-basis: auto;
+      flex-direction: row;
+      width: 620px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .card__author {
+    margin-right: 5px;
+  }
+
   .card__text {
+    min-height: 60px;
     margin-bottom: 0;
+
+    &--panorama {
+      order: 2;
+    }
   }
 
   .card__like-wrap {
-    position: absolute;
-    bottom: 22px;
     justify-content: space-between;
     width: 240px;
 
     &--panorama {
-      top: 25px;
-      right: 30px;
-      bottom: auto;
-      justify-content: flex-end;
+      margin-left: auto;
+      width: auto;
     }
   }
 
@@ -173,6 +182,18 @@
   .card__info {
     &--panorama {
       width: 940px;
+    }
+  }
+
+  .card__text {
+    &--panorama {
+      min-height: 33px;
+    }
+  }
+
+  .card__like-button {
+    &--panorama {
+      margin-left: 20px;
     }
   }
 }

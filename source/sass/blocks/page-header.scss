@@ -23,21 +23,21 @@
   fill: $base-bg-color;
 }
 
-.page-header__logo-letters,
-.page-header__logo-glasses,
-.page-header__logo-glasses-with-gaps,
-.page-header__logo-stars {
-  display: none;
+.page-header__logo-icon {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .page-header__logo-link {
   display: flex;
 
-  &[href]:hover g {
+  &[href]:hover use {
     fill: $secondary-text-color;
   }
 
-  &[href]:active g {
+  &[href]:active use {
     fill: $base-bg-color;
     opacity: 0.3;
   }
@@ -137,19 +137,21 @@
     height: 40px;
   }
 
-  .page-header__logo-letters-full {
-    display: none;
-  }
+  .page-header__logo-icon {
+    &--mobile {
+      display: none;
+    }
 
-  .page-header__logo-letters,
-  .page-header__logo-glasses {
-    display: inline-block;
+    &--tablet {
+      display: inline-block;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 35px;
     line-height: $small-heigth;
     font-weight: 400;
     text-transform: none;
@@ -171,13 +173,14 @@
     width: auto;
   }
 
-  .page-header__logo-glasses {
-    display: none;
-  }
+  .page-header__logo-icon {
+    &--tablet {
+      display: none;
+    }
 
-  .page-header__logo-glasses-with-gaps,
-  .page-header__logo-stars {
-    display: inline-block;
+    &--desktop {
+      display: inline-block;
+    }
   }
 
   .page-header__nav-toggle {

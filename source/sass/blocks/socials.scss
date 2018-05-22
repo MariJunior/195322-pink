@@ -6,8 +6,11 @@
 
 .socials__item {
   display: inline-block;
-  margin: 0 5px;
   vertical-align: middle;
+
+  &:nth-child(2n) {
+    margin: 0 13px;
+  }
 }
 
 .socials__logo {

@@ -28,36 +28,41 @@
 }
 
 .flashback-form__group {
-  padding-top: 32px;
+  position: relative;
+  padding-top: 72px;
   padding-right: 0;
   padding-bottom: 42px;
   padding-left: 0;
   width: 280px;
   border: none;
 
+  &--no-border,
+  &--contacts {
+    padding-top: 32px;
+  }
+
   &--small-padding {
-    padding-top: 7px;
+    padding-top: 26px;
   }
 }
 
 .flashback-form__group-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: block; /* IE and Edge */
   margin: 0 auto; /* IE and Edge */
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
   line-height: 20px;
   text-align: center;
   color: $secondary-text-color;
   text-transform: uppercase;
 
-  &--small-paddings {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
   &--big-paddings {
-    padding-right: 39px;
-    padding-left: 39px;
+    padding-right: 35px;
+    padding-left: 35px;
   }
 
   &--close {
@@ -82,6 +87,7 @@
   padding-bottom: 15px;
   padding-left: 20px;
   min-width: 280px;
+  min-height: 64px; /* IE */
   font-size: $bigest-size;
   line-height: $big-height;
   border: 2px solid $base-border-color;
@@ -246,12 +252,22 @@
   }
 
   .flashback-form__group {
+    padding-top: 55px;
     padding-bottom: 20px;
     width: 620px;
     border: 2px solid $base-border-color;
 
     &--no-border {
+      padding-top: 30px;
       border: none;
+    }
+
+    &--contacts {
+      padding-top: 46px;
+    }
+
+    &--achievements {
+      padding-top: 48px;
     }
 
     &--order-null {
@@ -268,6 +284,7 @@
   }
 
   .flashback-form__wrap {
+    padding-top: 44px;
     width: 620px;
     background-color: transparent;
 
@@ -276,7 +293,7 @@
     }
 
     &--other-padding {
-      padding-top: 57px;
+      padding-top: 65px;
     }
 
     &--order-null {
@@ -292,25 +309,51 @@
     }
 
     .flashback-form__group {
-      padding-top: 42px;
       width: 100%;
     }
   }
 
   .flashback-form__group-title {
+    top: -10px;
+    background-color: $base-bg-color;
+
     &--close {
       display: block;
+    }
+
+    &--achievements {
+      width: 436px;
+    }
+
+    &--contacts {
+      width: 260px;
+    }
+
+    &--apps {
+      width: 368px;
+    }
+
+    &--emotions {
+      width: 260px;
     }
   }
 
   .flashback-form__label {
     padding-left: 20px;
+
+    &--tel {
+      width: 150px;
+    }
+
+    &--email {
+      width: 120px;
+    }
   }
 
   .flashback-form__fullname-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 29px;
 
     &:last-child {
@@ -384,7 +427,7 @@
   .flashback-form__input {
     &--contacts {
       margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
 
     &--textarea {
@@ -427,6 +470,19 @@
       padding-right: 35px;
       width: 470px;
     }
+
+    &--contacts {
+      padding-top: 42px;
+      padding-bottom: 15px;
+    }
+
+    &--achievements {
+      padding-top: 42px;
+    }
+
+    &--small-padding {
+      padding-top: 43px;
+    }
   }
 
   .flashback-form__wrap {
@@ -438,15 +494,11 @@
     }
 
     &--other-padding {
-      padding-top: 55px;
+      padding-top: 65px;
     }
 
     &--contacts {
-      padding-top: 38px;
-    }
-
-    .flashback-form__group {
-      padding-top: 33px;
+      padding-top: 44px;
     }
   }
 
@@ -454,6 +506,7 @@
     &--textarea {
       margin-top: 0;
       margin-bottom: 16px;
+      padding-left: 16px;
       width: 820px;
       min-height: 128px;
     }
@@ -518,7 +571,7 @@
   }
 
   .flashback-form__platform-list {
-    padding-top: 14px;
+    padding-top: 0;
     padding-left: 75px;
   }
 

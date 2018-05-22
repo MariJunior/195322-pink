@@ -3,22 +3,6 @@
   width: 240px;
   border: none;
 
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-slider-thumb:active {
-    background-color: $secondary-text-color;
-  }
-
-  &::-moz-range-thumb:active {
-    background-color: $secondary-text-color;
-  }
-
-  &::-ms-thumb:active {
-    background-color: $secondary-text-color;
-  }
-
   &::-moz-focus-outer {
     border: none;
   }
@@ -86,6 +70,22 @@
     border-radius: 50%;
     background-color: $secondary-bg-color;
     cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb:active {
+    background-color: $secondary-text-color;
+  }
+
+  &::-moz-range-thumb:active {
+    background-color: $secondary-text-color;
+  }
+
+  &::-ms-thumb:active {
+    background-color: $secondary-text-color;
   }
 }
 

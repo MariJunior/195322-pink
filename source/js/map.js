@@ -2,12 +2,30 @@ ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
     center: [59.93629990, 30.32115742],
     zoom: 16,
-    controls: ['zoomControl',  'fullscreenControl']
+    controls: ['rulerControl']
   }, {
     suppressMapOpenBlock: true
-  }),
+  });
 
-  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  myMap.controls.add('zoomControl', {
+    float: 'none',
+    position: {
+        bottom: '50px',
+        left: '10px'
+    }
+  });
+
+  myMap.controls.add('fullscreenControl', {
+    float: 'none',
+    position: {
+        bottom: '50px',
+        right: '10px'
+    }
+  });
+
+  myMap.controls.remove('rulerControl');
+
+  var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     hintContent: 'Мы находимся тут',
     balloonContent: 'Санкт-Петербург, ул. Большая Конюшенная, 19/8.'
   }, {

@@ -9,6 +9,7 @@
 
 .copyright__link {
   display: inline-block;
+  margin-top: 5px;
   margin-left: 10px;
   vertical-align: middle;
 
@@ -23,6 +24,6 @@
 
 @media (min-width: $desktop-width) {
   .copyright {
-    padding-top: 23px;
+    padding-top: 20px;
   }
 }

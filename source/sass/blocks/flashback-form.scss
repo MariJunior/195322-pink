@@ -87,6 +87,7 @@
   padding-bottom: 15px;
   padding-left: 20px;
   min-width: 280px;
+  min-height: 64px; /* IE */
   font-size: $bigest-size;
   line-height: $big-height;
   border: 2px solid $base-border-color;

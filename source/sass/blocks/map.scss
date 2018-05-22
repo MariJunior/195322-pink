@@ -44,7 +44,7 @@
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 375px;
+    height: 370px;
     background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-tablet@1x.jpg");
     background-position: center 56.5%, center 74%;
 
@@ -91,5 +91,15 @@
 
   .map__image {
     transform: translate(-50%, -22.5%);
+  }
+}
+
+// Для экранов с большим разрешением, просто чтоб было нормально до конца)
+@media (min-width: 1400px) {
+  .map {
+    &::before,
+    &::after {
+      height: 145px;
+    }
   }
 }

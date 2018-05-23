@@ -18,24 +18,25 @@
   fill: $base-text-color;
 }
 
-.page-footer__logo-icon {
-  &--desktop {
-    display: none;
-  }
+.page-footer__logo-glasses-with-gaps,
+.page-footer__logo-stars {
+  display: none;
 }
 
 .page-footer__logo-link {
   display: block;
   margin-bottom: 33px;
 
-  &[href]:hover use {
+  &[href]:hover .page-footer__logo-letters {
     fill: $secondary-text-color;
   }
 
-
-  &[href]:active use {
-    fill: $base-text-color;
+  &[href]:active {
     opacity: 0.3;
+
+    .page-footer__logo-letters {
+      fill: $base-text-color;
+    }
   }
 }
 
@@ -89,13 +90,22 @@
     font-size: $bigest-size;
   }
 
-  .page-footer__logo-icon {
-    &--mobile {
-      display: none;
+  .page-footer__logo-glasses {
+    display: none;
+  }
+
+  .page-footer__logo-glasses-with-gaps,
+  .page-footer__logo-stars {
+    display: inline-block;
+  }
+
+  .page-footer__logo-link {
+    &[href]:hover .page-footer__logo-stars {
+      fill: $secondary-text-color;
     }
 
-    &--desktop {
-      display: inline-block;
+    &[href]:active .page-footer__logo-stars {
+      fill: $base-text-color;
     }
   }
 

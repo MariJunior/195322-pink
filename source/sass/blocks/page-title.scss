@@ -59,10 +59,9 @@
 
 @media (min-width: $desktop-width) {
   .page-title {
-    margin-top: -109px;
-    padding-top: 175px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-size: 2560px auto;
+    margin-top: 0;
+    padding-top: 66px;
+    background: none;
 
     &--photo-page {
       padding-bottom: 100px;
@@ -70,10 +69,6 @@
 
     &--form-page {
       padding-bottom: 100px;
-    }
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
 

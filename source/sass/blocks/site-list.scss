@@ -31,9 +31,20 @@
 @media (min-width: $desktop-width) {
   .site-list {
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 13px;
+    // min-width: 620px;
+    // max-width: 750px;
     width: 620px;
+  }
+
+  .site-list__item {
+    margin-right: 79px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .site-list__link {
